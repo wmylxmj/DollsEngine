@@ -2,6 +2,7 @@
 //
 
 #include "DollsEngine.h"
+#include "Engine/Engine.h"
 
 using namespace std;
 
