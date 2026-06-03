@@ -3,12 +3,19 @@
 
 #include "DollsEngine.h"
 #include "Engine/Engine.h"
+#define GLFW_INCLUDE_NONE
+#include "GLFW/glfw3.h"
 #include "volk.h"
 
 using namespace std;
 
 int main()
 {
+	glfwInit();
+	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);      // 禁用默认的 OpenGL 上下文
+	glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);        // 暂时禁止窗口大小调整
+	GLFWwindow* window = glfwCreateWindow(800, 600, "Vulkan Window", nullptr, nullptr);
+
 	VkResult result = volkInitialize();
 
 	if (result != VK_SUCCESS) {
@@ -16,7 +23,14 @@ int main()
 		return -1;
 	}
 
-	printf("volk 已成功加载 Vulkan 驱动！\n");
-	cout << "Hello CMake!" << endl;
+	while (!glfwWindowShouldClose(window)) {
+		glfwPollEvents(); // 处理键盘、鼠标等窗口输入事件
+
+		// TODO: 在此处添加 Vulkan 的渲染逻辑（如提交指令缓冲区、呈现图像等）
+	}
+
+	glfwDestroyWindow(window);
+	glfwTerminate();
+
 	return 0;
 }

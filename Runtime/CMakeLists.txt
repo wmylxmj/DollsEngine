@@ -2,7 +2,8 @@
 # 项目特定的逻辑。
 #
 
-add_subdirectory(../External/volk ${CMAKE_CURRENT_BINARY_DIR}/volk_build)
+add_subdirectory(../External/volk ${CMAKE_CURRENT_BINARY_DIR}/volk)
+add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable (DollsEngine "DollsEngine.cpp" "DollsEngine.h" "Engine/Engine.h")
@@ -14,6 +15,7 @@ target_compile_definitions(DollsEngine PRIVATE
     $<$<PLATFORM_ID:Darwin>:VK_USE_PLATFORM_MACOS_MVK>
 )
 target_link_libraries(DollsEngine PRIVATE volk)
+target_link_libraries(DollsEngine PRIVATE glfw)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET DollsEngine PROPERTY CXX_STANDARD 20)
