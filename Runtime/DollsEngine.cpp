@@ -2,12 +2,19 @@
 //
 
 #include "DollsEngine.h"
-#include "Engine/Engine.h"
+#include "Application/Application.h"
 #define GLFW_INCLUDE_NONE
 #include "GLFW/glfw3.h"
 #include "volk.h"
 
-using namespace std;
+class MyApplication : public DollsEngine::Application
+{
+public:
+	void OnWindowClose() override {
+	}
+};
+
+MyApplication* application = nullptr;
 
 int main()
 {

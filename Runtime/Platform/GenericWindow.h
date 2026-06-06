@@ -19,9 +19,9 @@ namespace DollsEngine
 	{
 	public:
 		void Create(const GenericWindowCreateInfo& createInfo);
-		void Show();
+		virtual void Show();
 
-	private:
+	protected:
 		GLFWwindow* m_window;
 	};
 }

@@ -8,7 +8,7 @@ namespace DollsEngine
 	{
 	public:
 
-	private:
+	protected:
 		GenericApplicationMessageHandler* m_messageHandler;
 	};
 }
