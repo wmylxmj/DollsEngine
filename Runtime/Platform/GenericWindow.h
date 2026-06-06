@@ -6,6 +6,8 @@
 
 namespace DollsEngine
 {
+	class Application;
+
 	struct GenericWindowDesc
 	{
 		const char* title;
