@@ -11,8 +11,9 @@ add_executable (DollsEngine
     "DollsEngine.h" 
     "Engine/Engine.h" 
     "Platform/GenericWindow.h" 
+    
     "Application/Application.h"
-)
+     "Platform/GenericWindow.cpp")
 
 # 添加Vulkan平台宏定义
 target_compile_definitions(DollsEngine PRIVATE
