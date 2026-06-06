@@ -6,14 +6,16 @@ add_subdirectory(../External/volk ${CMAKE_CURRENT_BINARY_DIR}/volk)
 add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 
 # 将源代码添加到此项目的可执行文件。
-add_executable (DollsEngine 
+add_executable (
+    DollsEngine 
     "DollsEngine.cpp" 
     "DollsEngine.h" 
     "Engine/Engine.h" 
     "Platform/GenericWindow.h" 
-    
+    "Platform/GenericWindow.cpp"
     "Application/Application.h"
-     "Platform/GenericWindow.cpp")
+    "Core/Core.h"
+ "Platform/GenericApplication.h")
 
 # 添加Vulkan平台宏定义
 target_compile_definitions(DollsEngine PRIVATE

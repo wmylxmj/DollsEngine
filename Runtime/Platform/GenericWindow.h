@@ -8,7 +8,7 @@ namespace DollsEngine
 {
 	class Application;
 
-	struct GenericWindowDesc
+	struct GenericWindowCreateInfo
 	{
 		const char* title;
 		uint32_t clientWidth;
@@ -18,7 +18,7 @@ namespace DollsEngine
 	class GenericWindow
 	{
 	public:
-		void Init(const GenericWindowDesc& desc);
+		void Create(const GenericWindowCreateInfo& createInfo);
 		void Show();
 
 	private:

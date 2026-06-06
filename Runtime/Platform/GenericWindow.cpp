@@ -2,9 +2,9 @@
 
 namespace DollsEngine
 {
-	void GenericWindow::Init(const GenericWindowDesc& desc)
+	void GenericWindow::Create(const GenericWindowCreateInfo& createInfo)
 	{
-		m_window = glfwCreateWindow(desc.clientWidth, desc.clientHeight, desc.title, nullptr, nullptr);
+		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
 
 		glfwSetWindowUserPointer(m_window, this);
 
