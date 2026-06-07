@@ -14,12 +14,17 @@ namespace DollsEngine
 	{
 	public:
 		~WindowsWindow();
-		void Create(WindowsApplication* application, const GenericWindowCreateInfo& createInfo);
+
+		static std::shared_ptr<WindowsWindow> Create();
+
+		void Initialize(WindowsApplication* application, const GenericWindowCreateInfo& createInfo);
 		virtual void Show() override;
 		virtual void* GetOSWindowHandle() const override;
 		WindowsApplication* GetOwningApplication() const;
 
-	protected:
+	private:
+		WindowsWindow();
+
 		WindowsApplication* m_owningApplication;
 		GLFWwindow* m_window;
 	};
