@@ -5,6 +5,8 @@ namespace DollsEngine
 	void WindowsApplication::Initialize()
 	{
 		glfwInit();
+		glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);      // 禁用默认的 OpenGL 上下文
+		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);        // 暂时禁止窗口大小调整
 	}
 
 	void WindowsApplication::CreateWindow(GenericWindowCreateInfo& createInfo)

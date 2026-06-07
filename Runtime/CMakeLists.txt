@@ -17,8 +17,8 @@ add_executable (
     "Core/Core.h"
     "Engine/Engine.h" 
     "Application/Application.h"
-    "DollsEngine.cpp" 
-    "DollsEngine.h" 
+    "Application/Application.cpp"
+    "main.cpp"
 )
 
 # 添加Vulkan平台宏定义
