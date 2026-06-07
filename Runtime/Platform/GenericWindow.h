@@ -15,5 +15,6 @@ namespace DollsEngine
 	{
 	public:
 		virtual void Show() = 0;
+		virtual void* GetOSWindowHandle() const = 0;
 	};
 }

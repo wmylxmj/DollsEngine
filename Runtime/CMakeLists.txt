@@ -13,6 +13,7 @@ add_executable (
     "Platform/Windows/WindowsWindow.h"
     "Platform/Windows/WindowsWindow.cpp"
     "Platform/Windows/WindowsApplication.h"
+    "Platform/Windows/WindowsApplication.cpp"
     "Core/Core.h"
     "Engine/Engine.h" 
     "Application/Application.h"
