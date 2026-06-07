@@ -8,14 +8,17 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 # 将源代码添加到此项目的可执行文件。
 add_executable (
     DollsEngine 
+    "Platform/GenericWindow.h" 
+    "Platform/GenericApplication.h"
+    "Platform/Windows/WindowsWindow.h"
+    "Platform/Windows/WindowsWindow.cpp"
+    "Platform/Windows/WindowsApplication.h"
+    "Core/Core.h"
+    "Engine/Engine.h" 
+    "Application/Application.h"
     "DollsEngine.cpp" 
     "DollsEngine.h" 
-    "Engine/Engine.h" 
-    "Platform/GenericWindow.h" 
-    "Platform/GenericWindow.cpp"
-    "Application/Application.h"
-    "Core/Core.h"
- "Platform/GenericApplication.h" "Platform/Windows/WindowsWindow.h")
+)
 
 # 添加Vulkan平台宏定义
 target_compile_definitions(DollsEngine PRIVATE

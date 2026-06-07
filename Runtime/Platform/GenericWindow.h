@@ -2,12 +2,8 @@
 
 #include <stdint.h>
 
-#include "GLFW/glfw3.h"
-
 namespace DollsEngine
 {
-	class Application;
-
 	struct GenericWindowCreateInfo
 	{
 		const char* title;
@@ -18,10 +14,6 @@ namespace DollsEngine
 	class GenericWindow
 	{
 	public:
-		void Create(const GenericWindowCreateInfo& createInfo);
-		virtual void Show();
-
-	protected:
-		GLFWwindow* m_window;
+		virtual void Show() = 0;
 	};
 }
