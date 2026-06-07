@@ -2,13 +2,14 @@
 
 namespace DollsEngine
 {
-	void Application::Create(GenericApplication* platformApplication)
+	void Application::Create(std::shared_ptr<GenericApplication> platformApplication)
 	{
 		m_platformApplication = platformApplication;
 
-		m_platformApplication->SetMessageHandler(this);
+		m_platformApplication->SetMessageHandler(std::static_pointer_cast<GenericApplicationMessageHandler>(this->shared_from_this()));
 	}
-	void Application::CreateWindow(GenericWindowCreateInfo createInfo)
+
+	void Application::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
 		m_platformApplication->CreateWindow(createInfo);
 	}

@@ -2,7 +2,7 @@
 
 namespace DollsEngine
 {
-	void WindowsWindow::Create(WindowsApplication* application, GenericWindowCreateInfo& createInfo)
+	void WindowsWindow::Create(WindowsApplication* application, const GenericWindowCreateInfo& createInfo)
 	{
 		m_application = application;
 		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);

@@ -22,9 +22,9 @@ public:
 int main()
 {
 	DollsEngine::WindowsApplication::Initialize();
-	DollsEngine::WindowsApplication* windowsApplication = new DollsEngine::WindowsApplication();
+	std::shared_ptr<DollsEngine::WindowsApplication> windowsApplication = std::make_shared<DollsEngine::WindowsApplication>();
 
-	MyApplication* myApplication = new MyApplication();
+	std::shared_ptr<MyApplication> myApplication = std::make_shared<MyApplication>();
 	myApplication->Create(windowsApplication);
 
 	DollsEngine::GenericWindowCreateInfo windowCreateInfo;

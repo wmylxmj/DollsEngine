@@ -11,9 +11,9 @@ namespace DollsEngine
 	{
 	public:
 		static void Initialize();
-		virtual void CreateWindow(GenericWindowCreateInfo& createInfo) override;
+		virtual void CreateWindow(const GenericWindowCreateInfo& createInfo) override;
 
 	private:
-		std::vector<WindowsWindow*> m_windows;
+		std::vector<std::shared_ptr<WindowsWindow>> m_windows;
 	};
 }

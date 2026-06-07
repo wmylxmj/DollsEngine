@@ -5,14 +5,14 @@
 
 namespace DollsEngine
 {
-	class Application : public GenericApplicationMessageHandler
+	class Application : public GenericApplicationMessageHandler, public std::enable_shared_from_this<Application>
 	{
 	public:
-		void Create(GenericApplication* platformApplication);
+		void Create(std::shared_ptr<GenericApplication> platformApplication);
 
-		void CreateWindow(GenericWindowCreateInfo createInfo);
+		void CreateWindow(const GenericWindowCreateInfo& createInfo);
 
 	protected:
-		GenericApplication* m_platformApplication;
+		std::shared_ptr<GenericApplication> m_platformApplication;
 	};
 }

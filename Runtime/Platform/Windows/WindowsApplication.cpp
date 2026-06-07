@@ -9,9 +9,9 @@ namespace DollsEngine
 		glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);        // 暂时禁止窗口大小调整
 	}
 
-	void WindowsApplication::CreateWindow(GenericWindowCreateInfo& createInfo)
+	void WindowsApplication::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
-		WindowsWindow* window = new WindowsWindow();
+		std::shared_ptr<WindowsWindow> window = std::make_shared<WindowsWindow>();
 		window->Create(this, createInfo);
 
 		glfwSetWindowCloseCallback((GLFWwindow*)window->GetOSWindowHandle(), [](GLFWwindow* window) {
