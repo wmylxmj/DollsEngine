@@ -14,7 +14,8 @@ bool g_exit = false;
 class MyApplication : public DollsEngine::Application
 {
 public:
-	void OnWindowClose() override {
+	void OnWindowClose(const std::shared_ptr<DollsEngine::GenericWindow>& window) override
+	{
 		g_exit = true;
 	}
 };
@@ -38,7 +39,6 @@ int main()
 		// TODO: 在此处添加 Vulkan 的渲染逻辑（如提交指令缓冲区、呈现图像等）
 	}
 
-	//glfwDestroyWindow(window);
 	glfwTerminate();
 
 	return 0;

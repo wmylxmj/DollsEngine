@@ -15,8 +15,8 @@ namespace DollsEngine
 		window->Create(this, createInfo);
 
 		glfwSetWindowCloseCallback((GLFWwindow*)window->GetOSWindowHandle(), [](GLFWwindow* window) {
-			WindowsApplication& application = *(WindowsApplication*)glfwGetWindowUserPointer(window);
-			application.m_messageHandler->OnWindowClose();
+			WindowsWindow& windowsWindow = *(WindowsWindow*)glfwGetWindowUserPointer(window);
+			windowsWindow.GetOwningApplication()->m_messageHandler->OnWindowClose(windowsWindow.shared_from_this());
 		});
 
 		m_windows.push_back(window);
