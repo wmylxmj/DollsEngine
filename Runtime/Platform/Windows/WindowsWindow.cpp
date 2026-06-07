@@ -2,14 +2,14 @@
 
 namespace DollsEngine
 {
-	WindowsWindow::~WindowsWindow() 
+	WindowsWindow::~WindowsWindow()
 	{
 		glfwDestroyWindow(m_window);
 	}
 
 	void WindowsWindow::Create(WindowsApplication* application, const GenericWindowCreateInfo& createInfo)
 	{
-		m_application = application;
+		m_owningApplication = application;
 		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
 
 		glfwSetWindowUserPointer(m_window, this);
@@ -27,6 +27,6 @@ namespace DollsEngine
 
 	WindowsApplication* WindowsWindow::GetOwningApplication() const
 	{
-		return m_application;
+		return m_owningApplication;
 	}
 }

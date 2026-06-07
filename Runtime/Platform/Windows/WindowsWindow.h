@@ -20,7 +20,7 @@ namespace DollsEngine
 		WindowsApplication* GetOwningApplication() const;
 
 	protected:
-		WindowsApplication* m_application;
+		WindowsApplication* m_owningApplication;
 		GLFWwindow* m_window;
 	};
 }

@@ -10,7 +10,6 @@ namespace DollsEngine
 	class WindowsApplication : public GenericApplication
 	{
 	public:
-		static void Initialize();
 		virtual void CreateWindow(const GenericWindowCreateInfo& createInfo) override;
 
 	private:

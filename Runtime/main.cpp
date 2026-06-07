@@ -22,7 +22,9 @@ public:
 
 int main()
 {
-	DollsEngine::WindowsApplication::Initialize();
+	if (!glfwInit()) return -1;
+	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
+
 	std::shared_ptr<DollsEngine::WindowsApplication> windowsApplication = std::make_shared<DollsEngine::WindowsApplication>();
 
 	std::shared_ptr<MyApplication> myApplication = std::make_shared<MyApplication>();
