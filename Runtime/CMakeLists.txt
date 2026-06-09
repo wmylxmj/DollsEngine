@@ -21,6 +21,11 @@ add_executable (
     "main.cpp"
 )
 
+target_compile_definitions(DollsEngine PRIVATE
+    $<$<PLATFORM_ID:Windows>:DOLLS_PLATFORM_WINDOWS>
+)
+
+
 # 添加Vulkan平台宏定义
 target_compile_definitions(DollsEngine PRIVATE
     $<$<PLATFORM_ID:Windows>:VK_USE_PLATFORM_WIN32_KHR>
