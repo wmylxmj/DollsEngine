@@ -2,14 +2,22 @@
 
 namespace DollsEngine
 {
-	std::shared_ptr<WindowsWindow> WindowsWindow::Create(const GenericWindowCreateInfo& createInfo)
+	WindowsWindow::WindowsWindow() :
+		m_window(nullptr),
+		m_owningApplication(nullptr)
 	{
-		return std::shared_ptr<WindowsWindow>(new WindowsWindow(createInfo));
 	}
 
 	WindowsWindow::~WindowsWindow()
 	{
 		glfwDestroyWindow(m_window);
+	}
+
+	void WindowsWindow::Create(WindowsApplication* owningApplication, const GenericWindowCreateInfo& createInfo)
+	{
+		m_owningApplication = owningApplication;
+		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
+		glfwSetWindowUserPointer(m_window, this);
 	}
 
 	void WindowsWindow::Show()
@@ -25,12 +33,5 @@ namespace DollsEngine
 	WindowsApplication* WindowsWindow::GetOwningApplication() const
 	{
 		return m_owningApplication;
-	}
-
-	WindowsWindow::WindowsWindow(const GenericWindowCreateInfo& createInfo) : m_owningApplication(nullptr)
-	{
-		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
-
-		glfwSetWindowUserPointer(m_window, this);
 	}
 }

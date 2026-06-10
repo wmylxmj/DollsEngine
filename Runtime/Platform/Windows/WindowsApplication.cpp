@@ -4,8 +4,8 @@ namespace DollsEngine
 {
 	void WindowsApplication::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
-		std::shared_ptr<WindowsWindow> window = WindowsWindow::Create(createInfo);
-		window->SetOwningApplication(this);
+		std::shared_ptr<WindowsWindow> window = std::make_shared<WindowsWindow>();
+		window->Create(this, createInfo);
 
 		glfwSetWindowCloseCallback((GLFWwindow*)window->GetOSWindowHandle(), [](GLFWwindow* window) {
 			WindowsWindow& windowsWindow = *(WindowsWindow*)glfwGetWindowUserPointer(window);
