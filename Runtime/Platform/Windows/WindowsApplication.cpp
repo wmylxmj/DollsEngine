@@ -1,25 +1,30 @@
 #include "WindowsApplication.h"
 
+#include "WindowsWindowEvent.h"
+
 namespace DollsEngine
 {
 	std::shared_ptr<GenericWindow> WindowsApplication::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
 		std::shared_ptr<WindowsWindow> window = std::make_shared<WindowsWindow>();
 		window->Create(this, createInfo);
-
-		glfwSetWindowCloseCallback((GLFWwindow*)window->GetOSWindowHandle(), [](GLFWwindow* window) {
-			WindowsWindow& windowsWindow = *(WindowsWindow*)glfwGetWindowUserPointer(window);
-
-			for (auto& item : windowsWindow.GetOwningApplication()->m_windows)
+		window->SetEventCallback([](Event& event) {
+			if (event.GetEventTypeId() == GetEventTypeId<WindowsWindowCloseEvent>())
 			{
-				if (item.get() == &windowsWindow)
-				{
-					windowsWindow.GetOwningApplication()->m_messageHandler->OnWindowClose(item);
-				}
+				static_cast<WindowsWindowCloseEvent&>(event).GetWindow()->GetOwningApplication()->OnEvent(event);
 			}
 		});
 
 		m_windows.push_back(window);
 		return window;
+	}
+
+	void WindowsApplication::OnEvent(Event& event)
+	{
+		if (event.GetEventTypeId() == GetEventTypeId<WindowsWindowCloseEvent>())
+		{
+			WindowsWindowCloseEvent& windowCloseEvent = static_cast<WindowsWindowCloseEvent&>(event);
+			m_messageHandler->OnWindowClose(*windowCloseEvent.GetWindow());
+		}
 	}
 }

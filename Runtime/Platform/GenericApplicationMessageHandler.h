@@ -9,6 +9,6 @@ namespace DollsEngine
 	class GenericApplicationMessageHandler
 	{
 	public:
-		virtual void OnWindowClose(const std::shared_ptr<GenericWindow>& window) {}
+		virtual void OnWindowClose(const GenericWindow& window) {}
 	};
 }

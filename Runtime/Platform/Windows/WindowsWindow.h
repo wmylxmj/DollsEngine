@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../GenericWindow.h"
+#include "WindowsWindowEvent.h"
 
 #include "GLFW/glfw3.h"
 

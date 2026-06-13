@@ -18,6 +18,12 @@ namespace DollsEngine
 		m_owningApplication = owningApplication;
 		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
 		glfwSetWindowUserPointer(m_window, this);
+
+		glfwSetWindowCloseCallback(m_window, [](GLFWwindow* window) {
+			WindowsWindow* windowsWindow = (WindowsWindow*)(glfwGetWindowUserPointer(window));
+			WindowsWindowCloseEvent event(windowsWindow);
+			windowsWindow->m_eventCallback(event);
+		});
 	}
 
 	void WindowsWindow::Show()

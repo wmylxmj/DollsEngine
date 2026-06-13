@@ -14,7 +14,7 @@ bool g_exit = false;
 class MyApplication : public DollsEngine::Application
 {
 public:
-	void OnWindowClose(const std::shared_ptr<DollsEngine::GenericWindow>& window) override
+	void OnWindowClose(const DollsEngine::GenericWindow& window) override
 	{
 		g_exit = true;
 	}

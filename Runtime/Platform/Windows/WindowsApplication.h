@@ -11,6 +11,7 @@ namespace DollsEngine
 	{
 	public:
 		virtual std::shared_ptr<GenericWindow> CreateWindow(const GenericWindowCreateInfo& createInfo) override;
+		void OnEvent(Event& event);
 
 	private:
 		std::vector<std::shared_ptr<WindowsWindow>> m_windows;
