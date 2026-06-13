@@ -33,6 +33,8 @@ target_compile_definitions(DollsEngine PRIVATE
     $<$<PLATFORM_ID:Darwin>:VK_USE_PLATFORM_MACOS_MVK>
 )
 target_link_libraries(DollsEngine PRIVATE volk)
+
+target_compile_definitions(DollsEngine PRIVATE GLFW_INCLUDE_NONE)
 target_link_libraries(DollsEngine PRIVATE glfw)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
