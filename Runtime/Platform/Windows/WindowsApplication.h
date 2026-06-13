@@ -14,6 +14,6 @@ namespace DollsEngine
 		void OnEvent(Event& event);
 
 	private:
-		std::vector<std::shared_ptr<WindowsWindow>> m_windows;
+		std::vector<std::unique_ptr<WindowsWindow>> m_windows;
 	};
 }

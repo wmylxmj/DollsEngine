@@ -19,7 +19,7 @@ namespace DollsEngine
 	{
 	public:
 		virtual void Show() = 0;
-		virtual void* GetOSWindowHandle() const = 0;
+		virtual void* GetOsWindowHandle() const = 0;
 		void SetEventCallback(const std::function<void(Event&)>& callback) { m_eventCallback = callback; }
 
 	protected:

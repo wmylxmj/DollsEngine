@@ -5,7 +5,7 @@
 namespace DollsEngine
 {
 	template<typename T>
-	constexpr size_t GetEventTypeId()
+	size_t GetEventTypeId()
 	{
 		static const size_t typeId = reinterpret_cast<size_t>(&typeId);
 		return typeId;

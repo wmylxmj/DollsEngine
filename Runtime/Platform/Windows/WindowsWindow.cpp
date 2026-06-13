@@ -1,12 +1,11 @@
 #include "WindowsWindow.h"
 
+#include "../GenericWindowEvent.h"
+
 namespace DollsEngine
 {
-	WindowsWindow::WindowsWindow() :
-		m_window(nullptr),
-		m_owningApplication(nullptr)
-	{
-	}
+	WindowsWindow::WindowsWindow() : m_window(nullptr) {}
+
 
 	WindowsWindow::~WindowsWindow()
 	{
@@ -15,13 +14,12 @@ namespace DollsEngine
 
 	void WindowsWindow::Create(WindowsApplication* owningApplication, const GenericWindowCreateInfo& createInfo)
 	{
-		m_owningApplication = owningApplication;
 		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
 		glfwSetWindowUserPointer(m_window, this);
 
 		glfwSetWindowCloseCallback(m_window, [](GLFWwindow* window) {
 			WindowsWindow* windowsWindow = (WindowsWindow*)(glfwGetWindowUserPointer(window));
-			WindowsWindowCloseEvent event(windowsWindow);
+			GenericWindowCloseEvent event(windowsWindow);
 			windowsWindow->m_eventCallback(event);
 		});
 	}
@@ -31,13 +29,8 @@ namespace DollsEngine
 		glfwShowWindow(m_window);
 	}
 
-	void* WindowsWindow::GetOSWindowHandle() const
+	void* WindowsWindow::GetOsWindowHandle() const
 	{
 		return m_window;
-	}
-
-	WindowsApplication* WindowsWindow::GetOwningApplication() const
-	{
-		return m_owningApplication;
 	}
 }
