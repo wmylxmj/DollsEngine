@@ -1,12 +1,14 @@
 #pragma once
 
+#include <iostream>
+
 namespace DollsEngine
 {
 	template<typename T>
 	constexpr size_t GetEventTypeId()
 	{
-		static char typeIdPlaceholder = 0;
-		return reinterpret_cast<size_t>(&typeIdPlaceholder);
+		static const size_t typeId = reinterpret_cast<size_t>(&typeId);
+		return typeId;
 	}
 
 	class Event
