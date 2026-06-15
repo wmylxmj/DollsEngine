@@ -21,7 +21,6 @@ namespace DollsEngine
 		virtual void Show() override;
 		virtual void* GetOsWindowHandle() const override;
 
-
 	private:
 		GLFWwindow* m_window;
 	};

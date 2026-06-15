@@ -4,16 +4,28 @@
 
 namespace DollsEngine
 {
-	WindowsWindow::WindowsWindow() : m_window(nullptr) {}
+	static uint32_t s_numWindows = 0;
 
+	WindowsWindow::WindowsWindow() : m_window(nullptr) {}
 
 	WindowsWindow::~WindowsWindow()
 	{
 		glfwDestroyWindow(m_window);
+		s_numWindows--;
+		if (s_numWindows == 0)
+		{
+            glfwTerminate();
+		}
 	}
 
 	void WindowsWindow::Create(const GenericWindowCreateInfo& createInfo)
 	{
+		if (s_numWindows == 0) 
+		{ 
+			glfwInit();
+		}
+		s_numWindows += 1;
+
 		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
 		glfwSetWindowUserPointer(m_window, this);
 

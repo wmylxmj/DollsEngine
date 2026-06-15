@@ -21,7 +21,6 @@ public:
 
 int main()
 {
-	if (!glfwInit()) return -1;
 	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 
 	std::shared_ptr<DollsEngine::WindowsApplication> windowsApplication = std::make_shared<DollsEngine::WindowsApplication>();
@@ -39,8 +38,6 @@ int main()
 		glfwPollEvents(); // 处理键盘、鼠标等窗口输入事件
 		// TODO: 在此处添加 Vulkan 的渲染逻辑（如提交指令缓冲区、呈现图像等）
 	}
-
-	glfwTerminate();
 
 	return 0;
 }
