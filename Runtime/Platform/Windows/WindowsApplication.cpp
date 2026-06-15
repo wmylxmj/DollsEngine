@@ -4,7 +4,7 @@
 
 namespace DollsEngine
 {
-	std::shared_ptr<GenericWindow> WindowsApplication::CreateWindow(const GenericWindowCreateInfo& createInfo)
+	GenericWindow* WindowsApplication::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
 		std::unique_ptr<WindowsWindow> window = std::make_unique<WindowsWindow>();
 		window->Create(createInfo);
@@ -12,8 +12,9 @@ namespace DollsEngine
 			this->OnEvent(event);
 		});
 
+		GenericWindow* windowPtr = window.get();
 		m_windows.push_back(std::move(window));
-		return window;
+        		return windowPtr;
 	}
 
 	void WindowsApplication::OnEvent(Event& event)
