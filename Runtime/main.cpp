@@ -1,6 +1,7 @@
 // DollsEngine.cpp: 定义应用程序的入口点。
 //
 
+#include "Engine/Engine.h"
 #include "Application/Application.h"
 #include "Platform/Windows/WindowsApplication.h"
 
@@ -21,8 +22,12 @@ public:
 
 int main()
 {
-	MyApplication myApplication = MyApplication();
+	DollsEngine::Engine engine;
+
+	MyApplication myApplication;
 	myApplication.Create();
+
+	engine.SetApplication(&myApplication);
 
 	DollsEngine::GenericWindowCreateInfo windowCreateInfo;
 	windowCreateInfo.clientWidth = 800;
@@ -32,7 +37,7 @@ int main()
 	myApplication.CreateWindow(windowCreateInfo)->Show();
 
 	while (!g_exit) {
-		myApplication.Tick();
+		engine.Tick();
 	}
 
 	return 0;
