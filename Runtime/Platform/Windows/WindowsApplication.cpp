@@ -14,7 +14,7 @@ namespace DollsEngine
 
 		GenericWindow* windowPtr = window.get();
 		m_windows.push_back(std::move(window));
-        return windowPtr;
+		return windowPtr;
 	}
 
 	void WindowsApplication::PumpMessages()

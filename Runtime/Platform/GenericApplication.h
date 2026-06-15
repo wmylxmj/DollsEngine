@@ -11,9 +11,10 @@ namespace DollsEngine
 	{
 	public:
 		GenericApplication() : m_messageHandler(nullptr) {}
+		void SetMessageHandler(GenericApplicationMessageHandler* messageHandler) { m_messageHandler = messageHandler; }
+
 		virtual GenericWindow* CreateWindow(const GenericWindowCreateInfo& createInfo) = 0;
 		virtual void PumpMessages() = 0;
-		void SetMessageHandler(GenericApplicationMessageHandler* messageHandler) { m_messageHandler = messageHandler; }
 
 	protected:
 		GenericApplicationMessageHandler* m_messageHandler;

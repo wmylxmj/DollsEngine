@@ -14,14 +14,14 @@ namespace DollsEngine
 		s_numWindows--;
 		if (s_numWindows == 0)
 		{
-            glfwTerminate();
+			glfwTerminate();
 		}
 	}
 
 	void WindowsWindow::Create(const GenericWindowCreateInfo& createInfo)
 	{
-		if (s_numWindows == 0) 
-		{ 
+		if (s_numWindows == 0)
+		{
 			glfwInit();
 		}
 		s_numWindows += 1;
