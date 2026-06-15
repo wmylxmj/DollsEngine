@@ -26,6 +26,7 @@ namespace DollsEngine
 		}
 		s_numWindows += 1;
 
+		if (!createInfo.useOpenGL) glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
 		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
 		glfwSetWindowUserPointer(m_window, this);
 

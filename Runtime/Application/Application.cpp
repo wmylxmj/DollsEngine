@@ -12,6 +12,10 @@ namespace DollsEngine
 #endif
 	}
 
+	void Application::Tick()
+	{
+	}
+
 	void Application::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
 		m_platformApplication->CreateWindow(createInfo);

@@ -9,6 +9,7 @@ namespace DollsEngine
 	{
 	public:
 		void Create();
+		void Tick();
 
 		void CreateWindow(const GenericWindowCreateInfo& createInfo);
 

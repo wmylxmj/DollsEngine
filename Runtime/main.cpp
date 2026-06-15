@@ -21,8 +21,6 @@ public:
 
 int main()
 {
-	glfwWindowHint(GLFW_CLIENT_API, GLFW_NO_API);
-
 	std::shared_ptr<DollsEngine::WindowsApplication> windowsApplication = std::make_shared<DollsEngine::WindowsApplication>();
 
 	std::shared_ptr<MyApplication> myApplication = std::make_shared<MyApplication>();
@@ -32,6 +30,7 @@ int main()
 	windowCreateInfo.clientWidth = 800;
 	windowCreateInfo.clientHeight = 600;
 	windowCreateInfo.title = "Test Window";
+	windowCreateInfo.useOpenGL = false;
 	myApplication->CreateWindow(windowCreateInfo);
 
 	while (!g_exit) {
