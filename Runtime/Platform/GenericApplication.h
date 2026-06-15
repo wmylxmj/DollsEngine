@@ -11,9 +11,9 @@ namespace DollsEngine
 	{
 	public:
 		virtual GenericWindow* CreateWindow(const GenericWindowCreateInfo& createInfo) = 0;
-		void SetMessageHandler(const std::shared_ptr<GenericApplicationMessageHandler> messageHandler) { m_messageHandler = messageHandler; }
+		void SetMessageHandler(GenericApplicationMessageHandler* messageHandler) { m_messageHandler = messageHandler; }
 
 	protected:
-		std::shared_ptr<GenericApplicationMessageHandler> m_messageHandler;
+		GenericApplicationMessageHandler* m_messageHandler;
 	};
 }
