@@ -17,6 +17,13 @@ namespace DollsEngine
         return windowPtr;
 	}
 
+	void WindowsApplication::PumpMessages()
+	{
+		if (m_windows.size() > 0) {
+			glfwPollEvents();
+		}
+	}
+
 	void WindowsApplication::OnEvent(Event& event)
 	{
 		if (event.GetEventTypeId() == GetEventTypeId<GenericWindowCloseEvent>())

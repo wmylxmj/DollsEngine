@@ -11,6 +11,7 @@ namespace DollsEngine
 	{
 	public:
 		virtual GenericWindow* CreateWindow(const GenericWindowCreateInfo& createInfo) override;
+		virtual void PumpMessages() override;
 		void OnEvent(Event& event);
 
 	private:

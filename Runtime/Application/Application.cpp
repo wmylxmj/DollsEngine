@@ -14,6 +14,7 @@ namespace DollsEngine
 
 	void Application::Tick()
 	{
+		m_platformApplication->PumpMessages();
 	}
 
 	void Application::CreateWindow(const GenericWindowCreateInfo& createInfo)
