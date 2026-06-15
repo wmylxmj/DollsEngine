@@ -11,7 +11,7 @@ namespace DollsEngine
 		void Create();
 		void Tick();
 
-		void CreateWindow(const GenericWindowCreateInfo& createInfo);
+		GenericWindow* CreateWindow(const GenericWindowCreateInfo& createInfo);
 
 	protected:
 		std::unique_ptr<GenericApplication> m_platformApplication;

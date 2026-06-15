@@ -29,7 +29,7 @@ int main()
 	windowCreateInfo.clientHeight = 600;
 	windowCreateInfo.title = "Test Window";
 	windowCreateInfo.useOpenGL = false;
-	myApplication.CreateWindow(windowCreateInfo);
+	myApplication.CreateWindow(windowCreateInfo)->Show();
 
 	while (!g_exit) {
 		myApplication.Tick();

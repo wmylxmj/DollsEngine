@@ -17,8 +17,8 @@ namespace DollsEngine
 		m_platformApplication->PumpMessages();
 	}
 
-	void Application::CreateWindow(const GenericWindowCreateInfo& createInfo)
+	GenericWindow* Application::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
-		m_platformApplication->CreateWindow(createInfo);
+		return m_platformApplication->CreateWindow(createInfo);
 	}
 }
