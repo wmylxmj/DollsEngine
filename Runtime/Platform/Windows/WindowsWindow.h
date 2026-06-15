@@ -16,7 +16,7 @@ namespace DollsEngine
 		WindowsWindow();
 		~WindowsWindow();
 
-		void Create(WindowsApplication* owningApplication, const GenericWindowCreateInfo& createInfo);
+		void Create(const GenericWindowCreateInfo& createInfo);
 
 		virtual void Show() override;
 		virtual void* GetOsWindowHandle() const override;

@@ -12,7 +12,7 @@ namespace DollsEngine
 		glfwDestroyWindow(m_window);
 	}
 
-	void WindowsWindow::Create(WindowsApplication* owningApplication, const GenericWindowCreateInfo& createInfo)
+	void WindowsWindow::Create(const GenericWindowCreateInfo& createInfo)
 	{
 		m_window = glfwCreateWindow(createInfo.clientWidth, createInfo.clientHeight, createInfo.title, nullptr, nullptr);
 		glfwSetWindowUserPointer(m_window, this);

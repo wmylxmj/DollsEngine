@@ -7,7 +7,7 @@ namespace DollsEngine
 	std::shared_ptr<GenericWindow> WindowsApplication::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
 		std::unique_ptr<WindowsWindow> window = std::make_unique<WindowsWindow>();
-		window->Create(this, createInfo);
+		window->Create(createInfo);
 		window->SetEventCallback([this](Event& event) {
 			this->OnEvent(event);
 		});
