@@ -1,12 +1,15 @@
 #include "Application.h"
 
+#include "../Platform/Windows/WindowsApplication.h"
+
 namespace DollsEngine
 {
-	void Application::Create(std::shared_ptr<GenericApplication> platformApplication)
+	void Application::Create()
 	{
-		m_platformApplication = platformApplication;
-
+#ifdef DOLLS_PLATFORM_WINDOWS
+		m_platformApplication = std::make_unique<WindowsApplication>();
 		m_platformApplication->SetMessageHandler(this);
+#endif
 	}
 
 	void Application::CreateWindow(const GenericWindowCreateInfo& createInfo)

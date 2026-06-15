@@ -4,7 +4,6 @@
 #include "Application/Application.h"
 #include "Platform/Windows/WindowsApplication.h"
 
-#define GLFW_INCLUDE_NONE
 #include "GLFW/glfw3.h"
 
 #include <iostream>
@@ -28,7 +27,7 @@ int main()
 	std::shared_ptr<DollsEngine::WindowsApplication> windowsApplication = std::make_shared<DollsEngine::WindowsApplication>();
 
 	std::shared_ptr<MyApplication> myApplication = std::make_shared<MyApplication>();
-	myApplication->Create(windowsApplication);
+	myApplication->Create();
 
 	DollsEngine::GenericWindowCreateInfo windowCreateInfo;
 	windowCreateInfo.clientWidth = 800;
