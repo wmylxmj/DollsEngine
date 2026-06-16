@@ -17,8 +17,12 @@ namespace DollsEngine
 		m_platformApplication->PumpMessages();
 	}
 
-	GenericWindow* Application::CreateWindow(const GenericWindowCreateInfo& createInfo)
+	Window* Application::CreateWindow(const GenericWindowCreateInfo& createInfo)
 	{
-		return m_platformApplication->CreateWindow(createInfo);
+		std::unique_ptr<Window> window = std::make_unique<Window>();
+		window->SetNativeWindow(m_platformApplication->CreateWindow(createInfo));
+		Window* windowPtr = window.get();
+		m_windows.push_back(std::move(window));
+		return windowPtr;
 	}
 }
