@@ -16,7 +16,7 @@ namespace DollsEngine
 	class Window
 	{
 	public:
-		virtual void Create(const WindowCreateInfo& createInfo) = 0;
+		virtual bool Create(const WindowCreateInfo& createInfo) = 0;
 		virtual void Show() = 0;
 		virtual void* GetOsWindowHandle() const = 0;
 
