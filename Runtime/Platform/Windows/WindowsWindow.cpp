@@ -7,6 +7,8 @@ namespace DollsEngine
 {
 	static bool s_wndClassRegistered = false;
 
+	LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 	bool WindowsWindow::Create(const WindowCreateInfo& createInfo)
 	{
 		if (!s_wndClassRegistered)
