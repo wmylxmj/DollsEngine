@@ -1,5 +1,6 @@
 #pragma once
 
+#include "../../Core/Window.h"
 #include "../GenericWindow.h"
 
 #include "GLFW/glfw3.h"
@@ -8,9 +9,7 @@
 
 namespace DollsEngine
 {
-	class WindowsApplication;
-
-	class WindowsWindow : public GenericWindow
+	class WindowsWindow : public Window
 	{
 	public:
 		WindowsWindow();
