@@ -15,11 +15,12 @@ add_executable (
     "Platform/Windows/WindowsApplication.h"
     "Platform/Windows/WindowsApplication.cpp"
     "Core/Core.h"
+    "Core/IWindow.h"
     "Engine/Engine.h" 
     "Application/Application.h"
     "Application/Application.cpp"
     "main.cpp"
-  "Core/Event/Event.h" "Platform/GenericWindowEvent.h"  "Engine/Engine.cpp" "Application/Window.h")
+  "Core/Event/Event.h" "Platform/GenericWindowEvent.h"  "Engine/Engine.cpp" "Application/Window.h" "Core/Event/Events/WindowEvents.h")
 
 target_compile_definitions(DollsEngine PRIVATE
     $<$<PLATFORM_ID:Windows>:DOLLS_PLATFORM_WINDOWS>
