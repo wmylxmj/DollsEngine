@@ -8,19 +8,19 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 # 将源代码添加到此项目的可执行文件。
 add_executable (
     DollsEngine 
-    "Platform/GenericWindow.h" 
-    "Platform/GenericApplication.h"
+     
+    
     "Platform/Windows/WindowsWindow.h"
     "Platform/Windows/WindowsWindow.cpp"
-    "Platform/Windows/WindowsApplication.h"
-    "Platform/Windows/WindowsApplication.cpp"
+    
+    
     "Core/Core.h"
     
     "Engine/Engine.h" 
     "Application/Application.h"
     "Application/Application.cpp"
     "main.cpp"
-  "Core/Event/Event.h" "Platform/GenericWindowEvent.h"  "Engine/Engine.cpp" "Core/Window.h" "Core/Event/Events/WindowEvents.h")
+  "Core/Event/Event.h"   "Engine/Engine.cpp" "Core/Window.h" "Core/Event/Events/WindowEvents.h")
 
 target_compile_definitions(DollsEngine PRIVATE
     $<$<PLATFORM_ID:Windows>:DOLLS_PLATFORM_WINDOWS>

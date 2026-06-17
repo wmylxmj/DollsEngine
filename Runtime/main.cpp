@@ -3,7 +3,6 @@
 
 #include "Engine/Engine.h"
 #include "Application/Application.h"
-#include "Platform/Windows/WindowsApplication.h"
 
 #include "GLFW/glfw3.h"
 
@@ -14,10 +13,7 @@ bool g_exit = false;
 class MyApplication : public DollsEngine::Application
 {
 public:
-	void OnWindowClose(DollsEngine::GenericWindow* window) override
-	{
-		g_exit = true;
-	}
+
 };
 
 int main()
@@ -29,12 +25,10 @@ int main()
 
 	engine.SetApplication(&myApplication);
 
-	DollsEngine::GenericWindowCreateInfo windowCreateInfo;
+	DollsEngine::WindowCreateInfo windowCreateInfo;
 	windowCreateInfo.clientWidth = 800;
 	windowCreateInfo.clientHeight = 600;
 	windowCreateInfo.title = "Test Window";
-	windowCreateInfo.useOpenGL = false;
-	myApplication.CreateWindow(windowCreateInfo)->Show();
 
 	while (!g_exit) {
 		engine.Tick();

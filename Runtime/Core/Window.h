@@ -11,7 +11,6 @@ namespace DollsEngine
 		const char* title;
 		uint32_t clientWidth;
 		uint32_t clientHeight;
-		bool useOpenGL;
 	};
 
 	class Window

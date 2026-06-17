@@ -1,26 +1,21 @@
 #pragma once
 
 #include "../../Core/Window.h"
-#include "../GenericWindow.h"
 
-#include "GLFW/glfw3.h"
-
-#include <memory>
+#include <Windows.h>
 
 namespace DollsEngine
 {
+
 	class WindowsWindow : public Window
 	{
 	public:
-		WindowsWindow();
-		~WindowsWindow();
 
-		void Create(const GenericWindowCreateInfo& createInfo);
 
 		virtual void Show() override;
 		virtual void* GetOsWindowHandle() const override;
 
 	private:
-		GLFWwindow* m_window;
+		HWND m_hwnd;
 	};
 }
