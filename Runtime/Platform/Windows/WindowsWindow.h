@@ -6,8 +6,6 @@
 
 namespace DollsEngine
 {
-	struct WindowCreateInfo;
-
 	class WindowsWindow : public Window
 	{
 	public:
@@ -17,6 +15,7 @@ namespace DollsEngine
 
 	private:
 		friend LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam);
+
 		HWND m_hwnd;
 	};
 }
