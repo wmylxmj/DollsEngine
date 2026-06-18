@@ -11,5 +11,6 @@ namespace DollsEngine
 
 	void Application::Tick()
 	{
+		m_platform->PumpMessages();
 	}
 }
