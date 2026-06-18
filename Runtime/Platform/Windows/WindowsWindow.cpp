@@ -64,4 +64,8 @@ namespace DollsEngine
 	{
 		return m_hwnd;
 	}
+	LRESULT WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
+	{
+		return LRESULT();
+	}
 }
