@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../Core/Window.h"
+#include "../Core/Platform.h"
 #include <memory>
 
 namespace DollsEngine
@@ -12,6 +13,7 @@ namespace DollsEngine
 		void Tick();
 
 	protected:
+		std::unique_ptr<Platform> m_platform;
 		std::vector<std::unique_ptr<Window>> m_windows;
 	};
 }
