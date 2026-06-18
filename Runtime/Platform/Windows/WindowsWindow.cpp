@@ -64,8 +64,17 @@ namespace DollsEngine
 	{
 		return m_hwnd;
 	}
+
 	LRESULT WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	{
-		return LRESULT();
+		switch (msg)
+		{
+		case WM_CLOSE:
+			WindowsWindow* window = reinterpret_cast<WindowsWindow*>(GetWindowLongPtr(hwnd, GWLP_USERDATA));
+			WindowCloseEvent event(window);
+			window->m_eventCallback(event);
+			break;
+		}
+		return DefWindowProc(hwnd, msg, wParam, lParam);
 	}
 }
