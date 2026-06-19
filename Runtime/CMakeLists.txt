@@ -20,7 +20,7 @@ add_executable (
     "Application/Application.h"
     "Application/Application.cpp"
     "main.cpp"
-  "Core/Event/Event.h"   "Engine/Engine.cpp" "Core/Window.h" "Core/Event/Events/WindowEvents.h" "Platform/Platform.h" "Core/Platform.h" "Platform/Windows/WindowsPlatform.h" "Platform/Windows/WindowsPlatform.cpp")
+  "Core/Event/Event.h"   "Engine/Engine.cpp" "Core/Window.h" "Core/Event/Events/WindowEvents.h" "Platform/Platform.h" "Core/Platform.h" "Platform/Windows/WindowsPlatform.h" "Platform/Windows/WindowsPlatform.cpp"  "Platform/Windows/WindowsApi.h")
 
 target_compile_definitions(DollsEngine PRIVATE
     $<$<PLATFORM_ID:Windows>:DOLLS_PLATFORM_WINDOWS>
