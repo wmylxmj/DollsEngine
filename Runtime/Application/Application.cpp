@@ -13,4 +13,6 @@ namespace DollsEngine
 	{
 		m_platform->PumpMessages();
 	}
+
+
 }

@@ -13,6 +13,8 @@ namespace DollsEngine
 		void Tick();
 
 	protected:
+		void OnEvent(Event& event);
+
 		std::unique_ptr<Platform> m_platform;
 		std::vector<std::unique_ptr<Window>> m_windows;
 	};
