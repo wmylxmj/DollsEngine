@@ -15,18 +15,12 @@ namespace DollsEngine
 		m_platform->PumpMessages();
 	}
 
-	Window* Application::CreateWindow(const WindowCreateInfo& createInfo)
-	{
-		return nullptr;
-	}
-
 	void Application::OnEvent(Event& event)
 	{
 		if (event.GetEventTypeId() == GetEventTypeId<WindowCloseEvent>())
 		{
 			WindowCloseEvent& windowCloseEvent = static_cast<WindowCloseEvent&>(event);
+			OnWindowClose(windowCloseEvent);
 		}
 	}
-
-
 }
