@@ -1,6 +1,8 @@
 #include "Application.h"
 
 #include "../platform/Platform.h"
+#include "../Core/Event/Event.h"
+#include "../Core/Event/Events/WindowEvents.h"
 
 namespace DollsEngine
 {
@@ -12,6 +14,14 @@ namespace DollsEngine
 	void Application::Tick()
 	{
 		m_platform->PumpMessages();
+	}
+
+	void Application::OnEvent(Event& event)
+	{
+		if (event.GetEventTypeId() == GetEventTypeId<WindowCloseEvent>())
+		{
+			WindowCloseEvent& windowCloseEvent = static_cast<WindowCloseEvent&>(event);
+		}
 	}
 
 
