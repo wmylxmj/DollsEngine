@@ -14,6 +14,8 @@ namespace DollsEngine
 		void Create();
 		void Tick();
 
+		Window* CreateWindow(const WindowCreateInfo& createInfo);
+
 	protected:
 		void OnEvent(Event& event);
 
