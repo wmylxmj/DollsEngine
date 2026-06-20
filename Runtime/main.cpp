@@ -13,7 +13,10 @@ bool g_exit = false;
 class MyApplication : public DollsEngine::Application
 {
 public:
-
+	virtual void OnWindowClose(DollsEngine::WindowCloseEvent& event) override
+	{
+		g_exit = true;
+	}
 };
 
 int main()
@@ -29,6 +32,8 @@ int main()
 	windowCreateInfo.clientWidth = 800;
 	windowCreateInfo.clientHeight = 600;
 	windowCreateInfo.title = "Test Window";
+
+	myApplication.CreateWindow(windowCreateInfo)->Show();
 
 	while (!g_exit) {
 		engine.Tick();

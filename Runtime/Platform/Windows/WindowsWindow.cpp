@@ -16,6 +16,7 @@ namespace DollsEngine
 			WNDCLASSEX wc = {};
 			wc.cbSize = sizeof(WNDCLASSEX);
 			wc.style = CS_DBLCLKS;
+			wc.lpfnWndProc = WndProc;
 			wc.cbClsExtra = 0;
 			wc.cbWndExtra = 0;
 			wc.hInstance = GetModuleHandle(NULL);
