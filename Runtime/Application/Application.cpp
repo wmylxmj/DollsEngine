@@ -17,7 +17,14 @@ namespace DollsEngine
 
 	Window* Application::CreateWindow(const WindowCreateInfo& createInfo)
 	{
-		return nullptr;
+		std::unique_ptr<Window> window = std::make_unique<NativeWindow>();
+		window->Create(createInfo);
+		window->SetEventCallback([this](Event& event) { 
+			this->OnEvent(event); 
+		});
+		Window* windowPtr = window.get();
+        m_windows.push_back(std::move(window));
+		return windowPtr;
 	}
 
 	void Application::OnEvent(Event& event)
