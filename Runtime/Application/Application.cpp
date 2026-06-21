@@ -1,6 +1,6 @@
 #include "Application.h"
 
-#include "../platform/Platform.h"
+#include "../Platform/Platform.h"
 #include "../Core/Event/Event.h"
 
 namespace DollsEngine
