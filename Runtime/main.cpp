@@ -8,14 +8,13 @@
 
 #include <iostream>
 
-bool g_exit = false;
 
 class MyApplication : public DollsEngine::Application
 {
 public:
 	virtual void OnWindowClose(DollsEngine::WindowCloseEvent& event) override
 	{
-		g_exit = true;
+		m_shouldExit = true;
 	}
 };
 
@@ -35,7 +34,8 @@ int main()
 
 	myApplication.CreateWindow(windowCreateInfo)->Show();
 
-	while (!g_exit) {
+	while (!engine.ShouldExit())
+	{
 		engine.Tick();
 	}
 

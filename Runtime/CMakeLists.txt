@@ -16,6 +16,8 @@ add_executable (
     "Core/Window.h"
     "Core/Platform.h"
 
+    "RHI/RHI.h"
+
     "Engine/Engine.h" 
     "Engine/Engine.cpp"
 

@@ -13,4 +13,8 @@ namespace DollsEngine
 	{
 		m_application->Tick();
 	}
+
+	bool Engine::ShouldExit() {
+		return m_application->ShouldExit();
+	}
 }

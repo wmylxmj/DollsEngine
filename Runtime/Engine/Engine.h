@@ -11,6 +11,7 @@ namespace DollsEngine
 		void Tick();
 
 		void SetApplication(Application* application) { m_application = application; }
+		bool ShouldExit();
 
 	private:
 		Application* m_application;
