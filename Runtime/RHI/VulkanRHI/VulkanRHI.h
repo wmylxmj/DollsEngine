@@ -1,8 +1,10 @@
 #pragma once
 
+#include "../RHI.h"
+
 namespace DollsEngine
 {
-	class VulkanRHI
+	class VulkanRHI : public RHI
 	{
 
 	};
