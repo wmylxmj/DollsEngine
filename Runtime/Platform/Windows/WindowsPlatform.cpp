@@ -2,6 +2,11 @@
 
 namespace DollsEngine
 {
+	bool WindowsPlatform::Initialize()
+	{
+		return false;
+	}
+
 	void WindowsPlatform::PumpMessages()
 	{
 		MSG msg;

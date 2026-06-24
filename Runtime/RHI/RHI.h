@@ -5,7 +5,7 @@ namespace DollsEngine
     class RHI
     {
     public:
-        virtual void Initialize() = 0;
+        virtual bool Initialize() = 0;
 
     };
 }
