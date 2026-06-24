@@ -8,6 +8,7 @@ namespace DollsEngine
 	void Application::Create()
 	{
 		m_platform = std::make_unique<NativePlatform>();
+		m_platform->Initialize();
 	}
 
 	void Application::Tick()
@@ -19,11 +20,11 @@ namespace DollsEngine
 	{
 		std::unique_ptr<Window> window = std::make_unique<NativeWindow>();
 		window->Create(createInfo);
-		window->SetEventCallback([this](Event& event) { 
-			this->OnEvent(event); 
+		window->SetEventCallback([this](Event& event) {
+			this->OnEvent(event);
 		});
 		Window* windowPtr = window.get();
-        m_windows.push_back(std::move(window));
+		m_windows.push_back(std::move(window));
 		return windowPtr;
 	}
 
