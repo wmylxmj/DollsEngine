@@ -26,7 +26,7 @@ add_executable (
     "Application/Application.cpp"
 
     "main.cpp"
-)
+ "RHI/VulkanRHI/VulkanDevice.h")
 
 if (WIN32)
     target_sources(
