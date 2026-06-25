@@ -4,10 +4,7 @@
 #include "Engine/Engine.h"
 #include "Application/Application.h"
 
-#include "GLFW/glfw3.h"
-
 #include <iostream>
-
 
 class MyApplication : public DollsEngine::Application
 {

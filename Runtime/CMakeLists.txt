@@ -17,7 +17,10 @@ add_executable (
     "Core/Platform.h"
 
     "RHI/RHI.h"
+    "RHI/VulkanRHI/VulkanApi.h"
     "RHI/VulkanRHI/VulkanRHI.h"
+    "RHI/VulkanRHI/VulkanRHI.cpp"
+    "RHI/VulkanRHI/VulkanDevice.h"
 
     "Engine/Engine.h" 
     "Engine/Engine.cpp"
@@ -26,7 +29,7 @@ add_executable (
     "Application/Application.cpp"
 
     "main.cpp"
- "RHI/VulkanRHI/VulkanDevice.h")
+)
 
 if (WIN32)
     target_sources(

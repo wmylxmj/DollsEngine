@@ -4,5 +4,6 @@ namespace DollsEngine
 {
 	bool VulkanRHI::Initialize()
 	{
+		return true;
 	}
 }
