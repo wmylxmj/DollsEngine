@@ -1,6 +1,7 @@
 #pragma once
 
 #include "../RHI.h"
+#include "VulkanApi.h"
 
 namespace DollsEngine
 {
@@ -8,5 +9,8 @@ namespace DollsEngine
 	{
 	public:
 		virtual bool Initialize() override;
+
+	protected:
+		VkInstance m_instance;
 	};
 }
