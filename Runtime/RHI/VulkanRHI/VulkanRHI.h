@@ -11,6 +11,8 @@ namespace DollsEngine
 		virtual bool Initialize() override;
 
 	protected:
+		bool CreateInstance();
+
 		VkInstance m_instance;
 	};
 }
