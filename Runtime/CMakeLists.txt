@@ -17,6 +17,7 @@ add_executable (
     "Core/Platform.h"
 
     "RHI/RHI.h"
+    "RHI/VulkanRHI/VulkanPlatform/Windows/VulkanWindowsPlatform.h"
     "RHI/VulkanRHI/VulkanApi.h"
     "RHI/VulkanRHI/VulkanRHI.h"
     "RHI/VulkanRHI/VulkanRHI.cpp"
