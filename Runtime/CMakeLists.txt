@@ -30,7 +30,7 @@ add_executable (
     "Application/Application.cpp"
 
     "main.cpp"
-)
+ "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp")
 
 if (WIN32)
     target_sources(
