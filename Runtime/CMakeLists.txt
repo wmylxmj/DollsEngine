@@ -18,6 +18,7 @@ add_executable (
 
     "RHI/RHI.h"
     "RHI/VulkanRHI/VulkanApi.h"
+    "RHI/VulkanRHI/VulkanPlatform.h"
     "RHI/VulkanRHI/VulkanRHI.h"
     "RHI/VulkanRHI/VulkanRHI.cpp"
     "RHI/VulkanRHI/VulkanDevice.h"
@@ -29,7 +30,7 @@ add_executable (
     "Application/Application.cpp"
 
     "main.cpp"
- "RHI/VulkanRHI/VulkanPlatform.h")
+)
 
 if (WIN32)
     target_sources(
@@ -39,6 +40,7 @@ if (WIN32)
         "Platform/Windows/WindowsPlatform.cpp"  
         "Platform/Windows/WindowsWindow.h"
         "Platform/Windows/WindowsWindow.cpp"
+        "RHI/VulkanRHI/windows/VulkanWindowsPlatform.h"
     )
 endif()
     
@@ -46,14 +48,6 @@ target_compile_definitions(DollsEngine PRIVATE
     $<$<PLATFORM_ID:Windows>:DOLLS_PLATFORM_WINDOWS>
 )
 
-
-
-# 添加Vulkan平台宏定义
-target_compile_definitions(DollsEngine PRIVATE
-    $<$<PLATFORM_ID:Windows>:VK_USE_PLATFORM_WIN32_KHR>
-    $<$<PLATFORM_ID:Linux>:VK_USE_PLATFORM_XLIB_KHR>
-    $<$<PLATFORM_ID:Darwin>:VK_USE_PLATFORM_MACOS_MVK>
-)
 target_link_libraries(DollsEngine PRIVATE volk)
 
 target_compile_definitions(DollsEngine PRIVATE GLFW_INCLUDE_NONE)
