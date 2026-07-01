@@ -9,28 +9,23 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 add_executable (
     DollsEngine 
     "Platform/Platform.h"
-    
     "Core/Core.h"
     "Core/Event/Event.h"
     "Core/Event/Events/WindowEvents.h"
     "Core/Window.h"
     "Core/Platform.h"
-
     "RHI/RHI.h"
     "RHI/VulkanRHI/VulkanApi.h"
     "RHI/VulkanRHI/VulkanPlatform.h"
     "RHI/VulkanRHI/VulkanRHI.h"
     "RHI/VulkanRHI/VulkanRHI.cpp"
     "RHI/VulkanRHI/VulkanDevice.h"
-
     "Engine/Engine.h" 
     "Engine/Engine.cpp"
-
     "Application/Application.h"
     "Application/Application.cpp"
-
     "main.cpp"
- "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp")
+)
 
 if (WIN32)
     target_sources(
@@ -41,6 +36,7 @@ if (WIN32)
         "Platform/Windows/WindowsWindow.h"
         "Platform/Windows/WindowsWindow.cpp"
         "RHI/VulkanRHI/windows/VulkanWindowsPlatform.h"
+        "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp"
     )
 endif()
     
