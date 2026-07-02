@@ -7,5 +7,5 @@
 
 namespace DollsEngine
 {
-	VkSurfaceKHR VulkanWindowsPlatformCreateSurface(VkInstance instance, void* windowHandle);
+	VkResult VulkanWindowsPlatformCreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface);
 }

@@ -25,6 +25,8 @@ namespace DollsEngine
 		{
 			return false;
 		}
+
+		return true;
 	}
 
 	void WindowsWindow::Show()

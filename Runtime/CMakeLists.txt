@@ -2,6 +2,12 @@
 # 项目特定的逻辑。
 #
 
+# 添加Vulkan平台宏定义
+set(VOLK_STATIC_DEFINES
+    $<$<PLATFORM_ID:Windows>:VK_USE_PLATFORM_WIN32_KHR>
+    $<$<PLATFORM_ID:Linux>:VK_USE_PLATFORM_XLIB_KHR>
+    $<$<PLATFORM_ID:Darwin>:VK_USE_PLATFORM_MACOS_MVK>
+)
 add_subdirectory(../External/volk ${CMAKE_CURRENT_BINARY_DIR}/volk)
 add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 
