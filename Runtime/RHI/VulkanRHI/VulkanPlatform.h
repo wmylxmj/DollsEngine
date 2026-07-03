@@ -6,7 +6,7 @@
 
 namespace DollsEngine
 {
-	inline VkResult VulkanPlatformCreateSurface(VkInstance instance, HWND windowHandle, VkSurfaceKHR* outSurface)
+	inline VkResult VulkanPlatformCreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface)
 	{
 #ifdef DOLLS_PLATFORM_WINDOWS
 		return VulkanWindowsPlatformCreateSurface(instance, windowHandle, outSurface);
