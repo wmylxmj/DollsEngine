@@ -21,7 +21,7 @@ add_executable (
     "Core/Window.h"
     "Core/Platform.h"
     "RHI/RHI.h"
-    "RHI/VulkanRHI/VulkanApi.h"
+    "RHI/VulkanRHI/VulkanAPI.h"
     "RHI/VulkanRHI/VulkanPlatform.h"
     "RHI/VulkanRHI/VulkanRHI.h"
     "RHI/VulkanRHI/VulkanRHI.cpp"
@@ -36,7 +36,7 @@ add_executable (
 if (WIN32)
     target_sources(
         DollsEngine PRIVATE
-        "Platform/Windows/WindowsApi.h"
+        "Platform/Windows/WindowsAPI.h"
         "Platform/Windows/WindowsPlatform.h" 
         "Platform/Windows/WindowsPlatform.cpp"  
         "Platform/Windows/WindowsWindow.h"
