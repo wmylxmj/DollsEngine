@@ -14,13 +14,13 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 # 将源代码添加到此项目的可执行文件。
 add_executable (
     DollsEngine 
-    "Platform/Platform.h"
+    "Platform/PAL/Window.h"
+    "Platform/PAL/Platform.h"
     "Core/Core.h"
     "Core/Event/Event.h"
     "Core/Event/Events/WindowEvents.h"
-    "Core/Window.h"
-    "Core/Platform.h"
     "RHI/RHI.h"
+    "RHI/RHIResource.h"
     "RHI/VulkanRHI/VulkanAPI.h"
     "RHI/VulkanRHI/VulkanPlatform.h"
     "RHI/VulkanRHI/VulkanRHI.h"

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../Core/Window.h"
+#include "../PAL/Window.h"
 #include "WindowsApi.h"
 
 namespace DollsEngine
