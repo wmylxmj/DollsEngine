@@ -1,6 +1,6 @@
 #include "Application.h"
 
-#include "../PAL/Platform.h"
+#include "../PAL/PAL.h"
 #include "../Core/Event/Event.h"
 
 namespace DollsEngine
