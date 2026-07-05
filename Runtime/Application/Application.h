@@ -1,8 +1,8 @@
 #pragma once
 
-#include "../PAL/PAL/Window.h"
-#include "../PAL/PAL/Platform.h"
-#include "../PAL/PAL/WindowEvents.h"
+#include "../Platform/PAL/Window.h"
+#include "../Platform/PAL/Platform.h"
+#include "../Platform/PAL/WindowEvents.h"
 
 #include <memory>
 
