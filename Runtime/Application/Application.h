@@ -1,7 +1,7 @@
 #pragma once
 
-#include "../Platform/PAL/Window.h"
-#include "../Platform/PAL/Platform.h"
+#include "../PAL/PAL/Window.h"
+#include "../PAL/PAL/Platform.h"
 #include "../Core/Event/Events/WindowEvents.h"
 
 #include <memory>
