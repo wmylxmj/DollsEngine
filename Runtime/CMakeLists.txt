@@ -19,8 +19,8 @@ add_executable (
     "Core/Core.h"
     "Core/Event/Event.h"
     "Core/Event/Events/WindowEvents.h"
-    "RHI/RHI.h"
-    "RHI/RHIResource.h"
+    "RHI/RHI/RHI.h"
+    "RHI/RHI/RHIResource.h"
     "RHI/VulkanRHI/VulkanAPI.h"
     "RHI/VulkanRHI/VulkanPlatform.h"
     "RHI/VulkanRHI/VulkanRHI.h"
@@ -41,7 +41,7 @@ if (WIN32)
         "PAL/Windows/WindowsPlatform.cpp"  
         "PAL/Windows/WindowsWindow.h"
         "PAL/Windows/WindowsWindow.cpp"
-        "RHI/VulkanRHI/windows/VulkanWindowsPlatform.h"
+        "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.h"
         "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp"
     )
 endif()
