@@ -14,9 +14,9 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 # 将源代码添加到此项目的可执行文件。
 add_executable (
     DollsEngine 
-    "PAL/PAL/Window.h"
-    "PAL/PAL/WindowEvents.h"
-    "PAL/PAL/Platform.h"
+    "Platform/PAL/Window.h"
+    "Platform/PAL/WindowEvents.h"
+    "Platform/PAL/Platform.h"
     "Core/Core.h"
     "Core/Event/Event.h"
     "RHI/RHI/RHI.h"
@@ -36,11 +36,11 @@ add_executable (
 if (WIN32)
     target_sources(
         DollsEngine PRIVATE
-        "PAL/Windows/WindowsAPI.h"
-        "PAL/Windows/WindowsPlatform.h" 
-        "PAL/Windows/WindowsPlatform.cpp"  
-        "PAL/Windows/WindowsWindow.h"
-        "PAL/Windows/WindowsWindow.cpp"
+        "Platform/Windows/WindowsAPI.h"
+        "Platform/Windows/WindowsPlatform.h" 
+        "Platform/Windows/WindowsPlatform.cpp"  
+        "Platform/Windows/WindowsWindow.h"
+        "Platform/Windows/WindowsWindow.cpp"
         "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.h"
         "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp"
     )
