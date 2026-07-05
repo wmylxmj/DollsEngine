@@ -15,10 +15,10 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 add_executable (
     DollsEngine 
     "PAL/PAL/Window.h"
+    "PAL/PAL/WindowEvents.h"
     "PAL/PAL/Platform.h"
     "Core/Core.h"
     "Core/Event/Event.h"
-    "Core/Event/Events/WindowEvents.h"
     "RHI/RHI/RHI.h"
     "RHI/RHI/RHIResource.h"
     "RHI/VulkanRHI/VulkanAPI.h"

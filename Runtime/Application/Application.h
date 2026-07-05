@@ -2,7 +2,7 @@
 
 #include "../PAL/PAL/Window.h"
 #include "../PAL/PAL/Platform.h"
-#include "../Core/Event/Events/WindowEvents.h"
+#include "../PAL/PAL/WindowEvents.h"
 
 #include <memory>
 

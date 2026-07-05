@@ -1,7 +1,7 @@
 #include "WindowsPlatform.h"
 
 #include "WindowsWindow.h"
-#include "../../Core/Event/Events/WindowEvents.h"
+#include "../PAL/WindowEvents.h"
 
 namespace DollsEngine
 {
