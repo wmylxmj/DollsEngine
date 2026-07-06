@@ -28,10 +28,12 @@ add_executable (
     "Application/Application.h"
     "Application/Application.cpp"
     "Application/Window.h"
+    "Application/NativeWindow.h"
     "Application/WindowEvents.h"
     "Application/ApplicationPlatform.h"
+    "Application/ApplicationNativePlatform.h"
     "main.cpp"
-   "Application/NativeWindow.h" "Application/ApplicationNativePlatform.h")
+)
 
 if (WIN32)
     target_sources(
