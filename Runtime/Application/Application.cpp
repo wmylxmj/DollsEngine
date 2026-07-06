@@ -8,7 +8,7 @@ namespace DollsEngine
 {
 	void Application::Create()
 	{
-		m_platform = std::make_unique<NativePlatform>();
+		m_platform = std::make_unique<ApplicationNativePlatform>();
 		m_platform->Initialize();
 	}
 
