@@ -1,6 +1,7 @@
 #include "Application.h"
 
-#include "../Platform/PAL.h"
+#include "ApplicationNativePlatform.h"
+#include "NativeWindow.h"
 #include "../Core/Event/Event.h"
 
 namespace DollsEngine
