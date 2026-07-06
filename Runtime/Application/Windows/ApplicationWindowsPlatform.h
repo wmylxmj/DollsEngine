@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../ApplicationPlatform.h"
-#include "WindowsAPI.h"
+#include "../../Core/Windows/WindowsAPI.h"
 
 namespace DollsEngine
 {
