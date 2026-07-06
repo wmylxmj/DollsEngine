@@ -14,7 +14,6 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 # 将源代码添加到此项目的可执行文件。
 add_executable (
     DollsEngine 
-
     "Core/Core.h"
     "Core/Event/Event.h"
     "RHI/RHI/RHI.h"
@@ -38,8 +37,8 @@ if (WIN32)
     target_sources(
         DollsEngine PRIVATE
         "Core/Windows/WindowsAPI.h" 
-        "Application/Windows/WindowsPlatform.cpp" 
-        "Application/Windows/WindowsPlatform.h" 
+        "Application/Windows/ApplicationWindowsPlatform.cpp" 
+        "Application/Windows/ApplicationWindowsPlatform.h" 
         "Application/Windows/WindowsWindow.cpp" 
         "Application/Windows/WindowsWindow.h"
         "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.h"
