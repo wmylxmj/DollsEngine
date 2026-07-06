@@ -1,11 +1,11 @@
-#include "WindowsPlatform.h"
+#include "ApplicationWindowsPlatform.h"
 
 #include "WindowsWindow.h"
 #include "../PAL/WindowEvents.h"
 
 namespace DollsEngine
 {
-	bool WindowsPlatform::Initialize()
+	bool ApplicationWindowsPlatform::Initialize()
 	{
 		WNDCLASSEX wc = {};
 		wc.cbSize = sizeof(WNDCLASSEX);
@@ -30,7 +30,7 @@ namespace DollsEngine
 		return true;
 	}
 
-	void WindowsPlatform::PumpMessages()
+	void ApplicationWindowsPlatform::PumpMessages()
 	{
 		MSG msg;
 		while (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))

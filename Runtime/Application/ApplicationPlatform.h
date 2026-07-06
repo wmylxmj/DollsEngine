@@ -2,7 +2,7 @@
 
 namespace DollsEngine
 {
-	class Platform
+	class ApplicationPlatform
 	{
 	public:
 		virtual bool Initialize() = 0;

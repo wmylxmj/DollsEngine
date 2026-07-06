@@ -1,11 +1,11 @@
 #pragma once
 
-#include "../PAL/Platform.h"
+#include "../ApplicationPlatform.h"
 #include "WindowsAPI.h"
 
 namespace DollsEngine
 {
-	class WindowsPlatform : public Platform
+	class ApplicationWindowsPlatform : public ApplicationPlatform
 	{
 	public:
 		virtual bool Initialize() override;
