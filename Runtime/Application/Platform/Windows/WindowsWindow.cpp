@@ -1,6 +1,6 @@
 #include "WindowsWindow.h"
 
-#include "../WindowEvents.h"
+#include "../../WindowEvents.h"
 #include <tchar.h>
 
 namespace DollsEngine
