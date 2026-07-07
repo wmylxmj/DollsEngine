@@ -361,6 +361,8 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Clion
 /.idea/.gitignore
 /cmake-build-debug/CMakeFiles/3.29.6/CompilerIdC/a.exe
 /cmake-build-debug/CMakeFiles/3.29.6/CompilerIdCXX/a.exe
