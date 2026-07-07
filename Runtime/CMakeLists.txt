@@ -28,10 +28,10 @@ add_executable (
     "Application/Application.h"
     "Application/Application.cpp"
     "Application/Window.h"
-    "Application/NativeWindow.h"
+    "Application/Platform/NativeWindow.h"
     "Application/WindowEvents.h"
     "Application/ApplicationPlatform.h"
-    "Application/ApplicationNativePlatform.h"
+    "Application/Platform/ApplicationNativePlatform.h"
     "main.cpp"
 )
 
@@ -39,10 +39,10 @@ if (WIN32)
     target_sources(
         DollsEngine PRIVATE
         "Core/Windows/WindowsAPI.h" 
-        "Application/Windows/ApplicationWindowsPlatform.cpp" 
-        "Application/Windows/ApplicationWindowsPlatform.h" 
-        "Application/Windows/WindowsWindow.cpp" 
-        "Application/Windows/WindowsWindow.h"
+        "Application/Platform/Windows/ApplicationWindowsPlatform.cpp" 
+        "Application/Platform/Windows/ApplicationWindowsPlatform.h" 
+        "Application/Platform/Windows/WindowsWindow.cpp" 
+        "Application/Platform/Windows/WindowsWindow.h"
         "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.h"
         "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp"
     )
