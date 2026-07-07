@@ -33,6 +33,8 @@ add_executable(DollsEngine
         "Application/ApplicationPlatform.h"
         "Application/Platform/ApplicationNativePlatform.h"
         "main.cpp"
+        Application/Platform/Windows/WindowsPlatformService.cpp
+        Application/Platform/Windows/WindowsPlatformService.h
 )
 
 if (WIN32)
