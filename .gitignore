@@ -424,3 +424,7 @@ FodyWeavers.xsd
 /cmake-build-debug/Runtime/DollsEngine.exe
 /cmake-build-debug/Runtime/glfw/src/libglfw3.a
 /cmake-build-debug/Runtime/volk/libvolk.a
+/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-bf200b9d156a66a2469a.json
+/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0ea2243beff7bc19e517.json
+/cmake-build-debug/.cmake/api/v1/reply/index-2026-07-07T14-33-51-0748.json
+/cmake-build-debug/.cmake/api/v1/reply/target-DollsEngine-Debug-6be489a507eb97735c4b.json
