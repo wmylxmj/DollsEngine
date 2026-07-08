@@ -1,14 +1,14 @@
 #include "Application.h"
 
-#include "Platform/ApplicationNativePlatform.h"
 #include "Platform/NativeWindow.h"
+#include "Platform/NativePlatformService.h"
 #include "../Core/Event/Event.h"
 
 namespace DollsEngine
 {
 	void Application::Create()
 	{
-		m_platform = std::make_unique<ApplicationNativePlatform>();
+		m_platform = std::make_unique<NativePlatformService>();
 		m_platform->Initialize();
 	}
 
