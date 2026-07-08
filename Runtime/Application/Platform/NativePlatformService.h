@@ -1,0 +1,8 @@
+//
+// Created by 13973 on 26-7-8.
+//
+
+#ifndef NATIVEPLATFORMSERVICE_H
+#define NATIVEPLATFORMSERVICE_H
+
+#endif //NATIVEPLATFORMSERVICE_H
