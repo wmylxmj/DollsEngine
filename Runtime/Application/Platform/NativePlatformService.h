@@ -1,8 +1,9 @@
-//
-// Created by 13973 on 26-7-8.
-//
+#pragma once
 
-#ifndef NATIVEPLATFORMSERVICE_H
-#define NATIVEPLATFORMSERVICE_H
-
-#endif //NATIVEPLATFORMSERVICE_H
+#ifdef DOLLS_PLATFORM_WINDOWS
+#include "Windows/WindowsPlatformService.h"
+namespace DollsEngine
+{
+    using NativePlatformService = WindowsPlatformService;
+}
+#endif
