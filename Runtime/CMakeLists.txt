@@ -30,8 +30,6 @@ add_executable(DollsEngine
         "Application/PlatformService.h"
         "Application/Platform/NativeWindow.h"
         "Application/WindowEvents.h"
-        "Application/ApplicationPlatform.h"
-        "Application/Platform/ApplicationNativePlatform.h"
         "main.cpp"
         Application/Platform/NativePlatformService.h
 )
