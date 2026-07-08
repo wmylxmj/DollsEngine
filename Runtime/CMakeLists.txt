@@ -37,8 +37,6 @@ add_executable(DollsEngine
 if (WIN32)
     target_sources(DollsEngine PRIVATE
             "Core/Windows/WindowsAPI.h"
-            "Application/Platform/Windows/ApplicationWindowsPlatform.cpp"
-            "Application/Platform/Windows/ApplicationWindowsPlatform.h"
             "Application/Platform/Windows/WindowsWindow.cpp"
             "Application/Platform/Windows/WindowsWindow.h"
             "Application/Platform/Windows/WindowsPlatformService.h"

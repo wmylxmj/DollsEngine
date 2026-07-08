@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Window.h"
-#include "ApplicationPlatform.h"
+#include "PlatformService.h"
 #include "WindowEvents.h"
 
 #include <memory>
@@ -24,7 +24,7 @@ namespace DollsEngine
 		virtual void OnWindowClose(WindowCloseEvent& event) {}
 
 		bool m_shouldExit = false;
-		std::unique_ptr<ApplicationPlatform> m_platform;
+		std::unique_ptr<PlatformService> m_platform;
 		std::vector<std::unique_ptr<Window>> m_windows;
 	};
 }
