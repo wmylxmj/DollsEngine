@@ -27,14 +27,12 @@ add_executable(DollsEngine
         "Application/Application.h"
         "Application/Application.cpp"
         "Application/Window.h"
+        "Application/PlatformService.h"
         "Application/Platform/NativeWindow.h"
         "Application/WindowEvents.h"
         "Application/ApplicationPlatform.h"
         "Application/Platform/ApplicationNativePlatform.h"
         "main.cpp"
-        Application/Platform/Windows/WindowsPlatformService.cpp
-        Application/Platform/Windows/WindowsPlatformService.h
-        Application/PlatformService.h
 )
 
 if (WIN32)
@@ -44,6 +42,8 @@ if (WIN32)
             "Application/Platform/Windows/ApplicationWindowsPlatform.h"
             "Application/Platform/Windows/WindowsWindow.cpp"
             "Application/Platform/Windows/WindowsWindow.h"
+            "Application/Platform/Windows/WindowsPlatformService.h"
+            "Application/Platform/Windows/WindowsPlatformService.cpp"
             "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.h"
             "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp"
     )
