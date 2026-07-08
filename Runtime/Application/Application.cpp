@@ -8,13 +8,13 @@ namespace DollsEngine
 {
 	void Application::Create()
 	{
-		m_platform = std::make_unique<NativePlatformService>();
-		m_platform->Initialize();
+		m_platformService = std::make_unique<NativePlatformService>();
+		m_platformService->Initialize();
 	}
 
 	void Application::Tick()
 	{
-		m_platform->PumpMessages();
+		m_platformService->PumpMessages();
 	}
 
 	Window* Application::CreateWindow(const WindowCreateInfo& createInfo)

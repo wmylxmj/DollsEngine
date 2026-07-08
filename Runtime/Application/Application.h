@@ -24,7 +24,7 @@ namespace DollsEngine
 		virtual void OnWindowClose(WindowCloseEvent& event) {}
 
 		bool m_shouldExit = false;
-		std::unique_ptr<PlatformService> m_platform;
+		std::unique_ptr<PlatformService> m_platformService;
 		std::vector<std::unique_ptr<Window>> m_windows;
 	};
 }

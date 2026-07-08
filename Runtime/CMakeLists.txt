@@ -27,11 +27,11 @@ add_executable(DollsEngine
         "Application/Application.h"
         "Application/Application.cpp"
         "Application/Window.h"
+        "Application/WindowEvents.h"
         "Application/PlatformService.h"
         "Application/Platform/NativeWindow.h"
-        "Application/WindowEvents.h"
+        "Application/Platform/NativePlatformService.h"
         "main.cpp"
-        Application/Platform/NativePlatformService.h
 )
 
 if (WIN32)
