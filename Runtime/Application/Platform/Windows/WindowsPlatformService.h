@@ -1,7 +1,13 @@
 #pragma once
 
+#include "../../PlatformService.h"
+
 namespace DollsEngine {
-    class WindowsPlatformService {
+    class WindowsPlatformService : public PlatformService {
+
+    public:
+        virtual bool Initialize() override;
+        virtual void PumpMessages() override;
 
     };
 }

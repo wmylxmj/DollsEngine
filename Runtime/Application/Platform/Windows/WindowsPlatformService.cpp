@@ -3,3 +3,10 @@
 //
 
 #include "WindowsPlatformService.h"
+
+#include "WindowsWindow.h"
+#include "../../WindowEvents.h"
+
+namespace DollsEngine {
+
+}
