@@ -19,6 +19,7 @@ add_executable(DollsEngine
         "RHI/RHIResource.h"
         "RHI/VulkanRHI/VulkanAPI.h"
         "RHI/VulkanRHI/VulkanPlatform.h"
+        "RHI/VulkanRHI/Platforms/VulkanNativePlatform.h"
         "RHI/VulkanRHI/VulkanRHI.h"
         "RHI/VulkanRHI/VulkanRHI.cpp"
         "RHI/VulkanRHI/VulkanDevice.h"

@@ -2,7 +2,7 @@
 
 #include "../../../../Core/Windows/WindowsAPI.h"
 
-namespace DollsEngine
+namespace
 {
 	VkResult VulkanWindowsPlatform::CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface)
 	{
