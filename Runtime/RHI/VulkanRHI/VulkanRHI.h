@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../RHI/RHI.h"
+#include "../RHI.h"
 #include "VulkanAPI.h"
 
 namespace DollsEngine

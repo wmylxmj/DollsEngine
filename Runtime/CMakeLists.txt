@@ -15,8 +15,8 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 add_executable(DollsEngine
         "Core/Core.h"
         "Core/Event/Event.h"
-        "RHI/RHI/RHI.h"
-        "RHI/RHI/RHIResource.h"
+        "RHI/RHI.h"
+        "RHI/RHIResource.h"
         "RHI/VulkanRHI/VulkanAPI.h"
         "RHI/VulkanRHI/VulkanPlatform.h"
         "RHI/VulkanRHI/VulkanRHI.h"
