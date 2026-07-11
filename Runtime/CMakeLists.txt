@@ -41,8 +41,8 @@ if (WIN32)
             "Application/Platform/Windows/WindowsWindow.h"
             "Application/Platform/Windows/WindowsPlatformService.h"
             "Application/Platform/Windows/WindowsPlatformService.cpp"
-            "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.h"
-            "RHI/VulkanRHI/Windows/VulkanWindowsPlatform.cpp"
+            "RHI/VulkanRHI/Platforms/Windows/VulkanWindowsPlatform.h"
+            "RHI/VulkanRHI/Platforms/Windows/VulkanWindowsPlatform.cpp"
     )
 endif()
     
