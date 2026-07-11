@@ -1,15 +1,11 @@
 #pragma once
 
-#ifdef DOLLS_PLATFORM_WINDOWS
-#include "Windows/VulkanWindowsPlatform.h"
-#endif
+#include "VulkanAPI.h"
 
 namespace DollsEngine
 {
-	inline VkResult VulkanPlatformCreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface)
-	{
-#ifdef DOLLS_PLATFORM_WINDOWS
-		return VulkanWindowsPlatformCreateSurface(instance, windowHandle, outSurface);
-#endif
-	}
+	class VulkanPlatform {
+		virtual VkResult CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface) = 0;
+
+	};
 }

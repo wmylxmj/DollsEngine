@@ -4,7 +4,7 @@
 
 namespace DollsEngine
 {
-	VkResult VulkanWindowsPlatformCreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface)
+	VkResult VulkanWindowsPlatform::CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface)
 	{
 		VkWin32SurfaceCreateInfoKHR createInfo = {};
 		createInfo.sType = VK_STRUCTURE_TYPE_WIN32_SURFACE_CREATE_INFO_KHR;

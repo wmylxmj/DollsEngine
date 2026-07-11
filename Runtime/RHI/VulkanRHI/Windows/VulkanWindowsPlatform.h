@@ -1,8 +1,11 @@
 #pragma once
 
 #include "../VulkanAPI.h"
+#include "../VulkanPlatform.h"
 
 namespace DollsEngine
 {
-	VkResult VulkanWindowsPlatformCreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface);
+	class VulkanWindowsPlatform : public VulkanPlatform {
+		virtual VkResult CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface) override;
+	};
 }
