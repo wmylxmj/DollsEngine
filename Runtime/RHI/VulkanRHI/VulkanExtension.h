@@ -19,8 +19,24 @@ namespace DollsEngine
 
     };
 
+    class VulkanInstanceExtensionsCollector
+    {
+
+    };
+
+
+
+
     class VulkanDeviceExtension : public VulkanExtension
     {
 
     };
+
+    class VulkanDeviceExtensionsCollector
+    {
+
+    };
+
+
+
 }
