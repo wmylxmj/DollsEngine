@@ -9,7 +9,9 @@ namespace DollsEngine
     class VulkanExtension
     {
     public:
-        [[nodiscard]] inline bool IsSupported() const { return m_isSupported; }
+        void SetSupported() { m_isSupported = true; }
+        [[nodiscard]] bool IsSupported() const { return m_isSupported; }
+
 
     protected:
         bool m_isSupported = false;
