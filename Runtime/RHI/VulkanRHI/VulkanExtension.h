@@ -2,11 +2,15 @@
 
 #include "VulkanAPI.h"
 
+#include <vector>
+
 namespace DollsEngine
 {
     class VulkanExtension
     {
     public:
+        inline bool IsEnabled() const { return m_isEnabled; }
+        inline bool IsSupported() const { return m_isSupported; }
 
     protected:
         bool m_isEnabled = false;
@@ -21,7 +25,8 @@ namespace DollsEngine
 
     class VulkanInstanceExtensionsCollector
     {
-
+    private:
+        std::vector<VulkanInstanceExtension> m_preferredExtensions;
     };
 
 
