@@ -22,6 +22,8 @@ namespace DollsEngine
     // 实例拓展
     class VulkanInstanceExtension : public VulkanExtension
     {
+    public:
+        explicit VulkanInstanceExtension(const char* extensionName) : VulkanExtension(extensionName) {}
 
     };
 

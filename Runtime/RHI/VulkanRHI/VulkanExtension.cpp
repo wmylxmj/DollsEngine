@@ -3,3 +3,8 @@
 //
 
 #include "VulkanExtension.h"
+
+namespace DollsEngine
+{
+
+}
