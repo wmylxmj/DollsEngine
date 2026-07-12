@@ -9,11 +9,13 @@ namespace DollsEngine
     class VulkanExtension
     {
     public:
+        explicit VulkanExtension(const char* extensionName) : m_extensionName(extensionName) {}
         void SetSupported() { m_isSupported = true; }
         [[nodiscard]] bool IsSupported() const { return m_isSupported; }
 
 
     protected:
+        const char* m_extensionName;
         bool m_isSupported = false;
     };
 
