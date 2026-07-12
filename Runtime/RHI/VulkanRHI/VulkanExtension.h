@@ -25,6 +25,9 @@ namespace DollsEngine
 
     class VulkanInstanceExtensionsCollector
     {
+    public:
+        void FlagExtensionsSupported(const char* pLayerName = nullptr);
+
     private:
         std::vector<VulkanInstanceExtension> m_preferredExtensions;
     };
