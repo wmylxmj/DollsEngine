@@ -33,6 +33,7 @@ namespace DollsEngine
     public:
         void AddExtension(const char* extensionName);
         void FlagExtensionsSupported(const char* layerName = nullptr);
+        std::vector<const char*> GetSupportedExtensions();
 
     private:
         std::vector<VulkanInstanceExtension> m_preferredExtensions;

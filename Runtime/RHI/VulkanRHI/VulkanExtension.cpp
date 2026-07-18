@@ -33,6 +33,17 @@ namespace DollsEngine
         }
     }
 
-
+    std::vector<const char *> VulkanInstanceExtensionsCollector::GetSupportedExtensions()
+    {
+        std::vector<const char *> extensions;
+        for (const auto& extension : m_preferredExtensions) {
+            if (extension.IsSupported()) {
+                extensions.push_back(extension.GetExtensionName());
+            }
+        }
+        return extensions;
+    }
 
 }
+
+
