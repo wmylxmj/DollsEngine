@@ -10,6 +10,7 @@ namespace DollsEngine
     {
     public:
         explicit VulkanExtension(const char* extensionName) : m_extensionName(extensionName) {}
+        const char* GetExtensionName() const { return m_extensionName; }
         void SetSupported() { m_isSupported = true; }
         [[nodiscard]] bool IsSupported() const { return m_isSupported; }
 
