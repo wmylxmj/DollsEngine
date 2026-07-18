@@ -22,6 +22,9 @@ namespace DollsEngine
         vkEnumerateInstanceExtensionProperties(layerName, &extensionCount, extensionProperties.data());
 
         for (auto& preferredExtension : m_preferredExtensions) {
+            if (preferredExtension.IsSupported()) {
+                continue;
+            }
             for (const auto& extensionProperty : extensionProperties) {
                 if (strcmp(preferredExtension.GetExtensionName(), extensionProperty.extensionName) == 0) {
                     preferredExtension.SetSupported();
