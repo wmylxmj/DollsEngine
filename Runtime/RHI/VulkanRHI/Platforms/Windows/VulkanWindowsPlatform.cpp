@@ -12,4 +12,10 @@ namespace DollsEngine
 		createInfo.hwnd = (HWND)windowHandle;
 		return vkCreateWin32SurfaceKHR(instance, &createInfo, nullptr, outSurface);
 	}
+
+	void VulkanWindowsPlatform::CollectInstanceExtensions(VulkanInstanceExtensionsCollector &collector)
+	{
+
+	}
+
 }
