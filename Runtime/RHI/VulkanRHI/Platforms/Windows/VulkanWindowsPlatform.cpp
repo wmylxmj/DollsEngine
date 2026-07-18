@@ -15,7 +15,7 @@ namespace DollsEngine
 
 	void VulkanWindowsPlatform::CollectInstanceExtensions(VulkanInstanceExtensionsCollector &collector)
 	{
-
+		collector.AddExtension(VK_KHR_WIN32_SURFACE_EXTENSION_NAME);
 	}
 
 }
