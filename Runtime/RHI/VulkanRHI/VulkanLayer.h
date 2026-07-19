@@ -13,6 +13,11 @@ namespace DollsEngine
         const char* m_layerName;
         bool m_isSupported = false;
     };
+
+    // 实例层
+    class VulkanInstanceLayer : public VulkanLayer
+    {
+    };
 }
 
 
