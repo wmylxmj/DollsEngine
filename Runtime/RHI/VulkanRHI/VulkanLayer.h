@@ -17,6 +17,8 @@ namespace DollsEngine
     // 实例层
     class VulkanInstanceLayer : public VulkanLayer
     {
+    public:
+        explicit VulkanInstanceLayer(const char* layerName) : VulkanLayer(layerName) {}
     };
 }
 
