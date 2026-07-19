@@ -1,16 +1,12 @@
-//
-// Created by 13973 on 26-7-18.
-//
+#pragma once
 
-#ifndef VULKANLAYER_H
-#define VULKANLAYER_H
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanLayer {
 
-
-class VulkanLayer {
-
-};
+    };
+}
 
 
-
-#endif //VULKANLAYER_H
