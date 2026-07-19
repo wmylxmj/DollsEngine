@@ -10,6 +10,7 @@ namespace DollsEngine
 
     protected:
         const char* m_layerName;
+        bool m_isSupported = false;
     };
 }
 
