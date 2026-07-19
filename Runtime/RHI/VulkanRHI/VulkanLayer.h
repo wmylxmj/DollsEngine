@@ -9,6 +9,7 @@ namespace DollsEngine
         explicit VulkanLayer(const char* layerName) : m_layerName(layerName) {}
         const char* GetLayerName() const { return m_layerName; }
         void SetSupported() { m_isSupported = true; }
+        bool IsSupported() const { return m_isSupported; }
 
 
     protected:
