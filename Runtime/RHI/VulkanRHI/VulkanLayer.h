@@ -23,6 +23,11 @@ namespace DollsEngine
     public:
         explicit VulkanInstanceLayer(const char* layerName) : VulkanLayer(layerName) {}
     };
+
+    class VulkanInstanceLayersCollector
+    {
+    public:
+    };
 }
 
 
