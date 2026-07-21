@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VulkanAPI.h"
+#include <vector>
 
 namespace DollsEngine
 {
@@ -27,6 +28,9 @@ namespace DollsEngine
     class VulkanInstanceLayersCollector
     {
     public:
+
+    private:
+        std::vector<VulkanInstanceLayer> m_preferredLayers;
     };
 }
 
