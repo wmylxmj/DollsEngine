@@ -3,3 +3,13 @@
 //
 
 #include "VulkanLayer.h"
+
+namespace DollsEngine
+{
+    void VulkanInstanceLayersCollector::AddLayer(const char *layerName)
+    {
+        m_preferredLayers.emplace_back(layerName);
+    }
+
+
+}

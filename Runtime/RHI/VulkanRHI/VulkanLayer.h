@@ -28,6 +28,7 @@ namespace DollsEngine
     class VulkanInstanceLayersCollector
     {
     public:
+        void AddLayer(const char* layerName);
 
     private:
         std::vector<VulkanInstanceLayer> m_preferredLayers;
