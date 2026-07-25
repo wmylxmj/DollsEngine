@@ -5,6 +5,8 @@
 #include "VulkanLayer.h"
 #include "VulkanExtension.h"
 
+#include <memory>
+
 namespace DollsEngine
 {
 	class VulkanRHI : public RHI
