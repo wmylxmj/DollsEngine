@@ -27,6 +27,11 @@ namespace DollsEngine
 #endif
 		m_instanceExtensionsCollector.AddExtension(VK_KHR_SURFACE_EXTENSION_NAME);
 		m_vulkanPlatform->CollectInstanceExtensions(m_instanceExtensionsCollector);
+		m_instanceExtensionsCollector.FlagExtensionsSupported(nullptr);
+		for (const auto& layerName : supportedLayers) {
+			m_instanceExtensionsCollector.FlagExtensionsSupported(layerName);
+		}
+
 
 
 
