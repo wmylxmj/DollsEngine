@@ -33,10 +33,6 @@ namespace DollsEngine
 		}
 		std::vector<const char*> supportedExtensions = m_instanceExtensionsCollector.GetSupportedExtensions();
 
-
-
-
-
 		VkInstanceCreateInfo instanceCreateInfo = {};
 		instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 		instanceCreateInfo.pApplicationInfo = &appInfo;
