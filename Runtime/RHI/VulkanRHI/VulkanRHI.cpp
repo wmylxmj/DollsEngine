@@ -22,6 +22,14 @@ namespace DollsEngine
 		m_instanceLayersCollector.FlagLayersSupported();
 		std::vector<const char*> supportedLayers = m_instanceLayersCollector.GetSupportedLayers();
 
+#ifdef DOLLS_DEBUG
+		m_instanceExtensionsCollector.AddExtension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
+#endif
+		m_instanceExtensionsCollector.AddExtension(VK_KHR_SURFACE_EXTENSION_NAME);
+
+
+
+
 		VkInstanceCreateInfo instanceCreateInfo = {};
 		instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 		instanceCreateInfo.pApplicationInfo = &appInfo;
