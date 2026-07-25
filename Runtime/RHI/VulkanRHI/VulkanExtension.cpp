@@ -28,6 +28,7 @@ namespace DollsEngine
             for (const auto& extensionProperty : extensionProperties) {
                 if (strcmp(preferredExtension.GetExtensionName(), extensionProperty.extensionName) == 0) {
                     preferredExtension.SetSupported();
+                    break;
                 }
             }
         }
