@@ -42,6 +42,8 @@ namespace DollsEngine
 		instanceCreateInfo.pApplicationInfo = &appInfo;
 		instanceCreateInfo.enabledLayerCount = static_cast<uint32_t>(supportedLayers.size());
 		instanceCreateInfo.ppEnabledLayerNames = supportedLayers.data();
+		instanceCreateInfo.enabledExtensionCount = static_cast<uint32_t>(supportedExtensions.size());
+		instanceCreateInfo.ppEnabledExtensionNames = supportedExtensions.data();
 
 		if (vkCreateInstance(&instanceCreateInfo, nullptr, &m_instance) != VK_SUCCESS)
 		{
