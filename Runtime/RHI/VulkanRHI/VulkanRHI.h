@@ -1,7 +1,7 @@
 #pragma once
 
 #include "../RHI.h"
-#include "VulkanAPI.h"
+#include "Platforms/VulkanNativePlatform.h"
 #include "VulkanLayer.h"
 #include "VulkanExtension.h"
 
