@@ -2,6 +2,8 @@
 
 #include "../RHI.h"
 #include "VulkanAPI.h"
+#include "VulkanLayer.h"
+#include "VulkanExtension.h"
 
 namespace DollsEngine
 {
