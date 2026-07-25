@@ -16,9 +16,17 @@ namespace DollsEngine
 		appInfo.pEngineName = "DollsEngine";
 		appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
 
+#ifdef DOLLS_DEBUG
+		m_instanceLayersCollector.AddLayer("VK_LAYER_KHRONOS_validation");
+#endif
+		m_instanceLayersCollector.FlagLayersSupported();
+		std::vector<const char*> supportedLayers = m_instanceLayersCollector.GetSupportedLayers();
+
 		VkInstanceCreateInfo instanceCreateInfo = {};
 		instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
 		instanceCreateInfo.pApplicationInfo = &appInfo;
+		instanceCreateInfo.enabledLayerCount = static_cast<uint32_t>(supportedLayers.size());
+		instanceCreateInfo.ppEnabledLayerNames = supportedLayers.data();
 
 		if (vkCreateInstance(&instanceCreateInfo, nullptr, &m_instance) != VK_SUCCESS)
 		{
