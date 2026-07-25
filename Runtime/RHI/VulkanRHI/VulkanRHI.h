@@ -16,5 +16,6 @@ namespace DollsEngine
 		bool CreateInstance();
 
 		VkInstance m_instance;
+		VulkanInstanceLayersCollector m_instanceLayersCollector;
 	};
 }
