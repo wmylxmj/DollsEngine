@@ -34,6 +34,14 @@ namespace DollsEngine
         }
     }
 
-
-
+    std::vector<const char*> VulkanInstanceLayersCollector::GetSupportedLayers() const
+    {
+        std::vector<const char*> supportedLayers;
+        for (const auto& preferredLayer : m_preferredLayers) {
+            if (preferredLayer.IsSupported()) {
+                supportedLayers.push_back(preferredLayer.GetLayerName());
+            }
+        }
+        return supportedLayers;
+    }
 }
