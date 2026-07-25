@@ -50,7 +50,10 @@ if (WIN32)
             "RHI/VulkanRHI/Platforms/Windows/VulkanWindowsPlatform.cpp"
     )
 endif()
-    
+
+target_compile_definitions(DollsEngine PRIVATE
+        $<$<CONFIG:DEBUG>:DOLLS_DEBUG>
+)
 target_compile_definitions(DollsEngine PRIVATE
         $<$<PLATFORM_ID:Windows>:DOLLS_PLATFORM_WINDOWS>
 )
