@@ -26,6 +26,7 @@ namespace DollsEngine
 		m_instanceExtensionsCollector.AddExtension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
 #endif
 		m_instanceExtensionsCollector.AddExtension(VK_KHR_SURFACE_EXTENSION_NAME);
+		m_vulkanPlatform->CollectInstanceExtensions(m_instanceExtensionsCollector);
 
 
 

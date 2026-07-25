@@ -6,6 +6,7 @@
 namespace DollsEngine
 {
 	class VulkanWindowsPlatform : public VulkanPlatform {
+	public:
 		virtual VkResult CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface) override;
 		virtual void CollectInstanceExtensions(VulkanInstanceExtensionsCollector &collector) override;
 	};
