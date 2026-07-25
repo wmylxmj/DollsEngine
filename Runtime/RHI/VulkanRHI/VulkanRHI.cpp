@@ -31,6 +31,7 @@ namespace DollsEngine
 		for (const auto& layerName : supportedLayers) {
 			m_instanceExtensionsCollector.FlagExtensionsSupported(layerName);
 		}
+		std::vector<const char*> supportedExtensions = m_instanceExtensionsCollector.GetSupportedExtensions();
 
 
 
