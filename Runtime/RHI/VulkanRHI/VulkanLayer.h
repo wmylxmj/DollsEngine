@@ -29,6 +29,8 @@ namespace DollsEngine
     {
     public:
         void AddLayer(const char* layerName);
+        void FlagLayersSupported();
+        std::vector<const char*> GetSupportedLayers() const;
 
     private:
         std::vector<VulkanInstanceLayer> m_preferredLayers;
