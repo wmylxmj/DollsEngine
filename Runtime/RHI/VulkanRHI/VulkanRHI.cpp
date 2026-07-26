@@ -48,4 +48,13 @@ namespace DollsEngine
 
 		return true;
 	}
+
+	static VKAPI_ATTR VkBool32 VKAPI_CALL DebugMessageCallback(
+		VkDebugUtilsMessageSeverityFlagBitsEXT messageSeverity,
+		VkDebugUtilsMessageTypeFlagsEXT messageType,
+		const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
+		void* pUserData)
+	{
+
+	}
 }
