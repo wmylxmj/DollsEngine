@@ -16,6 +16,7 @@ namespace DollsEngine
 
 	protected:
 		bool CreateInstance();
+		bool CreateDebugMessenger();
 
 		std::unique_ptr<VulkanPlatform> m_vulkanPlatform;
 
