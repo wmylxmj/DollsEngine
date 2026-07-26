@@ -22,5 +22,7 @@ namespace DollsEngine
 		VkInstance m_instance;
 		VulkanInstanceLayersCollector m_instanceLayersCollector;
 		VulkanInstanceExtensionsCollector m_instanceExtensionsCollector;
+
+		VkDebugUtilsMessengerEXT m_debugMessenger;
 	};
 }
