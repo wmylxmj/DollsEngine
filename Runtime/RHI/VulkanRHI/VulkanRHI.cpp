@@ -71,6 +71,11 @@ namespace DollsEngine
 		createInfo.pfnUserCallback = DebugMessageCallback;
 		createInfo.pUserData = nullptr; // Optional
 
+		if (vkCreateDebugUtilsMessengerEXT(m_instance, &createInfo, nullptr, &m_debugMessenger) != VK_SUCCESS) {
+			return false;
+		}
+
+		return true;
 	}
 
 }
