@@ -55,6 +55,12 @@ namespace DollsEngine
 		const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
 		void* pUserData)
 	{
+		return VK_FALSE;
+	}
+
+	bool VulkanRHI::CreateDebugMessenger()
+	{
 
 	}
+
 }
