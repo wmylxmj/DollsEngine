@@ -90,7 +90,7 @@ namespace DollsEngine
 		std::vector<VkPhysicalDevice> physicalDevices(physicalDeviceCount);
 		vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, physicalDevices.data());
 
-
+		VkPhysicalDevice selectedDevice = VK_NULL_HANDLE;
 
 	}
 
