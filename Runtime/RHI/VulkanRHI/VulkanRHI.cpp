@@ -81,6 +81,8 @@ namespace DollsEngine
 	// 函数
 	static VkPhysicalDevice SelectPhysicalDevice(VkInstance instance)
 	{
+		uint32_t physicalDeviceCount = 0;
+		vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, nullptr);
 
 	}
 
