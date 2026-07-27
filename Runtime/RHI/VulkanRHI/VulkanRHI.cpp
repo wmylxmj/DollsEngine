@@ -78,4 +78,10 @@ namespace DollsEngine
 		return true;
 	}
 
+	bool VulkanRHI::CreateDevice()
+	{
+		return true;
+	}
+
+
 }
