@@ -82,7 +82,15 @@ namespace DollsEngine
 	static VkPhysicalDevice SelectPhysicalDevice(VkInstance instance)
 	{
 		uint32_t physicalDeviceCount = 0;
-		vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, nullptr);
+		if (vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, nullptr) != VK_SUCCESS ||
+			physicalDeviceCount == 0) {
+			return VK_NULL_HANDLE;
+		};
+
+		std::vector<VkPhysicalDevice> physicalDevices(physicalDeviceCount);
+		vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, physicalDevices.data());
+
+
 
 	}
 
