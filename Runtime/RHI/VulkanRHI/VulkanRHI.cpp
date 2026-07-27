@@ -78,6 +78,12 @@ namespace DollsEngine
 		return true;
 	}
 
+	// 函数
+	static VkPhysicalDevice SelectPhysicalDevice(VkInstance instance)
+	{
+
+	}
+
 	bool VulkanRHI::CreateDevice()
 	{
 		return true;
