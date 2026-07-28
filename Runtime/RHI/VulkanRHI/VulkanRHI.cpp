@@ -1,5 +1,8 @@
 #include "VulkanRHI.h"
 
+#include <tuple>
+#include <map>
+
 namespace DollsEngine
 {
 	bool VulkanRHI::Initialize()
@@ -89,6 +92,8 @@ namespace DollsEngine
 
 		std::vector<VkPhysicalDevice> physicalDevices(physicalDeviceCount);
 		vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, physicalDevices.data());
+
+		using Performance = std::tuple<uint32_t>;
 
 		VkPhysicalDevice selectedDevice = VK_NULL_HANDLE;
 
