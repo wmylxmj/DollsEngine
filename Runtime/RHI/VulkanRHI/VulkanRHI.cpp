@@ -94,7 +94,7 @@ namespace DollsEngine
 		vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, physicalDevices.data());
 
 		using Performance = std::tuple<uint32_t>;
-		std::multimap<Performance, VkPhysicalDevice> candidates;
+		std::multimap<Performance, VkPhysicalDevice, std::greater<>> candidates;
 
 		VkPhysicalDevice selectedDevice = VK_NULL_HANDLE;
 
