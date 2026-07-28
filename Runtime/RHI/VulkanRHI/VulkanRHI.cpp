@@ -96,7 +96,6 @@ namespace DollsEngine
 		using Performance = std::tuple<uint32_t>;
 		std::multimap<Performance, VkPhysicalDevice, std::greater<>> candidates;
 
-		VkPhysicalDevice selectedDevice = VK_NULL_HANDLE;
 
 		for (const auto& phyicalDevice : physicalDevices) {
 		}
