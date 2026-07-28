@@ -98,6 +98,10 @@ namespace DollsEngine
 
 
 		for (const auto& phyicalDevice : physicalDevices) {
+			Performance performance = std::make_tuple(0);
+
+
+			VkPhysicalDeviceProperties2 physicalDeviceProperties2 = {};
 		}
 	}
 
