@@ -98,6 +98,8 @@ namespace DollsEngine
 
 		VkPhysicalDevice selectedDevice = VK_NULL_HANDLE;
 
+		for (const auto& phyicalDevice : physicalDevices) {
+		}
 	}
 
 	bool VulkanRHI::CreateDevice()
