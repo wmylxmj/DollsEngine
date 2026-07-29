@@ -100,6 +100,9 @@ namespace DollsEngine
 			Performance performance = std::make_tuple(0);
 
 			VkPhysicalDeviceProperties2 physicalDeviceProperties2 = {};
+			physicalDeviceProperties2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2;
+
+			vkGetPhysicalDeviceProperties2(phyicalDevice, &physicalDeviceProperties2);
 		}
 	}
 
