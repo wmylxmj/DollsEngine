@@ -103,7 +103,18 @@ namespace DollsEngine
 			physicalDeviceProperties2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2;
 
 			vkGetPhysicalDeviceProperties2(phyicalDevice, &physicalDeviceProperties2);
+
+			if (physicalDeviceProperties2.properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
+				std::get<0>(performance) = 4;
+			}
+			else if (physicalDeviceProperties2.properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU) {
+				std::get<0>(performance) = 3;
+			}
+
+			candidates.insert({ performance, phyicalDevice });
 		}
+
+		return candidates.begin()->second;
 	}
 
 	bool VulkanRHI::CreateDevice()
