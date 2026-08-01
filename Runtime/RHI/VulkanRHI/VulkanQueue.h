@@ -5,6 +5,8 @@
 namespace DollsEngine
 {
     class VulkanQueue {
+    private:
+        VkQueue m_queue;
 
     };
 }
