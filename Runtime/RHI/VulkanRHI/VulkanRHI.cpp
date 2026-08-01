@@ -96,13 +96,13 @@ namespace DollsEngine
 		using Performance = std::tuple<uint32_t>;
 		std::multimap<Performance, VkPhysicalDevice, std::greater<>> candidates;
 
-		for (const auto& phyicalDevice : physicalDevices) {
+		for (const auto& physicalDevice : physicalDevices) {
 			Performance performance = std::make_tuple(0);
 
 			VkPhysicalDeviceProperties2 physicalDeviceProperties2 = {};
 			physicalDeviceProperties2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2;
 
-			vkGetPhysicalDeviceProperties2(phyicalDevice, &physicalDeviceProperties2);
+			vkGetPhysicalDeviceProperties2(physicalDevice, &physicalDeviceProperties2);
 
 			if (physicalDeviceProperties2.properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
 				std::get<0>(performance) = 4;
@@ -111,7 +111,7 @@ namespace DollsEngine
 				std::get<0>(performance) = 3;
 			}
 
-			candidates.insert({ performance, phyicalDevice });
+			candidates.insert({ performance, physicalDevice });
 		}
 
 		return candidates.begin()->second;
