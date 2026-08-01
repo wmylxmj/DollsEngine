@@ -7,6 +7,7 @@ namespace DollsEngine
     class VulkanQueue {
     private:
         VkQueue m_queue;
+        uint32_t m_queueFamilyIndex;
 
     };
 }
