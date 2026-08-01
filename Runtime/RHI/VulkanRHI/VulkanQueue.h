@@ -8,6 +8,7 @@ namespace DollsEngine
     private:
         VkQueue m_queue;
         uint32_t m_queueFamilyIndex;
+        uint32_t m_queueIndex;
 
     };
 }
