@@ -1,16 +1,12 @@
-//
-// Created by 13973 on 26-8-1.
-//
+#pragma once
 
-#ifndef VULKANQUEUE_H
-#define VULKANQUEUE_H
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanQueue {
 
-
-class VulkanQueue {
-
-};
+    };
+}
 
 
-
-#endif //VULKANQUEUE_H
