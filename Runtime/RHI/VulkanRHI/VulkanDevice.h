@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VulkanAPI.h"
+#include "VulkanQueue.h"
 
 namespace DollsEngine
 {
