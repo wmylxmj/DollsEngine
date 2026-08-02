@@ -13,6 +13,7 @@ namespace DollsEngine
 		bool CreateDevice();
 
 		VkDevice m_device;
+
 		VkPhysicalDevice m_physicalDevice;
 		VkPhysicalDeviceProperties m_physicalDeviceProperties;
 		VkPhysicalDeviceIDPropertiesKHR m_physicalDeviceIDProperties;
