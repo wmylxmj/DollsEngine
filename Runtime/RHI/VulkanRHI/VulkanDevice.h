@@ -15,6 +15,7 @@ namespace DollsEngine
 		VkDevice m_device;
 		VkPhysicalDevice m_physicalDevice;
 		VkPhysicalDeviceProperties m_physicalDeviceProperties;
+		VkPhysicalDeviceIDPropertiesKHR m_physicalDeviceIDProperties;
 
 		VulkanQueue m_graphicsQueue;
 	};
