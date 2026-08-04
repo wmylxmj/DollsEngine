@@ -44,7 +44,8 @@ namespace DollsEngine
 
     class VulkanDeviceExtension : public VulkanExtension
     {
-
+    public:
+        explicit VulkanDeviceExtension(const char* extensionName) : VulkanExtension(extensionName) {}
     };
 
     class VulkanDeviceExtensionsCollector
