@@ -50,7 +50,13 @@ namespace DollsEngine
 
     class VulkanDeviceExtensionsCollector
     {
+    public:
+        void AddExtension(const char* extensionName);
+        void FlagExtensionsSupported(VkPhysicalDevice physicalDevice);
+        std::vector<const char*> GetSupportedExtensions();
 
+    private:
+        std::vector<VulkanDeviceExtension> m_preferredExtensions;
     };
 
 
