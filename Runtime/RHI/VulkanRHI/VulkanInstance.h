@@ -14,11 +14,9 @@ namespace DollsEngine
         void SetSupported() { m_isSupported = true; }
         bool IsSupported() const { return m_isSupported; }
 
-
     protected:
         const char* m_layerName;
         bool m_isSupported = false;
-
     };
 
     class VulkanInstance {
