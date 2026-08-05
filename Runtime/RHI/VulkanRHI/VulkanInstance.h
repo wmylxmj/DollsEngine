@@ -20,6 +20,11 @@ namespace DollsEngine
     };
 
     class VulkanInstance {
+
+    private:
+        std::vector<VulkanInstanceLayer> m_preferredLayers;
+    };
+
     private:
     };
 }
