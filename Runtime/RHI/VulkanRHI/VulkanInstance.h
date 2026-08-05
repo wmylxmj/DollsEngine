@@ -1,16 +1,12 @@
-//
-// Created by 13973 on 26-8-5.
-//
+#pragma once
 
-#ifndef VULKANINSTANCE_H
-#define VULKANINSTANCE_H
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanInstance {
 
-
-class VulkanInstance {
-
-};
+    };
+}
 
 
-
-#endif //VULKANINSTANCE_H
