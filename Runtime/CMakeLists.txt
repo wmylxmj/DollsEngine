@@ -40,6 +40,8 @@ add_executable(DollsEngine
         "Application/Platforms/NativePlatformService.h"
         "main.cpp"
         RHI/VulkanRHI/VulkanDevice.cpp
+        RHI/VulkanRHI/VulkanInstance.cpp
+        RHI/VulkanRHI/VulkanInstance.h
 )
 
 if (WIN32)
