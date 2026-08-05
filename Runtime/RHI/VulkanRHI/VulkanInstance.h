@@ -24,9 +24,7 @@ namespace DollsEngine
     private:
         std::vector<VulkanInstanceLayer> m_preferredLayers;
     };
-
-    private:
-    };
+    ;
 }
 
 
