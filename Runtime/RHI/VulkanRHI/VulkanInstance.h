@@ -5,7 +5,6 @@
 
 namespace DollsEngine
 {
-    // 实例层
     class VulkanInstanceLayer
     {
     public:
@@ -19,17 +18,10 @@ namespace DollsEngine
         bool m_isSupported = false;
     };
 
-
-
-
-
-    // 实例拓展
     class VulkanInstanceExtension
     {
     public:
         explicit VulkanInstanceExtension(const char* extensionName) : m_extensionName(extensionName) {}
-
-
         const char* GetExtensionName() const { return m_extensionName; }
         void SetSupported() { m_isSupported = true; }
         [[nodiscard]] bool IsSupported() const { return m_isSupported; }
@@ -38,8 +30,6 @@ namespace DollsEngine
         const char* m_extensionName;
         bool m_isSupported = false;
     };
-
-
 
     class VulkanInstance {
 
