@@ -36,6 +36,7 @@ namespace DollsEngine
     private:
         std::vector<VulkanInstanceLayer> m_preferredLayers;
         std::vector<const char*> m_supportedLayers;
+        std::vector<VulkanInstanceExtension> m_preferredExtensions;
 
 
         std::vector<const char*> m_supportedExtensions;
