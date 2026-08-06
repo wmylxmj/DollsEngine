@@ -23,8 +23,9 @@ namespace DollsEngine
 
     private:
         std::vector<VulkanInstanceLayer> m_preferredLayers;
+        std::vector<const char*> m_supportedLayers;
     };
-    ;
+
 }
 
 
