@@ -38,8 +38,6 @@ namespace DollsEngine
         std::vector<const char*> m_supportedLayers;
 
         std::vector<VulkanInstanceExtension> m_preferredExtensions;
-
-
         std::vector<const char*> m_supportedExtensions;
     };
 
