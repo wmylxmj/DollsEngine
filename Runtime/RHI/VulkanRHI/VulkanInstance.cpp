@@ -3,3 +3,14 @@
 //
 
 #include "VulkanInstance.h"
+
+#include <cstring>
+
+namespace DollsEngine
+{
+    void VulkanInstance::FlagLayersSupported()
+    {
+
+    }
+
+}
