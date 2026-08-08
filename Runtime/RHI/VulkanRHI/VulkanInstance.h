@@ -37,6 +37,8 @@ namespace DollsEngine
         void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(extensionName); }
 
     private:
+        void FlagLayersSupported();
+
         std::vector<VulkanInstanceLayer> m_preferredLayers;
         std::vector<const char*> m_supportedLayers;
 
