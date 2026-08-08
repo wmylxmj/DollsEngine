@@ -32,6 +32,8 @@ namespace DollsEngine
     };
 
     class VulkanInstance {
+    public:
+        void AddPreferredLayer(const char* layerName) { m_preferredLayers.emplace_back(layerName); }
 
     private:
         std::vector<VulkanInstanceLayer> m_preferredLayers;
