@@ -8,6 +8,11 @@
 
 namespace DollsEngine
 {
+    bool VulkanInstance::Create(VkApplicationInfo applicationInfo)
+    {
+
+    }
+
     void VulkanInstance::FlagLayersSupported()
     {
         uint32_t layerCount;
