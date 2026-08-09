@@ -31,7 +31,6 @@ namespace DollsEngine
 
     void VulkanInstance::FlagExtensionsSupported(const char *layerName)
     {
-
         uint32_t extensionCount;
         vkEnumerateInstanceExtensionProperties(layerName, &extensionCount, nullptr);
 
@@ -49,8 +48,9 @@ namespace DollsEngine
                 }
             }
         }
-
     }
+
+
 
 
 }
