@@ -31,7 +31,8 @@ namespace DollsEngine
         bool m_isSupported = false;
     };
 
-    class VulkanInstance {
+    class VulkanInstance
+    {
     public:
         void AddPreferredLayer(const char* layerName) { m_preferredLayers.emplace_back(layerName); }
         void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(extensionName); }
