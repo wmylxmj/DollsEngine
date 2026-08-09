@@ -4,6 +4,12 @@
 
 namespace DollsEngine
 {
+	void VulkanWindowsPlatform::AddPreferredPlatformSpecificInstanceExtensions(VulkanInstance &instance)
+	{
+
+	}
+
+
 	VkResult VulkanWindowsPlatform::CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface)
 	{
 		VkWin32SurfaceCreateInfoKHR createInfo = {};
