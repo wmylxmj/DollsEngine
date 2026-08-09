@@ -37,8 +37,12 @@ namespace DollsEngine
         instanceCreateInfo.enabledExtensionCount = static_cast<uint32_t>(m_supportedExtensions.size());
         instanceCreateInfo.ppEnabledExtensionNames = m_supportedExtensions.data();
 
+        if (vkCreateInstance(&instanceCreateInfo, nullptr, &m_instance) != VK_SUCCESS)
+        {
+            return false;
+        }
 
-
+        return true;
     }
 
     void VulkanInstance::FlagLayersSupported()
