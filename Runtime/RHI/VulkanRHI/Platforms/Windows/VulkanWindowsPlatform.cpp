@@ -4,10 +4,7 @@
 
 namespace DollsEngine
 {
-	void VulkanWindowsPlatform::AddPreferredPlatformSpecificInstanceExtensions(VulkanInstance &instance)
-	{
 
-	}
 
 
 
