@@ -10,6 +10,14 @@ namespace DollsEngine
 {
     bool VulkanInstance::Create(VkApplicationInfo applicationInfo)
     {
+        FlagLayersSupported();
+        m_supportedLayers.clear();
+        for (const auto& preferredLayer : m_preferredLayers) {
+            if (preferredLayer.IsSupported()) {
+                m_supportedLayers.push_back(preferredLayer.GetLayerName());
+            }
+        }
+
 
     }
 
