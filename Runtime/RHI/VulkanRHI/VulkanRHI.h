@@ -3,7 +3,6 @@
 #include "../RHI.h"
 #include "Platforms/VulkanNativePlatform.h"
 #include "VulkanInstance.h"
-#include "VulkanExtension.h"
 
 #include <memory>
 
