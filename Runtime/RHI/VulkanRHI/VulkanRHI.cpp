@@ -20,36 +20,13 @@ namespace DollsEngine
 		appInfo.engineVersion = VK_MAKE_VERSION(1, 0, 0);
 
 #ifdef DOLLS_DEBUG
-		m_instanceLayersCollector.AddLayer("VK_LAYER_KHRONOS_validation");
+		m_instance.AddPreferredLayer("VK_LAYER_KHRONOS_validation");
+		m_instance.AddPreferredExtension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME)
 #endif
-		m_instanceLayersCollector.FlagLayersSupported();
-		std::vector<const char*> supportedLayers = m_instanceLayersCollector.GetSupportedLayers();
+		m_instance.AddPreferredExtension(VK_KHR_SURFACE_EXTENSION_NAME);
 
-#ifdef DOLLS_DEBUG
-		m_instanceExtensionsCollector.AddExtension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
-#endif
-		m_instanceExtensionsCollector.AddExtension(VK_KHR_SURFACE_EXTENSION_NAME);
-		m_vulkanPlatform->CollectInstanceExtensions(m_instanceExtensionsCollector);
-		m_instanceExtensionsCollector.FlagExtensionsSupported(nullptr);
-		for (const auto& layerName : supportedLayers) {
-			m_instanceExtensionsCollector.FlagExtensionsSupported(layerName);
-		}
-		std::vector<const char*> supportedExtensions = m_instanceExtensionsCollector.GetSupportedExtensions();
-
-		VkInstanceCreateInfo instanceCreateInfo = {};
-		instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
-		instanceCreateInfo.pApplicationInfo = &appInfo;
-		instanceCreateInfo.enabledLayerCount = static_cast<uint32_t>(supportedLayers.size());
-		instanceCreateInfo.ppEnabledLayerNames = supportedLayers.data();
-		instanceCreateInfo.enabledExtensionCount = static_cast<uint32_t>(supportedExtensions.size());
-		instanceCreateInfo.ppEnabledExtensionNames = supportedExtensions.data();
-
-		if (vkCreateInstance(&instanceCreateInfo, nullptr, &m_instance) != VK_SUCCESS)
-		{
-			return false;
-		}
-
-		return true;
+		m_vulkanPlatform->AddPreferredPlatformSpecificInstanceExtensions(m_instance);
+		return m_instance.Create(appInfo);
 	}
 
 	static VKAPI_ATTR VkBool32 VKAPI_CALL DebugMessageCallback(
