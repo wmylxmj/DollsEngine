@@ -13,44 +13,42 @@ add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable(DollsEngine
-        "Core/Core.h"
-        "Core/Event/Event.h"
-        "RHI/RHI.h"
-        "RHI/RHIResource.h"
-        "RHI/VulkanRHI/VulkanAPI.h"
-        "RHI/VulkanRHI/VulkanPlatform.h"
-        "RHI/VulkanRHI/Platforms/VulkanNativePlatform.h"
-        "RHI/VulkanRHI/VulkanRHI.h"
-        "RHI/VulkanRHI/VulkanRHI.cpp"
-        RHI/VulkanRHI/VulkanDevice.h
-        RHI/VulkanRHI/VulkanExtension.cpp
-        RHI/VulkanRHI/VulkanExtension.h
-        RHI/VulkanRHI/VulkanQueue.cpp
-        RHI/VulkanRHI/VulkanQueue.h
-        "Engine/Engine.h"
-        "Engine/Engine.cpp"
-        "Application/Application.h"
-        "Application/Application.cpp"
-        "Application/Window.h"
-        "Application/WindowEvents.h"
-        "Application/PlatformService.h"
-        "Application/Platforms/NativeWindow.h"
-        "Application/Platforms/NativePlatformService.h"
-        "main.cpp"
-        RHI/VulkanRHI/VulkanDevice.cpp
-        RHI/VulkanRHI/VulkanInstance.cpp
+        Core/Core.h
+        Core/Event/Event.h
+        RHI/RHI.h
+        RHI/RHIResource.h
+        RHI/VulkanRHI/VulkanAPI.h
+        RHI/VulkanRHI/VulkanPlatform.h
+        RHI/VulkanRHI/Platforms/VulkanNativePlatform.h
+        RHI/VulkanRHI/VulkanRHI.h
+        RHI/VulkanRHI/VulkanRHI.cpp
         RHI/VulkanRHI/VulkanInstance.h
+        RHI/VulkanRHI/VulkanInstance.cpp
+        RHI/VulkanRHI/VulkanDevice.h
+        RHI/VulkanRHI/VulkanDevice.cpp
+        RHI/VulkanRHI/VulkanQueue.h
+        RHI/VulkanRHI/VulkanQueue.cpp
+        Engine/Engine.h
+        Engine/Engine.cpp
+        Application/Application.h
+        Application/Application.cpp
+        Application/Window.h
+        Application/WindowEvents.h
+        Application/PlatformService.h
+        Application/Platforms/NativeWindow.h
+        Application/Platforms/NativePlatformService.h
+        main.cpp
 )
 
 if (WIN32)
     target_sources(DollsEngine PRIVATE
-            "Core/Windows/WindowsAPI.h"
-            "Application/Platforms/Windows/WindowsWindow.cpp"
-            "Application/Platforms/Windows/WindowsWindow.h"
-            "Application/Platforms/Windows/WindowsPlatformService.h"
-            "Application/Platforms/Windows/WindowsPlatformService.cpp"
-            "RHI/VulkanRHI/Platforms/Windows/VulkanWindowsPlatform.h"
-            "RHI/VulkanRHI/Platforms/Windows/VulkanWindowsPlatform.cpp"
+            Core/Windows/WindowsAPI.h
+            Application/Platforms/Windows/WindowsWindow.cpp
+            Application/Platforms/Windows/WindowsWindow.h
+            Application/Platforms/Windows/WindowsPlatformService.h
+            Application/Platforms/Windows/WindowsPlatformService.cpp
+            RHI/VulkanRHI/Platforms/Windows/VulkanWindowsPlatform.h
+            RHI/VulkanRHI/Platforms/Windows/VulkanWindowsPlatform.cpp
     )
 endif()
 
