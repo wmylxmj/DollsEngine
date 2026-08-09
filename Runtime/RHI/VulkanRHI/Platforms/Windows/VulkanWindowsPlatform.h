@@ -5,10 +5,11 @@
 
 namespace DollsEngine
 {
-	class VulkanWindowsPlatform : public VulkanPlatform {
+	class VulkanWindowsPlatform : public VulkanPlatform
+	{
 	public:
 		virtual void AddPreferredPlatformSpecificInstanceExtensions(VulkanInstance &instance) override;
+
 		virtual VkResult CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface) override;
-		virtual void CollectInstanceExtensions(VulkanInstanceExtensionsCollector &collector) override;
 	};
 }
