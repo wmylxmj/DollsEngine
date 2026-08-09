@@ -32,6 +32,24 @@ namespace DollsEngine
     void VulkanInstance::FlagExtensionsSupported(const char *layerName)
     {
 
+        uint32_t extensionCount;
+        vkEnumerateInstanceExtensionProperties(layerName, &extensionCount, nullptr);
+
+        std::vector<VkExtensionProperties> extensionProperties(extensionCount);
+        vkEnumerateInstanceExtensionProperties(layerName, &extensionCount, extensionProperties.data());
+
+        for (auto& preferredExtension : m_preferredExtensions) {
+            if (preferredExtension.IsSupported()) {
+                continue;
+            }
+            for (const auto& extensionProperty : extensionProperties) {
+                if (strcmp(preferredExtension.GetExtensionName(), extensionProperty.extensionName) == 0) {
+                    preferredExtension.SetSupported();
+                    break;
+                }
+            }
+        }
+
     }
 
 
