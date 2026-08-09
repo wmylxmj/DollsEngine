@@ -51,7 +51,4 @@ namespace DollsEngine
         std::vector<VulkanInstanceExtension> m_preferredExtensions;
         std::vector<const char*> m_supportedExtensions;
     };
-
 }
-
-
