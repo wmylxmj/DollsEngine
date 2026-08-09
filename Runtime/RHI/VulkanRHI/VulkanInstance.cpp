@@ -30,6 +30,14 @@ namespace DollsEngine
         }
 
 		VkInstanceCreateInfo instanceCreateInfo = {};
+        instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
+        instanceCreateInfo.pApplicationInfo = &applicationInfo;
+        instanceCreateInfo.enabledLayerCount = static_cast<uint32_t>(m_supportedLayers.size());
+        instanceCreateInfo.ppEnabledLayerNames = m_supportedLayers.data();
+        instanceCreateInfo.enabledExtensionCount = static_cast<uint32_t>(m_supportedExtensions.size());
+        instanceCreateInfo.ppEnabledExtensionNames = m_supportedExtensions.data();
+
+
 
     }
 
