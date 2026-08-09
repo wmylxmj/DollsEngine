@@ -36,6 +36,8 @@ namespace DollsEngine
         void AddPreferredLayer(const char* layerName) { m_preferredLayers.emplace_back(layerName); }
         void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(extensionName); }
 
+        bool Create();
+
     private:
         void FlagLayersSupported();
         void FlagExtensionsSupported(const char* layerName = nullptr);
