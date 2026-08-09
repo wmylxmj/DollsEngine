@@ -40,6 +40,7 @@ namespace DollsEngine
         void FlagLayersSupported();
         void FlagExtensionsSupported(const char* layerName = nullptr);
 
+        VkInstance m_instance;
 
         std::vector<VulkanInstanceLayer> m_preferredLayers;
         std::vector<const char*> m_supportedLayers;
