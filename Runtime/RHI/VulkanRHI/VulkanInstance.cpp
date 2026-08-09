@@ -18,6 +18,13 @@ namespace DollsEngine
             }
         }
 
+        FlagExtensionsSupported(nullptr);
+		for (const auto& layerName : m_supportedLayers) {
+			FlagExtensionsSupported(layerName);
+		}
+        m_supportedExtensions.clear();
+
+
 
     }
 
