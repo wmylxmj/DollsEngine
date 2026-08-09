@@ -21,7 +21,7 @@ namespace DollsEngine
 
 #ifdef DOLLS_DEBUG
 		m_instance.AddPreferredLayer("VK_LAYER_KHRONOS_validation");
-		m_instance.AddPreferredExtension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME)
+		m_instance.AddPreferredExtension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
 #endif
 		m_instance.AddPreferredExtension(VK_KHR_SURFACE_EXTENSION_NAME);
 
