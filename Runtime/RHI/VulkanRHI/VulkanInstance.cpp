@@ -19,9 +19,9 @@ namespace DollsEngine
         }
 
         FlagExtensionsSupported(nullptr);
-		for (const auto& layerName : m_supportedLayers) {
-			FlagExtensionsSupported(layerName);
-		}
+        for (const auto& layerName : m_supportedLayers) {
+            FlagExtensionsSupported(layerName);
+        }
         m_supportedExtensions.clear();
         for (const auto& preferredExtension : m_preferredExtensions) {
             if (preferredExtension.IsSupported()) {
@@ -29,7 +29,7 @@ namespace DollsEngine
             }
         }
 
-		VkInstanceCreateInfo instanceCreateInfo = {};
+        VkInstanceCreateInfo instanceCreateInfo = {};
         instanceCreateInfo.sType = VK_STRUCTURE_TYPE_INSTANCE_CREATE_INFO;
         instanceCreateInfo.pApplicationInfo = &applicationInfo;
         instanceCreateInfo.enabledLayerCount = static_cast<uint32_t>(m_supportedLayers.size());
@@ -86,8 +86,4 @@ namespace DollsEngine
             }
         }
     }
-
-
-
-
 }
