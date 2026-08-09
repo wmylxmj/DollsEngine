@@ -23,6 +23,8 @@ namespace DollsEngine
 			FlagExtensionsSupported(layerName);
 		}
         m_supportedExtensions.clear();
+        for (const auto& preferredExtension : m_preferredExtensions) {
+        }
 
 
 
