@@ -25,8 +25,6 @@ add_executable(DollsEngine
         RHI/VulkanRHI/VulkanDevice.h
         RHI/VulkanRHI/VulkanExtension.cpp
         RHI/VulkanRHI/VulkanExtension.h
-        RHI/VulkanRHI/VulkanLayer.cpp
-        RHI/VulkanRHI/VulkanLayer.h
         RHI/VulkanRHI/VulkanQueue.cpp
         RHI/VulkanRHI/VulkanQueue.h
         "Engine/Engine.h"
