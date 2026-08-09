@@ -29,5 +29,10 @@ namespace DollsEngine
         }
     }
 
+    void VulkanInstance::FlagExtensionsSupported(const char *layerName)
+    {
+
+    }
+
 
 }
