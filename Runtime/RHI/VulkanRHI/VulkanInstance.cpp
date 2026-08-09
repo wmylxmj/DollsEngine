@@ -24,6 +24,9 @@ namespace DollsEngine
 		}
         m_supportedExtensions.clear();
         for (const auto& preferredExtension : m_preferredExtensions) {
+            if (preferredExtension.IsSupported()) {
+                m_supportedExtensions.push_back(preferredExtension.GetExtensionName());
+            }
         }
 
 
