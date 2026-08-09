@@ -21,7 +21,7 @@ namespace DollsEngine
 
 		std::unique_ptr<VulkanPlatform> m_vulkanPlatform;
 
-		VkInstance m_instance;
+		VulkanInstance m_instance;
 		VulkanInstanceLayersCollector m_instanceLayersCollector;
 		VulkanInstanceExtensionsCollector m_instanceExtensionsCollector;
 
