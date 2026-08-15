@@ -1,16 +1,10 @@
-//
-// Created by 13973 on 26-8-11.
-//
+#pragma once
 
-#ifndef VULKANPHYSICALDEVICE_H
-#define VULKANPHYSICALDEVICE_H
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanPhysicalDevice {
 
-
-class VulkanPhysicalDevice {
-
-};
-
-
-
-#endif //VULKANPHYSICALDEVICE_H
+    };
+}
