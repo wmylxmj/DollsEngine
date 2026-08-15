@@ -5,6 +5,8 @@
 namespace DollsEngine
 {
     class VulkanPhysicalDevice {
+    public:
+
     private:
  		VkPhysicalDevice m_physicalDevice;
 		VkPhysicalDeviceProperties m_physicalDeviceProperties;
