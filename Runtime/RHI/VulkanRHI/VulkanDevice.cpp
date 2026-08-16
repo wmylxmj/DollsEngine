@@ -2,10 +2,9 @@
 
 namespace DollsEngine
 {
-    bool VulkanDevice::Initialize(VkPhysicalDevice physicalDevice)
+    bool VulkanDevice::Initialize(VulkanPhysicalDevice physicalDevice)
     {
         m_physicalDevice = physicalDevice;
     }
-
 
 }
