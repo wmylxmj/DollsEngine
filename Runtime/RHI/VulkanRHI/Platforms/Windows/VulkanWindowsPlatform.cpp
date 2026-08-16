@@ -4,7 +4,7 @@
 
 namespace DollsEngine
 {
-	void VulkanWindowsPlatform::AddPreferredPlatformSpecificInstanceExtensions(VulkanInstance &instance)
+	void VulkanWindowsPlatform::AddPreferredInstanceExtensions(VulkanInstance &instance)
 	{
 		instance.AddPreferredExtension(VK_KHR_WIN32_SURFACE_EXTENSION_NAME);
 	}
