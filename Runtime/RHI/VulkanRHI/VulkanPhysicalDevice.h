@@ -9,6 +9,8 @@ namespace DollsEngine
     	void Initialize(VkPhysicalDevice physicalDevice);
     	const VkPhysicalDevice& GetPhysicalDevice() const { return m_physicalDevice; }
 
+    	const VkPhysicalDeviceProperties& GetProperties() const { return m_physicalDeviceProperties; }
+
     private:
  		VkPhysicalDevice m_physicalDevice;
 
