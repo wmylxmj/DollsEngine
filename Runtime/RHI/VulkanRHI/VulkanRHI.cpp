@@ -80,11 +80,6 @@ namespace DollsEngine
 			VulkanPhysicalDevice vulkanPhysicalDevice = {};
 			vulkanPhysicalDevice.Initialize(physicalDevice);
 
-			VkPhysicalDeviceProperties2 physicalDeviceProperties2 = {};
-			physicalDeviceProperties2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2;
-
-			vkGetPhysicalDeviceProperties2(physicalDevice, &physicalDeviceProperties2);
-
 			if (vulkanPhysicalDevice.GetProperties().deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
 				std::get<0>(performance) = 4;
 			}
