@@ -85,10 +85,10 @@ namespace DollsEngine
 
 			vkGetPhysicalDeviceProperties2(physicalDevice, &physicalDeviceProperties2);
 
-			if (physicalDeviceProperties2.properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
+			if (vulkanPhysicalDevice.GetProperties().deviceType == VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU) {
 				std::get<0>(performance) = 4;
 			}
-			else if (physicalDeviceProperties2.properties.deviceType == VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU) {
+			else if (vulkanPhysicalDevice.GetProperties().deviceType == VK_PHYSICAL_DEVICE_TYPE_INTEGRATED_GPU) {
 				std::get<0>(performance) = 3;
 			}
 
