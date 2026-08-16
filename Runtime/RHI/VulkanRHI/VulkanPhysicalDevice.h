@@ -11,6 +11,7 @@ namespace DollsEngine
 
     	const VkPhysicalDeviceProperties& GetProperties() const { return m_physicalDeviceProperties; }
     	const VkPhysicalDeviceIDPropertiesKHR& GetIDProperties() const { return m_physicalDeviceIDProperties; }
+    	const VkPhysicalDeviceSubgroupProperties& GetSubgroupProperties() const { return m_physicalDeviceSubgroupProperties; }
 
     private:
  		VkPhysicalDevice m_physicalDevice;
