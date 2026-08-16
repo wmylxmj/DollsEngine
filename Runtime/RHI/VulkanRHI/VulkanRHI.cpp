@@ -78,6 +78,7 @@ namespace DollsEngine
 			Performance performance = std::make_tuple(0);
 
 			VulkanPhysicalDevice vulkanPhysicalDevice = {};
+			vulkanPhysicalDevice.Initialize(physicalDevice);
 
 			VkPhysicalDeviceProperties2 physicalDeviceProperties2 = {};
 			physicalDeviceProperties2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2;
@@ -91,7 +92,7 @@ namespace DollsEngine
 				std::get<0>(performance) = 3;
 			}
 
-			candidates.insert({ performance, physicalDevice });
+			candidates.insert({ performance, vulkanPhysicalDevice });
 		}
 
 		return candidates.begin()->second;
