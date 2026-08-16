@@ -26,7 +26,7 @@ namespace DollsEngine
 #endif
 		m_instance.AddPreferredExtension(VK_KHR_SURFACE_EXTENSION_NAME);
 
-		m_vulkanPlatform->AddPreferredPlatformSpecificInstanceExtensions(m_instance);
+		m_vulkanPlatform->AddPreferredInstanceExtensions(m_instance);
 		return m_instance.Create(appInfo);
 	}
 
