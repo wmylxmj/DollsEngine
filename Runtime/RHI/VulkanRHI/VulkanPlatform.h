@@ -8,7 +8,7 @@ namespace DollsEngine
 	class VulkanPlatform
 	{
 	public:
-		virtual void AddPreferredInstanceExtensions(VulkanInstance
+		virtual void AddPreferredInstanceExtensions(VulkanInstance& instance) = 0;
 
 		virtual VkResult CreateSurface(VkInstance instance, void* windowHandle, VkSurfaceKHR* outSurface) = 0;
 	};
