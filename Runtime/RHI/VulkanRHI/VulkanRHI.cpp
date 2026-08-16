@@ -1,4 +1,5 @@
 #include "VulkanRHI.h"
+#include "VulkanPhysicalDevice.h"
 
 #include <tuple>
 #include <map>
@@ -59,22 +60,24 @@ namespace DollsEngine
 	}
 
 	// 函数
-	static VkPhysicalDevice SelectPhysicalDevice(VkInstance instance)
+	static VulkanPhysicalDevice SelectPhysicalDevice(VkInstance instance)
 	{
 		uint32_t physicalDeviceCount = 0;
 		if (vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, nullptr) != VK_SUCCESS ||
 			physicalDeviceCount == 0) {
-			return VK_NULL_HANDLE;
+			return {};
 		};
 
 		std::vector<VkPhysicalDevice> physicalDevices(physicalDeviceCount);
 		vkEnumeratePhysicalDevices(instance, &physicalDeviceCount, physicalDevices.data());
 
 		using Performance = std::tuple<uint32_t>;
-		std::multimap<Performance, VkPhysicalDevice, std::greater<>> candidates;
+		std::multimap<Performance, VulkanPhysicalDevice, std::greater<>> candidates;
 
 		for (const auto& physicalDevice : physicalDevices) {
 			Performance performance = std::make_tuple(0);
+
+			VulkanPhysicalDevice vulkanPhysicalDevice = {};
 
 			VkPhysicalDeviceProperties2 physicalDeviceProperties2 = {};
 			physicalDeviceProperties2.sType = VK_STRUCTURE_TYPE_PHYSICAL_DEVICE_PROPERTIES_2;
