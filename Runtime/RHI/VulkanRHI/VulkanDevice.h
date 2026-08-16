@@ -9,7 +9,7 @@ namespace DollsEngine
 	class VulkanDevice
 	{
 	public:
-		bool Initialize(VkPhysicalDevice physicalDevice);
+		bool Initialize(VulkanPhysicalDevice physicalDevice);
 	private:
 		bool CreateDevice();
 
