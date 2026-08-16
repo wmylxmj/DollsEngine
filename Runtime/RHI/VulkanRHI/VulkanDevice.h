@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VulkanAPI.h"
+#include "VulkanPhysicalDevice.h"
 #include "VulkanQueue.h"
 
 namespace DollsEngine
@@ -14,7 +15,7 @@ namespace DollsEngine
 
 		VkDevice m_device;
 
-		VkPhysicalDevice m_physicalDevice;
+		VulkanPhysicalDevice m_physicalDevice;
 		VkPhysicalDeviceProperties m_physicalDeviceProperties;
 		VkPhysicalDeviceIDPropertiesKHR m_physicalDeviceIDProperties;
 
