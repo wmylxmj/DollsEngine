@@ -9,7 +9,7 @@ namespace DollsEngine
 	// 设备拓展
 	class VulkanDeviceExtension
 	{
-
+	public:
 	};
 
 	class VulkanDevice
