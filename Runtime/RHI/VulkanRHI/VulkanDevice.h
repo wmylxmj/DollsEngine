@@ -28,6 +28,9 @@ namespace DollsEngine
 		bool Create(VulkanPhysicalDevice physicalDevice);
 
 	private:
+        void FlagExtensionsSupported(const char* layerName = nullptr);
+
+
 		std::vector<VulkanDeviceExtension> m_preferredExtensions;
 
 
