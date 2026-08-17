@@ -30,9 +30,7 @@ namespace DollsEngine
 	private:
         void FlagExtensionsSupported(const char* layerName = nullptr);
 
-
 		std::vector<VulkanDeviceExtension> m_preferredExtensions;
-
 
 		VkDevice m_device;
 
