@@ -8,10 +8,9 @@ namespace DollsEngine
 {
 	// 设备拓展
 	class VulkanDeviceExtension
+	{
 
-    public:
-        VulkanDeviceExtension(const char* extensionName)
-            : m_extensionName(extensionName)
+	};
 
 	class VulkanDevice
 	{
