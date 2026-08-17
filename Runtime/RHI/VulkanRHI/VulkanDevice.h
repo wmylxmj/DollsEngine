@@ -4,6 +4,8 @@
 #include "VulkanPhysicalDevice.h"
 #include "VulkanQueue.h"
 
+#include <vector>
+
 namespace DollsEngine
 {
 	// 设备拓展
@@ -26,6 +28,7 @@ namespace DollsEngine
 		bool Create(VulkanPhysicalDevice physicalDevice);
 
 	private:
+		std::vector<VulkanDeviceExtension> m_preferredExtensions;
 
 
 		VkDevice m_device;
