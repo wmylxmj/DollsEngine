@@ -10,6 +10,16 @@ namespace DollsEngine
 	class VulkanDeviceExtension
 	{
 	public:
+        const char* GetExtensionName() const { return m_extensionName; }
+        void SetSupported() { m_isSupported = true; }
+        [[nodiscard]] bool IsSupported() const { return m_isSupported; }
+
+    protected:
+        const char* m_extensionName;
+        bool m_isSupported = false;
+    };
+
+
 	};
 
 	class VulkanDevice
