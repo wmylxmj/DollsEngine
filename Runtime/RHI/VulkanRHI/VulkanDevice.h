@@ -25,7 +25,6 @@ namespace DollsEngine
 	public:
 		bool Create(VulkanPhysicalDevice physicalDevice);
 
-
 	private:
 
 
