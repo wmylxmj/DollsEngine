@@ -19,9 +19,6 @@ namespace DollsEngine
         bool m_isSupported = false;
     };
 
-
-	};
-
 	class VulkanDevice
 	{
 	public:
