@@ -25,7 +25,7 @@ namespace DollsEngine
         m_supportedExtensions.clear();
         for (const auto& preferredExtension : m_preferredExtensions) {
             if (preferredExtension.first) {
-                m_supportedExtensions.push_back(preferredExtension.GetExtensionName());
+                m_supportedExtensions.push_back(preferredExtension.second);
             }
         }
 
@@ -79,7 +79,7 @@ namespace DollsEngine
                 continue;
             }
             for (const auto& extensionProperty : extensionProperties) {
-                if (strcmp(preferredExtension.GetExtensionName(), extensionProperty.extensionName) == 0) {
+                if (strcmp(preferredExtension.second, extensionProperty.extensionName) == 0) {
                     preferredExtension.first = true;
                     break;
                 }
