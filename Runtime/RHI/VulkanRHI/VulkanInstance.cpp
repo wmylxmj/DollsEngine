@@ -14,7 +14,7 @@ namespace DollsEngine
         m_supportedLayers.clear();
         for (const auto& preferredLayer : m_preferredLayers) {
             if (preferredLayer.first) {
-                m_supportedLayers.push_back(preferredLayer.GetLayerName());
+                m_supportedLayers.push_back(preferredLayer.second);
             }
         }
 
@@ -58,7 +58,7 @@ namespace DollsEngine
                 continue;
             }
             for (const auto& availableLayer : availableLayers) {
-                if (strcmp(preferredLayer.GetLayerName(), availableLayer.layerName) == 0) {
+                if (strcmp(preferredLayer.second, availableLayer.layerName) == 0) {
                     preferredLayer.first = true;
                     break;
                 }
