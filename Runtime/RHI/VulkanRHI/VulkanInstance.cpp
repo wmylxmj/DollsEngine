@@ -59,7 +59,7 @@ namespace DollsEngine
             }
             for (const auto& availableLayer : availableLayers) {
                 if (strcmp(preferredLayer.GetLayerName(), availableLayer.layerName) == 0) {
-                    preferredLayer.SetSupported();
+                    preferredLayer.first = true;
                     break;
                 }
             }
@@ -80,7 +80,7 @@ namespace DollsEngine
             }
             for (const auto& extensionProperty : extensionProperties) {
                 if (strcmp(preferredExtension.GetExtensionName(), extensionProperty.extensionName) == 0) {
-                    preferredExtension.SetSupported();
+                    preferredExtension.first = true;
                     break;
                 }
             }
