@@ -20,10 +20,10 @@ namespace DollsEngine
         bool m_isSupported = false;
     };
 
-    class VulkanInstanceExtension
+    class std::pair<bool, const char*>
     {
     public:
-        explicit VulkanInstanceExtension(const char* extensionName) : m_extensionName(extensionName) {}
+        explicit std::pair<bool, const char*>(const char* extensionName) : m_extensionName(extensionName) {}
         const char* GetExtensionName() const { return m_extensionName; }
         void SetSupported() { m_isSupported = true; }
         [[nodiscard]] bool IsSupported() const { return m_isSupported; }
@@ -51,7 +51,7 @@ namespace DollsEngine
         std::vector<std::pair<bool, const char*>> m_preferredLayers;
         std::vector<const char*> m_supportedLayers;
 
-        std::vector<VulkanInstanceExtension> m_preferredExtensions;
+        std::vector<std::pair<bool, const char*>> m_preferredExtensions;
         std::vector<const char*> m_supportedExtensions;
     };
 }
