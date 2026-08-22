@@ -13,7 +13,7 @@ namespace DollsEngine
         FlagLayersSupported();
         m_supportedLayers.clear();
         for (const auto& preferredLayer : m_preferredLayers) {
-            if (preferredLayer.IsSupported()) {
+            if (preferredLayer.first) {
                 m_supportedLayers.push_back(preferredLayer.GetLayerName());
             }
         }
@@ -24,7 +24,7 @@ namespace DollsEngine
         }
         m_supportedExtensions.clear();
         for (const auto& preferredExtension : m_preferredExtensions) {
-            if (preferredExtension.IsSupported()) {
+            if (preferredExtension.first) {
                 m_supportedExtensions.push_back(preferredExtension.GetExtensionName());
             }
         }
@@ -54,7 +54,7 @@ namespace DollsEngine
         vkEnumerateInstanceLayerProperties(&layerCount, availableLayers.data());
 
         for (auto& preferredLayer : m_preferredLayers) {
-            if (preferredLayer.IsSupported()) {
+            if (preferredLayer.first) {
                 continue;
             }
             for (const auto& availableLayer : availableLayers) {
@@ -75,7 +75,7 @@ namespace DollsEngine
         vkEnumerateInstanceExtensionProperties(layerName, &extensionCount, extensionProperties.data());
 
         for (auto& preferredExtension : m_preferredExtensions) {
-            if (preferredExtension.IsSupported()) {
+            if (preferredExtension.first) {
                 continue;
             }
             for (const auto& extensionProperty : extensionProperties) {
