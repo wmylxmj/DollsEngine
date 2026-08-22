@@ -3,13 +3,14 @@
 #include "VulkanAPI.h"
 
 #include <vector>
+#include <utility>
 
 namespace DollsEngine
 {
-    class VulkanInstanceLayer
+    class std::pair<bool, const char*>
     {
     public:
-        explicit VulkanInstanceLayer(const char* layerName) : m_layerName(layerName) {}
+        explicit std::pair<bool, const char*>(const char* layerName) : m_layerName(layerName) {}
         const char* GetLayerName() const { return m_layerName; }
         void SetSupported() { m_isSupported = true; }
         bool IsSupported() const { return m_isSupported; }
@@ -47,7 +48,7 @@ namespace DollsEngine
 
         VkInstance m_instance;
 
-        std::vector<VulkanInstanceLayer> m_preferredLayers;
+        std::vector<std::pair<bool, const char*>> m_preferredLayers;
         std::vector<const char*> m_supportedLayers;
 
         std::vector<VulkanInstanceExtension> m_preferredExtensions;
