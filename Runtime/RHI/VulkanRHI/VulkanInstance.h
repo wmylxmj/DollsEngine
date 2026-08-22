@@ -36,8 +36,8 @@ namespace DollsEngine
     class VulkanInstance
     {
     public:
-        void AddPreferredLayer(const char* layerName) { m_preferredLayers.emplace_back(layerName); }
-        void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(extensionName); }
+        void AddPreferredLayer(const char* layerName) { m_preferredLayers.emplace_back(false, layerName); }
+        void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(false, extensionName); }
 
         bool Create(VkApplicationInfo applicationInfo);
         VkInstance GetInstance() const { return m_instance; }
