@@ -12,13 +12,13 @@ namespace DollsEngine
 	class VulkanDevice
 	{
 	public:
-		        void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(false, extensionName); }
+		void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(false, extensionName); }
 
 
 		bool Create(VulkanPhysicalDevice physicalDevice);
 
 	private:
-        void FlagExtensionsSupported(const char* layerName = nullptr);
+		void FlagExtensionsSupported(const char* layerName = nullptr);
 
 		std::vector<std::pair<bool, const char*>> m_preferredExtensions;
 
