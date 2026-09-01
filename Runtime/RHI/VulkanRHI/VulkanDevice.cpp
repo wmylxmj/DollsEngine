@@ -16,11 +16,11 @@ namespace DollsEngine
         std::vector<VkExtensionProperties> availableExtensions(extensionCount);
         vkEnumerateDeviceExtensionProperties(m_physicalDevice.GetPhysicalDevice(), layerName, &extensionCount, availableExtensions.data());
 
-        for (const char *requiredExtension : m_requiredExtensions) {
-            bool hasExtension = false;
-            for (const VkExtensionProperties &availableExtension : availableExtensions) {
-                if (strcmp(requiredExtension, availableExtension.extensionName) == 0) {
-                    hasExtension = true;
+        for (auto& preferredExtension : m_preferredExtensions) {
+            if (preferredExtension.first) {
+                continue;
+            }
+        }
     }
 
 
