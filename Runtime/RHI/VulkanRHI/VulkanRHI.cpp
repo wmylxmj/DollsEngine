@@ -8,6 +8,10 @@ namespace DollsEngine
 {
 	bool VulkanRHI::Initialize()
 	{
+		if (volkInitialize() != VK_SUCCESS) {
+			return false;
+		}
+
 		if (!CreateInstance()) return false;
 		if (!CreateDebugMessenger()) return false;
 		if (!CreateDevice()) return false;
