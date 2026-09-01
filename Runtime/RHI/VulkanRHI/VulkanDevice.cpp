@@ -9,4 +9,9 @@ namespace DollsEngine
         return true;
     }
 
+    void VulkanDevice::FlagExtensionsSupported(const char *layerName) {
+
+    }
+
+
 }
