@@ -3,6 +3,7 @@
 
 #include <tuple>
 #include <map>
+#include <iostream>
 
 namespace DollsEngine
 {
@@ -44,6 +45,7 @@ namespace DollsEngine
 		const VkDebugUtilsMessengerCallbackDataEXT* pCallbackData,
 		void* pUserData)
 	{
+		std::cout << "validation layer: " << pCallbackData->pMessage << std::endl;
 		return VK_FALSE;
 	}
 
