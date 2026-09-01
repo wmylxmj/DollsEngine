@@ -20,6 +20,12 @@ namespace DollsEngine
             if (preferredExtension.first) {
                 continue;
             }
+            for (const auto& availableExtension : availableExtensions) {
+                if (strcmp(preferredExtension.second, availableExtension.extensionName) == 0) {
+                    preferredExtension.first = true;
+                    break;
+                }
+            }
         }
     }
 
