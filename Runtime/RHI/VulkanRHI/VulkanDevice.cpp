@@ -1,5 +1,7 @@
 #include "VulkanDevice.h"
 
+#include <cstring>
+
 namespace DollsEngine
 {
     bool VulkanDevice::Create(VulkanPhysicalDevice physicalDevice)
