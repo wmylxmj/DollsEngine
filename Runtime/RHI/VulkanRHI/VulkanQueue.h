@@ -10,12 +10,14 @@ namespace DollsEngine
     public:
         VulkanQueue(VulkanDevice& device);
 
-        VkQueue GetQueue() const { return m_queue; }
+        VkQueue GetHandle() const { return m_queue; }
 
     private:
         VkQueue m_queue;
         uint32_t m_queueFamilyIndex;
         uint32_t m_queueIndex;
+
+        VulkanDevice&
 
     };
 }
