@@ -3,6 +3,7 @@
 #include "../RHI.h"
 #include "Platforms/VulkanNativePlatform.h"
 #include "VulkanInstance.h"
+#include "VulkanDevice.h"
 
 #include <memory>
 
@@ -23,5 +24,6 @@ namespace DollsEngine
 		VulkanInstance m_instance;
 
 		VkDebugUtilsMessengerEXT m_debugMessenger;
+		VulkanDevice m_device;
 	};
 }
