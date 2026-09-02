@@ -7,7 +7,6 @@ namespace DollsEngine
     class VulkanPhysicalDevice {
     public:
     	void Initialize(VkPhysicalDevice physicalDevice);
-    	VkPhysicalDevice GetHandle() const { return m_physicalDevice; }
 
     	const VkPhysicalDeviceProperties& GetProperties() const { return m_physicalDeviceProperties; }
     	const VkPhysicalDeviceIDPropertiesKHR& GetIDProperties() const { return m_physicalDeviceIDProperties; }
