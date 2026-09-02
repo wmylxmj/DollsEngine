@@ -17,8 +17,6 @@ namespace DollsEngine
         uint32_t m_queueFamilyIndex;
         uint32_t m_queueIndex;
 
-        VulkanDevice&
-
     };
 }
 
