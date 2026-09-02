@@ -15,6 +15,7 @@ namespace DollsEngine
         void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(false, extensionName); }
 
 		bool Create(VulkanPhysicalDevice physicalDevice);
+		VkDevice GetHandle() const { return m_device; }
 
 	private:
 		void FlagExtensionsSupported(const char* layerName = nullptr);

@@ -14,7 +14,7 @@ namespace DollsEngine
         void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(false, extensionName); }
 
         bool Create(VkApplicationInfo applicationInfo);
-        VkInstance GetInstance() const { return m_instance; }
+        VkInstance GetHandle() const { return m_instance; }
 
     private:
         void FlagLayersSupported();
