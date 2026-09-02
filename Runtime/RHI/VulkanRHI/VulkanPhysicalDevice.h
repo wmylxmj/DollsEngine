@@ -8,7 +8,6 @@ namespace DollsEngine
     public:
     	void Initialize(VkPhysicalDevice physicalDevice);
     	VkPhysicalDevice GetHandle() const { return m_physicalDevice; }
-    	const VkPhysicalDevice& GetPhysicalDevice() const { return m_physicalDevice; }
 
     	const VkPhysicalDeviceProperties& GetProperties() const { return m_physicalDeviceProperties; }
     	const VkPhysicalDeviceIDPropertiesKHR& GetIDProperties() const { return m_physicalDeviceIDProperties; }
