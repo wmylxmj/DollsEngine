@@ -21,6 +21,7 @@ namespace DollsEngine
 		void FlagExtensionsSupported(const char* layerName = nullptr);
 
 		std::vector<std::pair<bool, const char*>> m_preferredExtensions;
+		std::vector<const char*> m_supportedExtensions;
 
 		VkDevice m_device;
 
