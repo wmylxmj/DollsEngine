@@ -8,7 +8,7 @@ namespace DollsEngine
 
     class VulkanQueue {
     public:
-        VulkanQueue(VulkanDevice& device);
+        VulkanQueue(VulkanDevice& device) : m_device(device) {};
 
         VkQueue GetHandle() const { return m_queue; }
         uint32_t GetQueueFamilyIndex() const { return m_queueFamilyIndex; }
