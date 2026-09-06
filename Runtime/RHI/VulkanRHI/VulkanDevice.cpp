@@ -8,6 +8,8 @@ namespace DollsEngine
     {
         m_physicalDevice = physicalDevice;
 
+        VkDeviceCreateInfo deviceCreateInfo = {};
+
         FlagExtensionsSupported(nullptr);
         m_supportedExtensions.clear();
         for (const auto& preferredExtension : m_preferredExtensions) {
