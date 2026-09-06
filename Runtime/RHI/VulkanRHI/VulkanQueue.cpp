@@ -3,3 +3,12 @@
 //
 
 #include "VulkanQueue.h"
+
+namespace DollsEngine
+{
+    void VulkanQueue::Initialize(uint32_t queueFamilyIndex, uint32_t queueIndex)
+    {
+
+    }
+
+}
