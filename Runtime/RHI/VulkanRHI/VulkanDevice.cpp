@@ -8,6 +8,18 @@ namespace DollsEngine
     {
         m_physicalDevice = physicalDevice;
 
+        FlagExtensionsSupported(nullptr);
+        m_supportedExtensions.clear();
+        for (const auto& preferredExtension : m_preferredExtensions) {
+            if (preferredExtension.first) {
+                m_supportedExtensions.push_back(preferredExtension.second);
+            }
+        }
+
+
+
+
+
         return true;
     }
 
