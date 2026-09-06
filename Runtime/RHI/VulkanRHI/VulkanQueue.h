@@ -8,7 +8,7 @@ namespace DollsEngine
 
     class VulkanQueue {
     public:
-        VulkanQueue(VulkanDevice& device) : m_device(device) {};
+        VulkanQueue(VulkanDevice& device) : m_device(device) {}
 
         void Initialize(uint32_t queueFamilyIndex, uint32_t queueIndex);
 
