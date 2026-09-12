@@ -53,6 +53,10 @@ namespace DollsEngine
                     computeQueueFamilyIndex = i;
                 }
             }
+
+            if (graphicsQueueFamilyIndex == i || computeQueueFamilyIndex == i) {
+                float queuePriority = 1.0f;
+            }
         }
 
         std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
