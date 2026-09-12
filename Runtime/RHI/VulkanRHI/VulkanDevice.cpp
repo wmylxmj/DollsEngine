@@ -45,7 +45,9 @@ namespace DollsEngine
                 }
             }
             if (queueFamily.queueFlags & VK_QUEUE_COMPUTE_BIT) {
-                computeQueueFamilyIndex = i;
+                if (!computeQueueFamilyIndex.has_value()) {
+                    computeQueueFamilyIndex = i;
+                }
             }
         }
 
