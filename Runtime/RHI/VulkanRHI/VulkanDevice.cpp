@@ -28,6 +28,9 @@ namespace DollsEngine
         deviceCreateInfo.enabledExtensionCount = static_cast<uint32_t>(m_supportedExtensions.size());
         deviceCreateInfo.ppEnabledExtensionNames = m_supportedExtensions.data();
 
+        std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
+
+
         uint32_t queueFamilyCount = 0;
         vkGetPhysicalDeviceQueueFamilyProperties(m_physicalDevice.GetHandle(), &queueFamilyCount, nullptr);
 
