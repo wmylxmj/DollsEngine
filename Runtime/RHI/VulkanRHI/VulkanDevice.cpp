@@ -59,12 +59,6 @@ namespace DollsEngine
             }
         }
 
-        std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
-
-
-
-
-
         return true;
     }
 
