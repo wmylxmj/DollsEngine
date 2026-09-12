@@ -31,6 +31,7 @@ namespace DollsEngine
         vkGetPhysicalDeviceQueueFamilyProperties(m_physicalDevice.GetHandle(), &queueFamilyCount, nullptr);
 
         std::vector<VkQueueFamilyProperties> queueFamilies(queueFamilyCount);
+        vkGetPhysicalDeviceQueueFamilyProperties(m_physicalDevice.GetHandle(), &queueFamilyCount, queueFamilies.data());
 
         std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
 
