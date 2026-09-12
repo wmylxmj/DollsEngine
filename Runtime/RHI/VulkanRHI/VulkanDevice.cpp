@@ -11,6 +11,8 @@ namespace DollsEngine
         VkDeviceCreateInfo deviceCreateInfo = {};
         deviceCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
 
+        VkPhysicalDeviceFeatures physicalDeviceFeatures = {};
+
         FlagExtensionsSupported(nullptr);
         m_supportedExtensions.clear();
         for (const auto& preferredExtension : m_preferredExtensions) {
