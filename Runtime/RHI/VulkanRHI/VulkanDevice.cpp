@@ -37,6 +37,7 @@ namespace DollsEngine
         std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
 
         std::optional<uint32_t> graphicsQueueFamilyIndex;
+        std::optional<uint32_t> computeQueueFamilyIndex;
 
 
 
