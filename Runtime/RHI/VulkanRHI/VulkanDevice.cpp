@@ -12,6 +12,7 @@ namespace DollsEngine
         deviceCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_CREATE_INFO;
 
         VkPhysicalDeviceFeatures physicalDeviceFeatures = {};
+        deviceCreateInfo.pEnabledFeatures = &physicalDeviceFeatures;
 
         FlagExtensionsSupported(nullptr);
         m_supportedExtensions.clear();
