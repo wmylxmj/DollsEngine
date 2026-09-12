@@ -18,6 +18,8 @@ namespace DollsEngine
                 m_supportedExtensions.push_back(preferredExtension.second);
             }
         }
+        deviceCreateInfo.enabledExtensionCount = static_cast<uint32_t>(m_supportedExtensions.size());
+        deviceCreateInfo.ppEnabledExtensionNames = m_supportedExtensions.data();
 
 
 
