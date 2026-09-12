@@ -1,6 +1,7 @@
 #include "VulkanDevice.h"
 
 #include <cstring>
+#include <optional>
 
 namespace DollsEngine
 {
@@ -35,6 +36,7 @@ namespace DollsEngine
 
         std::vector<VkDeviceQueueCreateInfo> queueCreateInfos;
 
+        std::optional<uint32_t> graphicsQueueFamilyIndex;
 
 
 
