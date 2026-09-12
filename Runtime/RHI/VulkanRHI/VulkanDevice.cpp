@@ -40,7 +40,9 @@ namespace DollsEngine
         for (uint32_t i = 0; i < queueFamilyCount; ++i) {
             const auto& queueFamily = queueFamilies[i];
             if (queueFamily.queueFlags & VK_QUEUE_GRAPHICS_BIT) {
-                graphicsQueueFamilyIndex = i;
+                if (!graphicsQueueFamilyIndex.has_value()) {
+                    graphicsQueueFamilyIndex = i;
+                }
             }
             if (queueFamily.queueFlags & VK_QUEUE_COMPUTE_BIT) {
                 computeQueueFamilyIndex = i;
