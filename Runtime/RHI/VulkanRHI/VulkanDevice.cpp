@@ -14,6 +14,9 @@ namespace DollsEngine
         VkPhysicalDeviceFeatures physicalDeviceFeatures = {};
         deviceCreateInfo.pEnabledFeatures = &physicalDeviceFeatures;
 
+        deviceCreateInfo.enabledLayerCount = 0;
+        deviceCreateInfo.ppEnabledLayerNames = nullptr;
+
         FlagExtensionsSupported(nullptr);
         m_supportedExtensions.clear();
         for (const auto& preferredExtension : m_preferredExtensions) {
