@@ -69,6 +69,9 @@ namespace DollsEngine
         deviceCreateInfo.queueCreateInfoCount = static_cast<uint32_t>(queueCreateInfos.size());
         deviceCreateInfo.pQueueCreateInfos = queueCreateInfos.data();
 
+        if (vkCreateDevice(m_physicalDevice.GetHandle(), &deviceCreateInfo, nullptr, &m_device) != VK_SUCCESS) {
+        }
+
         return true;
     }
 
