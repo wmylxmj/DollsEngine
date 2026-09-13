@@ -56,6 +56,8 @@ namespace DollsEngine
 
             if (graphicsQueueFamilyIndex == i || computeQueueFamilyIndex == i) {
                 float queuePriority = 1.0f;
+
+                VkDeviceQueueCreateInfo queueCreateInfo = {};`
             }
         }
 
