@@ -58,6 +58,7 @@ namespace DollsEngine
                 float queuePriority = 1.0f;
 
                 VkDeviceQueueCreateInfo queueCreateInfo{};
+                queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
             }
         }
 
