@@ -28,5 +28,6 @@ namespace DollsEngine
 		VulkanPhysicalDevice m_physicalDevice;
 
 		VulkanQueue m_graphicsQueue;
+		VulkanQueue m_computeQueue;
 	};
 }
