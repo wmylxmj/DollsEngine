@@ -60,6 +60,7 @@ namespace DollsEngine
                 VkDeviceQueueCreateInfo queueCreateInfo{};
                 queueCreateInfo.sType = VK_STRUCTURE_TYPE_DEVICE_QUEUE_CREATE_INFO;
                 queueCreateInfo.queueFamilyIndex = i;
+                queueCreateInfo.queueCount = 1;
             }
         }
 
