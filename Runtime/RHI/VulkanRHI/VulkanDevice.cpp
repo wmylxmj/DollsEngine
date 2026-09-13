@@ -77,6 +77,7 @@ namespace DollsEngine
             return false;
         }
 
+        m_graphicsQueue.Initialize(graphicsQueueFamilyIndex.value(), 0);
         if (computeQueueFamilyIndex.has_value()) {
             m_computeQueue.Initialize(computeQueueFamilyIndex.value(), 0);
         }
