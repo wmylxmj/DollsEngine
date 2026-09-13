@@ -66,6 +66,8 @@ namespace DollsEngine
             }
         }
 
+        deviceCreateInfo.queueCreateInfoCount = static_cast<uint32_t>(queueCreateInfos.size());
+
         return true;
     }
 
