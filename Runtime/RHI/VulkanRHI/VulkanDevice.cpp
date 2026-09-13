@@ -56,8 +56,7 @@ namespace DollsEngine
 
             if (graphicsQueueFamilyIndex == i || computeQueueFamilyIndex == i) {
                 float queuePriority = 1.0f;
-
-                }
+            }
         }
 
         return true;
