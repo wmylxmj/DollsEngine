@@ -70,6 +70,7 @@ namespace DollsEngine
         deviceCreateInfo.pQueueCreateInfos = queueCreateInfos.data();
 
         if (vkCreateDevice(m_physicalDevice.GetHandle(), &deviceCreateInfo, nullptr, &m_device) != VK_SUCCESS) {
+            return false;
         }
 
         return true;
