@@ -40,6 +40,8 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
+        RHI/RHIRuntime.cpp
+        RHI/RHIRuntime.h
 )
 
 if (WIN32)
