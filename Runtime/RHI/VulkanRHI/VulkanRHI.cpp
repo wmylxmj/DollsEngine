@@ -106,6 +106,7 @@ namespace DollsEngine
 	bool VulkanRHI::CreateDevice()
 	{
 		m_device.AddPreferredExtension(VK_KHR_SWAPCHAIN_EXTENSION_NAME);
+		return m_device.Create(SelectPhysicalDevice(m_instance.GetHandle()));
 		return true;
 	}
 
