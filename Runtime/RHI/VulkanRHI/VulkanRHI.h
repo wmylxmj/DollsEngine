@@ -22,8 +22,6 @@ namespace DollsEngine
 		std::unique_ptr<VulkanPlatform> m_vulkanPlatform;
 
 		VulkanInstance m_instance;
-
 		VkDebugUtilsMessengerEXT m_debugMessenger;
-		VulkanDevice m_device;
 	};
 }
