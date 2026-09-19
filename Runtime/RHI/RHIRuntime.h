@@ -1,16 +1,6 @@
-//
-// Created by 13973 on 26-9-19.
-//
+#pragma once
 
-#ifndef RHIRUNTIME_H
-#define RHIRUNTIME_H
+namespace DollsEngine
+{
 
-
-
-class RHIRuntime {
-
-};
-
-
-
-#endif //RHIRUNTIME_H
+}
