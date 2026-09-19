@@ -17,6 +17,8 @@ add_executable(DollsEngine
         Core/Event/Event.h
         RHI/RHI.h
         RHI/RHIResource.h
+        RHI/RHIRuntime.cpp
+        RHI/RHIRuntime.h
         RHI/VulkanRHI/VulkanAPI.h
         RHI/VulkanRHI/VulkanPlatform.h
         RHI/VulkanRHI/Platforms/VulkanNativePlatform.h
@@ -40,8 +42,6 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
-        RHI/RHIRuntime.cpp
-        RHI/RHIRuntime.h
 )
 
 if (WIN32)
