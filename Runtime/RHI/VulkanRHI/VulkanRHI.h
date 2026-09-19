@@ -23,5 +23,6 @@ namespace DollsEngine
 
 		VulkanInstance m_instance;
 		VkDebugUtilsMessengerEXT m_debugMessenger;
+		VulkanDevice m_device;
 	};
 }
