@@ -13,6 +13,8 @@ namespace DollsEngine
 			return false;
 		}
 
+		m_vulkanPlatform = std::make_unique<VulkanNativePlatform>();
+
 		if (!CreateInstance()) return false;
 		if (!CreateDebugMessenger()) return false;
 		if (!CreateDevice()) return false;
