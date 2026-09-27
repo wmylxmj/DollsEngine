@@ -42,6 +42,8 @@ namespace DollsEngine
             return false;
         }
 
+        volkLoadInstance(m_instance);
+
         return true;
     }
 
