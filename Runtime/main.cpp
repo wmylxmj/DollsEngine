@@ -28,6 +28,8 @@ int main()
 
 	myApplication.CreateWindow(windowCreateInfo)->Show();
 
+	engine.Init();
+
 	while (!engine.ShouldExit())
 	{
 		engine.Tick();
