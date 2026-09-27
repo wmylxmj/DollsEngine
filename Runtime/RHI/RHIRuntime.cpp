@@ -14,6 +14,7 @@ namespace DollsEngine
     bool InitializeRHI()
     {
         s_globalRHI = new VulkanRHI();
+        return s_globalRHI->Initialize();
     }
 
 
