@@ -12,6 +12,8 @@ namespace DollsEngine
 	class VulkanDevice
 	{
 	public:
+		VulkanDevice();
+
         void AddPreferredExtension(const char* extensionName) { m_preferredExtensions.emplace_back(false, extensionName); }
 
 		bool Create(VulkanPhysicalDevice physicalDevice);
