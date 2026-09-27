@@ -36,6 +36,7 @@ namespace DollsEngine
 		m_instance.AddPreferredExtension(VK_EXT_DEBUG_UTILS_EXTENSION_NAME);
 #endif
 		m_instance.AddPreferredExtension(VK_KHR_SURFACE_EXTENSION_NAME);
+		m_instance.AddPreferredExtension(VK_KHR_GET_PHYSICAL_DEVICE_PROPERTIES_2_EXTENSION_NAME);
 
 		m_vulkanPlatform->AddPreferredInstanceExtensions(m_instance);
 		return m_instance.Create(appInfo);
