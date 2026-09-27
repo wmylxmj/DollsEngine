@@ -1,11 +1,13 @@
 #include "Engine.h"
 
 #include "../Application/Application.h"
+#include "../RHI/RHIRuntime.h"
 
 namespace DollsEngine
 {
 	int Engine::Init()
 	{
+		if (!InitializeRHI()) return -1;
 		return 0;
 	}
 
