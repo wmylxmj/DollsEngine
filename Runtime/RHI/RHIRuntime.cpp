@@ -16,5 +16,8 @@ namespace DollsEngine
         return s_globalRHI->Initialize();
     }
 
-
+    RHI* GetRHI()
+    {
+        return s_globalRHI;
+    }
 }

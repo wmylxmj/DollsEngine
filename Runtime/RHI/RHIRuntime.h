@@ -5,4 +5,5 @@
 namespace DollsEngine
 {
     bool InitializeRHI();
+    RHI* GetRHI();
 }
