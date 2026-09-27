@@ -5,6 +5,13 @@
 
 namespace DollsEngine
 {
+    VulkanDevice::VulkanDevice() :
+        m_graphicsQueue(*this),
+        m_computeQueue(*this)
+    {
+
+    }
+
     bool VulkanDevice::Create(VulkanPhysicalDevice physicalDevice)
     {
         m_physicalDevice = physicalDevice;
