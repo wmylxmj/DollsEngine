@@ -1,16 +1,12 @@
-//
-// Created by 13973 on 26-9-29.
-//
+#pragma once
 
-#ifndef VULKANSWAPCHAIN_H
-#define VULKANSWAPCHAIN_H
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanSwapchain {
 
-
-class VulkanSwapchain {
-
-};
+    };
+}
 
 
-
-#endif //VULKANSWAPCHAIN_H
