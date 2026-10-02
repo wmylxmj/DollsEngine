@@ -5,6 +5,8 @@
 namespace DollsEngine
 {
     class VulkanSwapchain {
+    protected:
+        VkSwapchainKHR m_swapchain;
 
     };
 }
