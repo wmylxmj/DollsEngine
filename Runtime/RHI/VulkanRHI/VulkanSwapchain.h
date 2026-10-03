@@ -4,6 +4,8 @@
 
 namespace DollsEngine
 {
+    class VulkanDevice;
+
     class VulkanSwapchain {
     public:
         VkSwapchainKHR GetHandle() const { return m_swapchain; }
