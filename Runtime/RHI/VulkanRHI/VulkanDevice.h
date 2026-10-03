@@ -19,6 +19,8 @@ namespace DollsEngine
 		bool Create(VulkanPhysicalDevice physicalDevice);
 		VkDevice GetHandle() const { return m_device; }
 
+		VulkanPhysicalDevice GetPhysicalDevice() const { return m_physicalDevice; }
+
 	private:
 		void FlagExtensionsSupported(const char* layerName = nullptr);
 
