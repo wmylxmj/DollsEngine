@@ -8,9 +8,9 @@ namespace DollsEngine
 
     class VulkanSwapchain {
     public:
-        VulkanSwapchain(VulkanDevice& device, VkSurfaceKHR surface);
+        VulkanSwapchain(VulkanDevice& device) : m_device(device) {}
 
-        bool Create(uint32_t width, uint32_t height, bool vsync);
+        bool Create(VkSurfaceKHR surface, uint32_t width, uint32_t height, bool vsync);
         VkSwapchainKHR GetHandle() const { return m_swapchain; }
 
     protected:
