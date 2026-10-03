@@ -11,6 +11,8 @@ namespace DollsEngine
         VulkanSwapchain(VulkanDevice& device) : m_device(device) {}
 
         bool Create(VkSurfaceKHR surface, uint32_t width, uint32_t height, bool vsync);
+
+        VkSurfaceKHR GetSurface() const { return m_surface; }
         VkSwapchainKHR GetHandle() const { return m_swapchain; }
 
     protected:
