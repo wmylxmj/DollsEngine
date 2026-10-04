@@ -14,11 +14,17 @@ namespace DollsEngine
         swapchainCreateInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
         swapchainCreateInfo.surface = m_surface;
         swapchainCreateInfo.minImageCount = 3;
+        swapchainCreateInfo.imageFormat = VK_FORMAT_B8G8R8A8_UNORM;
+        swapchainCreateInfo.imageColorSpace = VK_COLOR_SPACE_SRGB_NONLINEAR_KHR;
         swapchainCreateInfo.imageExtent.width = width;
         swapchainCreateInfo.imageExtent.height = height;
         swapchainCreateInfo.imageUsage = VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT;
+        swapchainCreateInfo.preTransform = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR;
         swapchainCreateInfo.imageArrayLayers = 1;
         swapchainCreateInfo.imageSharingMode = VK_SHARING_MODE_EXCLUSIVE;
+        swapchainCreateInfo.oldSwapchain = oldSwapchain;
+        swapchainCreateInfo.clipped = VK_TRUE;
+
 
     }
 
