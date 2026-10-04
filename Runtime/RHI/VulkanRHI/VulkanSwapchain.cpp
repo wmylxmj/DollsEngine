@@ -10,6 +10,8 @@ namespace DollsEngine
     {
         m_surface = surface;
 
+        VkSurfaceCapabilitiesKHR surfaceCapabilities;
+
         VkSwapchainCreateInfoKHR swapchainCreateInfo = {};
         swapchainCreateInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
         swapchainCreateInfo.surface = m_surface;
