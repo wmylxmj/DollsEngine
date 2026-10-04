@@ -52,7 +52,9 @@ namespace DollsEngine
         swapchainCreateInfo.clipped = VK_TRUE;
         swapchainCreateInfo.compositeAlpha = compositeAlpha;
 
-
+        if (vkCreateSwapchainKHR(m_device.GetHandle(), &swapchainCreateInfo, nullptr, &m_swapchain) != VK_SUCCESS) {
+            return false;
+        }
     }
 
 
