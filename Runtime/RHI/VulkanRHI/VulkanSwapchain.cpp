@@ -38,6 +38,7 @@ namespace DollsEngine
         swapchainCreateInfo.preTransform = VK_SURFACE_TRANSFORM_IDENTITY_BIT_KHR;
         swapchainCreateInfo.imageArrayLayers = 1;
         swapchainCreateInfo.imageSharingMode = VK_SHARING_MODE_EXCLUSIVE;
+        swapchainCreateInfo.presentMode = presentMode;
         swapchainCreateInfo.oldSwapchain = oldSwapchain;
         swapchainCreateInfo.clipped = VK_TRUE;
         swapchainCreateInfo.compositeAlpha = compositeAlpha;
