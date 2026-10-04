@@ -20,9 +20,12 @@ namespace DollsEngine
         VkPresentModeKHR presentMode = VK_PRESENT_MODE_FIFO_KHR;
         for (const auto& availablePresentMode : availablePresentModes) {
             if (availablePresentMode == VK_PRESENT_MODE_IMMEDIATE_KHR && !vsync) {
+                presentMode = availablePresentMode;
+                break;
             }
-            
-
+            if (availablePresentMode == VK_PRESENT_MODE_MAILBOX_KHR) {
+                presentMode = availablePresentMode;
+            }
         }
 
         VkSurfaceCapabilitiesKHR surfaceCapabilities;
