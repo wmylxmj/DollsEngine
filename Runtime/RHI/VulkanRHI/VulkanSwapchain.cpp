@@ -4,6 +4,8 @@
 
 #include "VulkanSwapchain.h"
 
+#include "VulkanDevice.h"
+
 namespace DollsEngine
 {
     bool VulkanSwapchain::Create(VkSurfaceKHR surface, uint32_t width, uint32_t height, bool vsync, VkSwapchainKHR oldSwapchain)
@@ -11,6 +13,7 @@ namespace DollsEngine
         m_surface = surface;
 
         VkSurfaceCapabilitiesKHR surfaceCapabilities;
+        vkGetPhysicalDeviceSurfaceCapabilitiesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &surfaceCapabilities);
 
         VkSwapchainCreateInfoKHR swapchainCreateInfo = {};
         swapchainCreateInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
