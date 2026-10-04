@@ -14,6 +14,7 @@ namespace DollsEngine
 
         uint32_t availablePresentModeCount = 0;
         vkGetPhysicalDeviceSurfacePresentModesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &availablePresentModeCount, nullptr);
+        std::vector<VkPresentModeKHR> availablePresentModes(availablePresentModeCount);
 
         VkSurfaceCapabilitiesKHR surfaceCapabilities;
         vkGetPhysicalDeviceSurfaceCapabilitiesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &surfaceCapabilities);
