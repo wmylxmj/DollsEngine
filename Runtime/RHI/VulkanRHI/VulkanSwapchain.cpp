@@ -30,6 +30,7 @@ namespace DollsEngine
         swapchainCreateInfo.imageSharingMode = VK_SHARING_MODE_EXCLUSIVE;
         swapchainCreateInfo.oldSwapchain = oldSwapchain;
         swapchainCreateInfo.clipped = VK_TRUE;
+        swapchainCreateInfo.compositeAlpha = compositeAlpha;
 
 
     }
