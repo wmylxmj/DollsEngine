@@ -17,6 +17,8 @@ namespace DollsEngine
         std::vector<VkPresentModeKHR> availablePresentModes(availablePresentModeCount);
         vkGetPhysicalDeviceSurfacePresentModesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &availablePresentModeCount, availablePresentModes.data());
 
+        VkPresentModeKHR presentMode = VK_PRESENT_MODE_FIFO_KHR;
+
         VkSurfaceCapabilitiesKHR surfaceCapabilities;
         vkGetPhysicalDeviceSurfaceCapabilitiesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &surfaceCapabilities);
         VkCompositeAlphaFlagBitsKHR compositeAlpha = VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR;
