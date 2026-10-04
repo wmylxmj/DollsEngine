@@ -15,6 +15,8 @@ namespace DollsEngine
         VkSurfaceCapabilitiesKHR surfaceCapabilities;
         vkGetPhysicalDeviceSurfaceCapabilitiesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &surfaceCapabilities);
         VkCompositeAlphaFlagBitsKHR compositeAlpha = VK_COMPOSITE_ALPHA_INHERIT_BIT_KHR;
+        if (surfaceCapabilities.supportedCompositeAlpha & VK_COMPOSITE_ALPHA_OPAQUE_BIT_KHR) {
+        }
 
         VkSwapchainCreateInfoKHR swapchainCreateInfo = {};
         swapchainCreateInfo.sType = VK_STRUCTURE_TYPE_SWAPCHAIN_CREATE_INFO_KHR;
