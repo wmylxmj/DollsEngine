@@ -19,6 +19,9 @@ namespace DollsEngine
 
         VkPresentModeKHR presentMode = VK_PRESENT_MODE_FIFO_KHR;
         for (const auto& availablePresentMode : availablePresentModes) {
+            if (availablePresentMode == VK_PRESENT_MODE_IMMEDIATE_KHR && !vsync) {
+            }
+            
 
         }
 
