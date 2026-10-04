@@ -9,6 +9,8 @@ namespace DollsEngine
     bool VulkanSwapchain::Create(VkSurfaceKHR surface, uint32_t width, uint32_t height, bool vsync, VkSwapchainKHR oldSwapchain)
     {
         m_surface = surface;
+
+        VkSwapchainCreateInfoKHR swapchainCreateInfo = {};
     }
 
 
