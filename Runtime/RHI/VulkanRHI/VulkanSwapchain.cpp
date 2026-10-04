@@ -18,6 +18,9 @@ namespace DollsEngine
         vkGetPhysicalDeviceSurfacePresentModesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &availablePresentModeCount, availablePresentModes.data());
 
         VkPresentModeKHR presentMode = VK_PRESENT_MODE_FIFO_KHR;
+        for (const auto& availablePresentMode : availablePresentModes) {
+
+        }
 
         VkSurfaceCapabilitiesKHR surfaceCapabilities;
         vkGetPhysicalDeviceSurfaceCapabilitiesKHR(m_device.GetPhysicalDevice().GetHandle(), m_surface, &surfaceCapabilities);
