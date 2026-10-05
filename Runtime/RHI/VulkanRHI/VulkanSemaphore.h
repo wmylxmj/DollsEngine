@@ -4,6 +4,8 @@
 
 namespace DollsEngine
 {
+    class VulkanDevice;
+
     class VulkanSemaphore {
 
     };
