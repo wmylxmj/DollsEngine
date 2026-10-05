@@ -2,6 +2,8 @@
 
 #include "VulkanAPI.h"
 
+#include <vector>
+
 namespace DollsEngine
 {
     class VulkanDevice;
