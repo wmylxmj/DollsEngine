@@ -22,6 +22,7 @@ namespace DollsEngine
 
         VkSurfaceKHR m_surface;
         VkSwapchainKHR m_swapchain;
+        std::vector<VkImage> m_images;
 
     };
 }
