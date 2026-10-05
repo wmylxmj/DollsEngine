@@ -8,6 +8,7 @@ namespace DollsEngine
 
     class VulkanSemaphore {
     public:
+        VulkanSemaphore(VulkanDevice& device) : m_device(device) {}
 
     protected:
         VulkanDevice& m_device;
