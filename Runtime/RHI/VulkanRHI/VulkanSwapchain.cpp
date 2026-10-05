@@ -58,6 +58,8 @@ namespace DollsEngine
 
         uint32_t imageCount;
         vkGetSwapchainImagesKHR(m_device.GetHandle(), m_swapchain, &imageCount, nullptr);
+        m_images.resize(imageCount);
+        vkGetSwapchainImagesKHR(m_device.GetHandle(), m_swapchain, &imageCount, m_images.data());
     }
 
 
