@@ -55,6 +55,9 @@ namespace DollsEngine
         if (vkCreateSwapchainKHR(m_device.GetHandle(), &swapchainCreateInfo, nullptr, &m_swapchain) != VK_SUCCESS) {
             return false;
         }
+
+        uint32_t imageCount;
+        vkGetSwapchainImagesKHR(m_device.GetHandle(), m_swapchain, &imageCount, nullptr);
     }
 
 
