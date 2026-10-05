@@ -7,6 +7,10 @@ namespace DollsEngine
     class VulkanDevice;
 
     class VulkanSemaphore {
+    public:
+
+    protected:
+
 
     };
 }
