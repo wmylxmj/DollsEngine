@@ -44,6 +44,8 @@ add_executable(DollsEngine
         main.cpp
         RHI/VulkanRHI/VulkanSwapchain.cpp
         RHI/VulkanRHI/VulkanSwapchain.h
+        RHI/VulkanRHI/VulkanSemaphore.cpp
+        RHI/VulkanRHI/VulkanSemaphore.h
 )
 
 if (WIN32)
