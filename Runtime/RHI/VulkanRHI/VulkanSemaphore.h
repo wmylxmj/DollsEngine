@@ -2,9 +2,9 @@
 
 #include "VulkanAPI.h"
 
-class VulkanSemaphore {
+namespace DollsEngine
+{
+    class VulkanSemaphore {
 
-};
-
-
-
+    };
+}
