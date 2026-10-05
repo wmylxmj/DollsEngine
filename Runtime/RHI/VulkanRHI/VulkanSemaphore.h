@@ -1,11 +1,6 @@
-//
-// Created by 13973 on 26-10-5.
-//
+#pragma once
 
-#ifndef VULKANSEMAPHORE_H
-#define VULKANSEMAPHORE_H
-
-
+#include "VulkanAPI.h"
 
 class VulkanSemaphore {
 
@@ -13,4 +8,3 @@ class VulkanSemaphore {
 
 
 
-#endif //VULKANSEMAPHORE_H
