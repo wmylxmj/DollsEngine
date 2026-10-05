@@ -10,6 +10,7 @@ namespace DollsEngine
     public:
 
     protected:
+        VulkanDevice& m_device;
 
 
     };
