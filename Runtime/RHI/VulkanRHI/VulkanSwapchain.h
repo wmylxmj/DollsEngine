@@ -27,6 +27,7 @@ namespace DollsEngine
         VkSwapchainKHR m_swapchain;
 
         std::vector<VkImage> m_images;
+        std::vector<VulkanSemaphore> m_readyToRenderSemaphores;
 
 
     };
