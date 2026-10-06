@@ -17,7 +17,5 @@ namespace DollsEngine
         VulkanDevice& m_device;
 
         VkSemaphore m_semaphore = VK_NULL_HANDLE;
-
-
     };
 }
