@@ -13,6 +13,8 @@ namespace DollsEngine
     protected:
         VulkanDevice& m_device;
 
+        VkSemaphore m_semaphore = VK_NULL_HANDLE;
+
 
     };
 }
