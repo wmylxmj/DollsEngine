@@ -17,11 +17,11 @@ namespace DollsEngine
         uint32_t GetQueueIndex() const { return m_queueIndex; }
 
     private:
+        VulkanDevice& m_device;
+
         VkQueue m_queue;
         uint32_t m_queueFamilyIndex;
         uint32_t m_queueIndex;
-
-        VulkanDevice& m_device;
     };
 }
 
