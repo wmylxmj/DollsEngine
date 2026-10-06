@@ -2,5 +2,10 @@
 
 namespace DollsEngine
 {
+    bool VulkanSemaphore::Create()
+    {
+
+    }
+
 
 }
