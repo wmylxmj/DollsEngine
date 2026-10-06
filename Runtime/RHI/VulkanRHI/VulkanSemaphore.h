@@ -10,6 +10,7 @@ namespace DollsEngine
     public:
         VulkanSemaphore(VulkanDevice& device) : m_device(device) {}
 
+        bool Create();
         VkSemaphore GetHandle() const { return m_semaphore; }
 
     protected:
