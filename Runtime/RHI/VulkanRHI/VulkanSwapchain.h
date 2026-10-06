@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VulkanAPI.h"
+#include "VulkanSemaphore.h"
 
 #include <vector>
 
@@ -17,6 +18,8 @@ namespace DollsEngine
         VkSurfaceKHR GetSurface() const { return m_surface; }
         VkSwapchainKHR GetHandle() const { return m_swapchain; }
 
+        const std::vector<VkImage>& GetImages() const { return m_images; }
+
     protected:
         VulkanDevice& m_device;
 
@@ -24,6 +27,8 @@ namespace DollsEngine
         VkSwapchainKHR m_swapchain;
 
         std::vector<VkImage> m_images;
+
+
     };
 }
 
