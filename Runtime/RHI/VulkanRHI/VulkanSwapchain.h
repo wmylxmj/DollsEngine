@@ -30,6 +30,7 @@ namespace DollsEngine
 
         std::vector<VulkanSemaphore> m_readyToRenderSemaphores;
         // 当前信号量索引
+        uint32_t m_currentSemaphoreIndex = 0;
 
 
     };
