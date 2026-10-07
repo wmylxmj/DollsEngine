@@ -69,7 +69,7 @@ namespace DollsEngine
         return true;
     }
 
-    uint32_t VulkanSwapchain::AcquireNextImage(VulkanSemaphore *pOutSemaphore)
+    bool VulkanSwapchain::AcquireNextImage(uint32_t &outImageIndex, VulkanSemaphore *pOutSemaphore)
     {
         uint32_t imageIndex;
         m_currentSemaphoreIndex = (m_currentSemaphoreIndex + 1) % m_readyToRenderSemaphores.size();
