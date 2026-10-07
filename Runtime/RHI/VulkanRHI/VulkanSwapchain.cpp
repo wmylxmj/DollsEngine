@@ -60,6 +60,12 @@ namespace DollsEngine
         vkGetSwapchainImagesKHR(m_device.GetHandle(), m_swapchain, &imageCount, nullptr);
         m_images.resize(imageCount);
         vkGetSwapchainImagesKHR(m_device.GetHandle(), m_swapchain, &imageCount, m_images.data());
+
+        m_readyToRenderSemaphores.resize(imageCount);
+        for (uint32_t i = 0; i < imageCount; ++i) {
+            m_readyToRenderSemaphores.emplace_back(m_device);
+            m_readyToRenderSemaphores[i].Create();
+        }
     }
 
 
