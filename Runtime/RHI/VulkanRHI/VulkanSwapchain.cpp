@@ -69,5 +69,10 @@ namespace DollsEngine
         return true;
     }
 
+    uint32_t VulkanSwapchain::AcquireNextImage(VulkanSemaphore *pOutSemaphore)
+    {
+
+    }
+
 
 }
