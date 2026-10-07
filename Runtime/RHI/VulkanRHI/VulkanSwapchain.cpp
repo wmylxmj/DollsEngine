@@ -71,6 +71,7 @@ namespace DollsEngine
 
     uint32_t VulkanSwapchain::AcquireNextImage(VulkanSemaphore *pOutSemaphore)
     {
+        uint32_t imageIndex;
 
     }
 
