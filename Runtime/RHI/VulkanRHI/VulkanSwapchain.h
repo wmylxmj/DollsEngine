@@ -15,7 +15,8 @@ namespace DollsEngine
 
         bool Create(VkSurfaceKHR surface, uint32_t width, uint32_t height, bool vsync, VkSwapchainKHR oldSwapchain = VK_NULL_HANDLE);
 
-        uint32_t AcquireNextImage(VulkanSemaphore* pOutSemaphore);
+        bool AcquireNextImage(uint32_t& outImageIndex, VulkanSemaphore *pOutSemaphore);
+
 
         VkSurfaceKHR GetSurface() const { return m_surface; }
         VkSwapchainKHR GetHandle() const { return m_swapchain; }
