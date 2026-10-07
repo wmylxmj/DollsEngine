@@ -29,6 +29,7 @@ namespace DollsEngine
         std::vector<VkImage> m_images;
 
         std::vector<VulkanSemaphore> m_readyToRenderSemaphores;
+        // 当前信号量索引
 
 
     };
