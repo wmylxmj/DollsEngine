@@ -74,6 +74,16 @@ namespace DollsEngine
         uint32_t imageIndex;
         m_currentSemaphoreIndex = (m_currentSemaphoreIndex + 1) % m_readyToRenderSemaphores.size();
 
+        if (vkAcquireNextImageKHR(
+            m_device.GetHandle(),
+            m_swapchain,
+            UINT64_MAX,
+            m_readyToRenderSemaphores[m_currentSemaphoreIndex].GetHandle(),
+            VK_NULL_HANDLE,
+            &imageIndex) != VK_SUCCESS) {
+            return false;
+        }
+
     }
 
 
