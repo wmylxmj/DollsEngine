@@ -84,6 +84,9 @@ namespace DollsEngine
             return false;
         }
 
+        outImageIndex = imageIndex;
+        pOutSemaphore = &m_readyToRenderSemaphores[m_currentSemaphoreIndex];
+        return true;
     }
 
 
