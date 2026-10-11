@@ -38,6 +38,8 @@ add_executable(DollsEngine
         RHI/VulkanRHI/VulkanSwapchain.h
         RHI/VulkanRHI/VulkanPresenter.cpp
         RHI/VulkanRHI/VulkanPresenter.h
+        RHI/VulkanRHI/VulkanTexture.cpp
+        RHI/VulkanRHI/VulkanTexture.h
         Engine/Engine.h
         Engine/Engine.cpp
         Application/Application.h
@@ -48,8 +50,6 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
-        RHI/VulkanRHI/VulkanTexture.cpp
-        RHI/VulkanRHI/VulkanTexture.h
 )
 
 if (WIN32)
