@@ -5,8 +5,9 @@
 namespace DollsEngine
 {
     class VulkanTexture {
+    public:
 
-    private:
+    protected:
         VkImage m_image;
     };
 }
