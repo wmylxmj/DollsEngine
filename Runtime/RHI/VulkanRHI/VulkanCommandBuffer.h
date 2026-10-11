@@ -1,8 +1,11 @@
 #pragma once
 
+#include "VulkanAPI.h"
 
-class VulkanCommandBuffer {
+namespace  DollsEngine
+{
+    class VulkanCommandBuffer {
 
-};
-
+    };
+}
 
