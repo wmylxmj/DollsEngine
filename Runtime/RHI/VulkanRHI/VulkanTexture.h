@@ -1,16 +1,10 @@
-//
-// Created by 13973 on 26-10-11.
-//
+#pragma once
 
-#ifndef VULKANTEXTURE_H
-#define VULKANTEXTURE_H
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanTexture {
 
-
-class VulkanTexture {
-
-};
-
-
-
-#endif //VULKANTEXTURE_H
+    };
+}
