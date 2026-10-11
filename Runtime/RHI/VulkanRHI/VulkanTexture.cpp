@@ -3,3 +3,8 @@
 //
 
 #include "VulkanTexture.h"
+
+namespace DollsEngine
+{
+
+}
