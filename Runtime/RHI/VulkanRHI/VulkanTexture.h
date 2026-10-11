@@ -9,5 +9,6 @@ namespace DollsEngine
 
     protected:
         VkImage m_image;
+        VmaAllocation m_allocation;
     };
 }
