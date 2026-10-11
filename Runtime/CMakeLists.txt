@@ -10,6 +10,7 @@ set(VOLK_STATIC_DEFINES
 )
 add_subdirectory(../External/volk ${CMAKE_CURRENT_BINARY_DIR}/volk)
 add_subdirectory(../External/glfw ${CMAKE_CURRENT_BINARY_DIR}/glfw)
+add_subdirectory(../External/VulkanMemoryAllocator ${CMAKE_CURRENT_BINARY_DIR}/VulkanMemoryAllocator)
 
 # 将源代码添加到此项目的可执行文件。
 add_executable(DollsEngine
@@ -50,6 +51,7 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
+        RHI/VulkanRHI/VulkanAPI.cpp
 )
 
 if (WIN32)
@@ -75,6 +77,8 @@ target_link_libraries(DollsEngine PRIVATE volk)
 
 target_compile_definitions(DollsEngine PRIVATE GLFW_INCLUDE_NONE)
 target_link_libraries(DollsEngine PRIVATE glfw)
+
+target_link_libraries(DollsEngine PRIVATE VulkanMemoryAllocator)
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
     set_property(TARGET DollsEngine PROPERTY CXX_STANDARD 20)
