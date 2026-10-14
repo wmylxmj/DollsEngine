@@ -52,6 +52,8 @@ add_executable(DollsEngine
         Application/Platforms/NativePlatformService.h
         main.cpp
         RHI/VulkanRHI/VulkanAPI.cpp
+        RHI/VulkanRHI/VulkanRenderPass.cpp
+        RHI/VulkanRHI/VulkanRenderPass.h
 )
 
 if (WIN32)
