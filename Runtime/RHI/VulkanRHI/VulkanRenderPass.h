@@ -4,6 +4,9 @@
 
 namespace DollsEngine
 {
+    class VulkanRenderPassDescription {
+    };
+
     class VulkanRenderPass {
 
     };
