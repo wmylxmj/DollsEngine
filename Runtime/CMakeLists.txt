@@ -56,6 +56,8 @@ add_executable(DollsEngine
         RHI/VulkanRHI/VulkanRenderPass.h
         RHI/VulkanRHI/VulkanTexture.cpp
         RHI/VulkanRHI/VulkanTexture.h
+        RHI/VulkanRHI/VulkanCommandPool.cpp
+        RHI/VulkanRHI/VulkanCommandPool.h
 )
 
 if (WIN32)
