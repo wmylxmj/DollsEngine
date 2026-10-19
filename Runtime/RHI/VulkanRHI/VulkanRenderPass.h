@@ -1,16 +1,10 @@
-//
-// Created by 13973 on 26-10-14.
-//
+#pragma once
 
-#ifndef VULKANRENDERPASS_H
-#define VULKANRENDERPASS_H
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanRenderPass {
 
-
-class VulkanRenderPass {
-
-};
-
-
-
-#endif //VULKANRENDERPASS_H
+    };
+}
