@@ -4,6 +4,7 @@
 
 namespace DollsEngine
 {
+    /* RenderPass来源：1.BeginRenderPass 2.Pipeline */
     class VulkanRenderPassDescription {
     };
 
