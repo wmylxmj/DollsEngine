@@ -4,6 +4,7 @@
 
 #include "VulkanCommandBuffer.h"
 
+#include "VulkanDevice.h"
 #include "VulkanCommandPool.h"
 
 namespace DollsEngine
