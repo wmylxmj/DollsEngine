@@ -9,6 +9,8 @@ namespace  DollsEngine
 
     class VulkanCommandBuffer {
     public:
+        VulkanCommandBuffer(VulkanDevice& device, VulkanCommandPool& commandPool);
+
         VkCommandBuffer GetHandle() const { return m_commandBuffer; }
 
     private:
