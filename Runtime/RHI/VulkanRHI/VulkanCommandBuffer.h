@@ -12,6 +12,8 @@ namespace  DollsEngine
         VkCommandBuffer GetHandle() const { return m_commandBuffer; }
 
     private:
+        VulkanCommandPool& m_commandPool;
+
         VkCommandBuffer m_commandBuffer;
 
     };
