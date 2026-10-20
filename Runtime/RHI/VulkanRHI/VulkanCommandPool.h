@@ -6,5 +6,7 @@ namespace DollsEngine
 {
     class VulkanCommandPool {
 
+    private:
+        VkCommandPool m_commandPool;
     };
 }
