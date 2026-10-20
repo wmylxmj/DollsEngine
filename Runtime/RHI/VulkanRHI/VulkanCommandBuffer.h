@@ -5,6 +5,10 @@
 namespace  DollsEngine
 {
     class VulkanCommandBuffer {
+    public:
+
+    private:
+        VkCommandBuffer m_commandBuffer;
 
     };
 }
