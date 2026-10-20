@@ -12,6 +12,7 @@ namespace  DollsEngine
         VkCommandBuffer GetHandle() const { return m_commandBuffer; }
 
     private:
+        VulkanDevice& m_device;
         VulkanCommandPool& m_commandPool;
 
         VkCommandBuffer m_commandBuffer;
