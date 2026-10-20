@@ -21,6 +21,7 @@ add_executable(DollsEngine
         RHI/RHIRuntime.cpp
         RHI/RHIRuntime.h
         RHI/VulkanRHI/VulkanAPI.h
+        RHI/VulkanRHI/VulkanAPI.cpp
         RHI/VulkanRHI/VulkanPlatform.h
         RHI/VulkanRHI/Platforms/VulkanNativePlatform.h
         RHI/VulkanRHI/VulkanRHI.h
@@ -35,10 +36,16 @@ add_executable(DollsEngine
         RHI/VulkanRHI/VulkanQueue.cpp
         RHI/VulkanRHI/VulkanCommandBuffer.cpp
         RHI/VulkanRHI/VulkanCommandBuffer.h
+        RHI/VulkanRHI/VulkanCommandPool.cpp
+        RHI/VulkanRHI/VulkanCommandPool.h
         RHI/VulkanRHI/VulkanSemaphore.cpp
         RHI/VulkanRHI/VulkanSemaphore.h
         RHI/VulkanRHI/VulkanSwapchain.cpp
         RHI/VulkanRHI/VulkanSwapchain.h
+        RHI/VulkanRHI/VulkanTexture.cpp
+        RHI/VulkanRHI/VulkanTexture.h
+        RHI/VulkanRHI/VulkanRenderPass.cpp
+        RHI/VulkanRHI/VulkanRenderPass.h
         RHI/VulkanRHI/VulkanPresenter.cpp
         RHI/VulkanRHI/VulkanPresenter.h
         Engine/Engine.h
@@ -51,13 +58,6 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
-        RHI/VulkanRHI/VulkanAPI.cpp
-        RHI/VulkanRHI/VulkanRenderPass.cpp
-        RHI/VulkanRHI/VulkanRenderPass.h
-        RHI/VulkanRHI/VulkanTexture.cpp
-        RHI/VulkanRHI/VulkanTexture.h
-        RHI/VulkanRHI/VulkanCommandPool.cpp
-        RHI/VulkanRHI/VulkanCommandPool.h
 )
 
 if (WIN32)
