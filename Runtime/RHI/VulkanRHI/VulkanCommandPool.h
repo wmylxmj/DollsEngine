@@ -1,16 +1,9 @@
-//
-// Created by 13973 on 26-10-19.
-//
+#pragma once
 
-#ifndef VULKANCOMMANDPOOL_H
-#define VULKANCOMMANDPOOL_H
-
+#include "VulkanAPI.h"
 
 
 class VulkanCommandPool {
 
 };
 
-
-
-#endif //VULKANCOMMANDPOOL_H
