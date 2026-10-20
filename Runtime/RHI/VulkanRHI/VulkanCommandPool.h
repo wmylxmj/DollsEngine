@@ -2,8 +2,9 @@
 
 #include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanCommandPool {
 
-class VulkanCommandPool {
-
-};
-
+    };
+}
