@@ -15,5 +15,10 @@ namespace DollsEngine
 
     }
 
+    bool VulkanCommandBuffer::Create()
+    {
+
+    }
+
 
 }
