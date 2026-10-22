@@ -6,5 +6,10 @@
 
 namespace DollsEngine
 {
+    VulkanCommandBuffer *VulkanCommandPool::AcquireCommandBuffer(VkCommandBufferLevel commandBufferLevel)
+    {
+
+    }
+
 
 }
