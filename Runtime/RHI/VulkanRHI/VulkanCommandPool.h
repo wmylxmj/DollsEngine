@@ -18,5 +18,6 @@ namespace DollsEngine
 
         std::mutex m_mutex;
         std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
+        std::vector<VulkanCommandBuffer*> m_availableCommandBuffers;
     };
 }
