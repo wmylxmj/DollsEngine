@@ -4,6 +4,8 @@
 
 #include "VulkanCommandPool.h"
 
+#include "VulkanDevice.h"
+
 namespace DollsEngine
 {
     VulkanCommandPool::VulkanCommandPool(VulkanDevice &device) :
@@ -19,7 +21,7 @@ namespace DollsEngine
         commandPoolCreateInfo.queueFamilyIndex = queueFamilyIndex;
         commandPoolCreateInfo.flags = VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT;
 
-        if (vkCreateCommandPool(m_device.GetDevice(), &commandPoolCreateInfo, nullptr, &m_commandPool) != VK_SUCCESS) {
+        if (vkCreateCommandPool(m_device.GetHandle(), &commandPoolCreateInfo, nullptr, &m_commandPool) != VK_SUCCESS) {
             return false;
         }
 
