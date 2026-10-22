@@ -6,6 +6,12 @@
 
 namespace DollsEngine
 {
+    VulkanCommandPool::VulkanCommandPool(VulkanDevice &device) :
+        m_device(device)
+    {
+
+    }
+
     VulkanCommandBuffer *VulkanCommandPool::AcquireCommandBuffer(VkCommandBufferLevel commandBufferLevel)
     {
 
