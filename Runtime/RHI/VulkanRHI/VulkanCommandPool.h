@@ -22,7 +22,7 @@ namespace DollsEngine
         VkCommandPool m_commandPool;
 
         std::mutex m_mutex;
-        std::pair<VkCommandBufferLevel, std::vector<std::unique_ptr<VulkanCommandBuffer>>> m_commandBuffers;
+        std::unordered_map<VkCommandBufferLevel, std::vector<std::unique_ptr<VulkanCommandBuffer>>> m_commandBuffers;
         std::unordered_map<VkCommandBufferLevel, std::queue<VulkanCommandBuffer*>> m_availableCommandBuffers;
     };
 }
