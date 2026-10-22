@@ -24,6 +24,7 @@ namespace DollsEngine
     private:
         VulkanDevice& m_device;
         VkCommandPool m_commandPool;
+        uint32_t m_queueFamilyIndex;
 
         std::mutex m_mutex;
         std::unordered_map<VkCommandBufferLevel, std::vector<std::unique_ptr<VulkanCommandBuffer>>> m_commandBuffers;
