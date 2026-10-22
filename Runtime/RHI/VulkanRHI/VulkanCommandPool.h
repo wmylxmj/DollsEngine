@@ -16,6 +16,7 @@ namespace DollsEngine
     class VulkanCommandPool {
     public:
         VulkanCommandPool(VulkanDevice& device);
+
         bool Create(uint32_t queueFamilyIndex);
         VkCommandPool GetHandle() const { return m_commandPool; }
 
@@ -23,6 +24,7 @@ namespace DollsEngine
 
     private:
         VulkanDevice& m_device;
+
         VkCommandPool m_commandPool;
         uint32_t m_queueFamilyIndex;
 
