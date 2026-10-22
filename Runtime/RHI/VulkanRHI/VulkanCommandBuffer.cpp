@@ -16,12 +16,12 @@ namespace DollsEngine
 
     }
 
-    bool VulkanCommandBuffer::Create()
+    bool VulkanCommandBuffer::Create(VkCommandBufferLevel commandBufferLevel)
     {
         VkCommandBufferAllocateInfo allocateInfo = {};
         allocateInfo.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_ALLOCATE_INFO;
         allocateInfo.commandPool = m_commandPool.GetHandle();
-        allocateInfo.level = VK_COMMAND_BUFFER_LEVEL_PRIMARY;
+        allocateInfo.level = commandBufferLevel;
         allocateInfo.commandBufferCount = 1;
 
         if (vkAllocateCommandBuffers(m_device.GetHandle(), &allocateInfo, &m_commandBuffer) != VK_SUCCESS)
