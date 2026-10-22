@@ -11,6 +11,8 @@
 
 namespace DollsEngine
 {
+    class VulkanDevice;
+
     class VulkanCommandPool {
     public:
         VkCommandPool GetHandle() const { return m_commandPool; }
