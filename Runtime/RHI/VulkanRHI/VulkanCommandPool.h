@@ -20,6 +20,7 @@ namespace DollsEngine
         VulkanCommandBuffer* AcquireCommandBuffer(VkCommandBufferLevel commandBufferLevel);
 
     private:
+        VulkanDevice& m_device;
         VkCommandPool m_commandPool;
 
         std::mutex m_mutex;
