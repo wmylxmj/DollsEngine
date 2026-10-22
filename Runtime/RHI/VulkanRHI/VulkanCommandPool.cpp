@@ -3,3 +3,8 @@
 //
 
 #include "VulkanCommandPool.h"
+
+namespace DollsEngine
+{
+
+}
