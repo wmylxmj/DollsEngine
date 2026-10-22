@@ -1,6 +1,9 @@
 #pragma once
 
 #include "VulkanAPI.h"
+#include "VulkanCommandBuffer.h"
+
+#include <mutex>
 
 namespace DollsEngine
 {
