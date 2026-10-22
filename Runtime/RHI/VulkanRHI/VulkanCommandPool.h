@@ -7,6 +7,7 @@
 #include <vector>
 #include <memory>
 #include <utility>
+#include <queue>
 
 namespace DollsEngine
 {
@@ -21,6 +22,6 @@ namespace DollsEngine
 
         std::mutex m_mutex;
         std::pair<VkCommandBufferLevel, std::vector<std::unique_ptr<VulkanCommandBuffer>>> m_commandBuffers;
-        std::pair<VkCommandBufferLevel, std::vector<VulkanCommandBuffer*>> m_availableCommandBuffers;
+        std::pair<VkCommandBufferLevel, std::queue<VulkanCommandBuffer*>> m_availableCommandBuffers;
     };
 }
