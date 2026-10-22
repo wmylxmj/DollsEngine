@@ -12,6 +12,12 @@ namespace DollsEngine
 
     }
 
+    bool VulkanCommandPool::Create(uint32_t queueFamilyIndex)
+    {
+
+    }
+
+
     VulkanCommandBuffer *VulkanCommandPool::AcquireCommandBuffer(VkCommandBufferLevel commandBufferLevel)
     {
 
