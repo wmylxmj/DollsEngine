@@ -4,6 +4,8 @@
 #include "VulkanCommandBuffer.h"
 
 #include <mutex>
+#include <vector>
+#include <memory>
 
 namespace DollsEngine
 {
@@ -13,5 +15,7 @@ namespace DollsEngine
 
     private:
         VkCommandPool m_commandPool;
+
+        std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
     };
 }
