@@ -16,6 +16,7 @@ namespace DollsEngine
     private:
         VkCommandPool m_commandPool;
 
+        std::mutex m_mutex;
         std::vector<std::unique_ptr<VulkanCommandBuffer>> m_commandBuffers;
     };
 }
