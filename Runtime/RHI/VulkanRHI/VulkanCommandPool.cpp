@@ -45,6 +45,10 @@ namespace DollsEngine
             m_availableCommandBuffers[commandBufferLevel].pop();
         }
 
+        if (pCommandBuffer == nullptr) {
+        }
+
+        return pCommandBuffer;
     }
 
 
