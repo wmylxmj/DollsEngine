@@ -46,10 +46,11 @@ namespace DollsEngine
         }
 
         if (pCommandBuffer == nullptr) {
+            std::unique_ptr<VulkanCommandBuffer> pNewCommandBuffer = std::make_unique<VulkanCommandBuffer>(m_device, *this);
+            m_commandBuffers[commandBufferLevel].push_back(std::move(pNewCommandBuffer));
+            pCommandBuffer = pNewCommandBuffer.get();
         }
 
         return pCommandBuffer;
     }
-
-
 }
