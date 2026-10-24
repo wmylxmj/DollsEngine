@@ -36,6 +36,9 @@ namespace DollsEngine
 
     VulkanCommandBuffer *VulkanCommandPool::AcquireCommandBuffer(VkCommandBufferLevel commandBufferLevel)
     {
+        std::lock_guard<std::mutex> lockGuard(m_mutex);
+
+        VulkanCommandBuffer* pCommandBuffer = nullptr;
 
     }
 
