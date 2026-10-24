@@ -58,6 +58,10 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
+        RHI/RHITexture.cpp
+        RHI/RHITexture.h
+        RHI/RHICommandContext.cpp
+        RHI/RHICommandContext.h
 )
 
 if (WIN32)
