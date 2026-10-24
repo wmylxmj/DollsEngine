@@ -11,7 +11,10 @@ namespace DollsEngine
     VulkanCommandPool::VulkanCommandPool(VulkanDevice &device) :
         m_device(device)
     {
-
+        m_commandBuffers[VK_COMMAND_BUFFER_LEVEL_PRIMARY] = std::vector<std::unique_ptr<VulkanCommandBuffer>>();
+        m_commandBuffers[VK_COMMAND_BUFFER_LEVEL_SECONDARY] = std::vector<std::unique_ptr<VulkanCommandBuffer>>();
+        m_availableCommandBuffers[VK_COMMAND_BUFFER_LEVEL_PRIMARY] = std::queue<VulkanCommandBuffer*>();
+        m_availableCommandBuffers[VK_COMMAND_BUFFER_LEVEL_SECONDARY] = std::queue<VulkanCommandBuffer*>();
     }
 
     bool VulkanCommandPool::Create(uint32_t queueFamilyIndex)
