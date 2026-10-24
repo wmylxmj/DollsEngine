@@ -40,6 +40,11 @@ namespace DollsEngine
 
         VulkanCommandBuffer* pCommandBuffer = nullptr;
 
+        if (!m_availableCommandBuffers[commandBufferLevel].empty()) {
+            pCommandBuffer = m_availableCommandBuffers[commandBufferLevel].front();
+            m_availableCommandBuffers[commandBufferLevel].pop();
+        }
+
     }
 
 
