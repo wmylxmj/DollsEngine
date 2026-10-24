@@ -16,6 +16,8 @@ namespace DollsEngine
 
     bool VulkanCommandPool::Create(uint32_t queueFamilyIndex)
     {
+        m_queueFamilyIndex = queueFamilyIndex;
+
         VkCommandPoolCreateInfo commandPoolCreateInfo = {};
         commandPoolCreateInfo.sType = VK_STRUCTURE_TYPE_COMMAND_POOL_CREATE_INFO;
         commandPoolCreateInfo.queueFamilyIndex = queueFamilyIndex;
