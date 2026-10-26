@@ -19,6 +19,8 @@ namespace  DollsEngine
         VulkanCommandPool& m_commandPool;
 
         VkCommandBuffer m_commandBuffer;
+        VkCommandBufferLevel m_commandBufferLevel;
+
 
     };
 }
