@@ -14,6 +14,8 @@ namespace  DollsEngine
         bool Create(VkCommandBufferLevel commandBufferLevel);
         VkCommandBuffer GetHandle() const { return m_commandBuffer; }
 
+        VkCommandBufferLevel GetCommandBufferLevel() const { return m_commandBufferLevel; }
+
     private:
         VulkanDevice& m_device;
         VulkanCommandPool& m_commandPool;
