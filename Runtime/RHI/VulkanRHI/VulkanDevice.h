@@ -7,6 +7,8 @@
 #include <vector>
 #include <utility>
 #include <mutex>
+#include <unordered_map>
+#include <queue>
 
 namespace DollsEngine
 {
