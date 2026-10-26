@@ -6,6 +6,7 @@
 
 #include <vector>
 #include <utility>
+#include <mutex>
 
 namespace DollsEngine
 {
