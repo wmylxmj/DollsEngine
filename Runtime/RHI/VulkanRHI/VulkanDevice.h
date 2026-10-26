@@ -3,6 +3,7 @@
 #include "VulkanAPI.h"
 #include "VulkanPhysicalDevice.h"
 #include "VulkanQueue.h"
+#include "VulkanCommandPool.h"
 
 #include <vector>
 #include <utility>
@@ -36,5 +37,7 @@ namespace DollsEngine
 
 		VulkanQueue m_graphicsQueue;
 		VulkanQueue m_computeQueue;
+
+		std::mutex m_commandPoolMutex;
 	};
 }
