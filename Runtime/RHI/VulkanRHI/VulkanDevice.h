@@ -39,5 +39,6 @@ namespace DollsEngine
 		VulkanQueue m_computeQueue;
 
 		std::mutex m_commandPoolMutex;
+		std::unordered_map<uint32_t, std::vector<std::unique_ptr<VulkanCommandPool>>> m_commandPools;
 	};
 }
