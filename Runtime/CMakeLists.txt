@@ -18,6 +18,8 @@ add_executable(DollsEngine
         Core/Event/Event.h
         RHI/RHI.h
         RHI/RHIResource.h
+        RHI/RHITexture.cpp
+        RHI/RHITexture.h
         RHI/RHICommandContext.cpp
         RHI/RHICommandContext.h
         RHI/RHIRuntime.cpp
@@ -50,6 +52,8 @@ add_executable(DollsEngine
         RHI/VulkanRHI/VulkanRenderPass.h
         RHI/VulkanRHI/VulkanPresenter.cpp
         RHI/VulkanRHI/VulkanPresenter.h
+        RHI/VulkanRHI/VulkanCommandContext.cpp
+        RHI/VulkanRHI/VulkanCommandContext.h
         Engine/Engine.h
         Engine/Engine.cpp
         Application/Application.h
@@ -60,10 +64,6 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
-        RHI/VulkanRHI/VulkanCommandContext.cpp
-        RHI/VulkanRHI/VulkanCommandContext.h
-        RHI/RHITexture.cpp
-        RHI/RHITexture.h
 )
 
 if (WIN32)
