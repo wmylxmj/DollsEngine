@@ -56,5 +56,8 @@ namespace DollsEngine
     }
 
     void VulkanCommandPool::ReleaseCommandBuffer(VulkanCommandBuffer *pCommandBuffer)
-    {}
+    {
+        std::lock_guard<std::mutex> lockGuard(m_mutex);
+        m_availableCommandBuffers[pCommandBuffer->GetCommandBufferLevel()].push(pCommandBuffer);
+    }
 }
