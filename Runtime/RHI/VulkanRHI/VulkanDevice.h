@@ -25,6 +25,8 @@ namespace DollsEngine
 
 		VulkanPhysicalDevice GetPhysicalDevice() const { return m_physicalDevice; }
 
+		VulkanCommandPool* AcquireCommandPool(uint32_t queueFamilyIndex);
+
 	private:
 		void FlagExtensionsSupported(const char* layerName = nullptr);
 
