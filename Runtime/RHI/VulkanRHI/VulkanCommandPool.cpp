@@ -54,4 +54,7 @@ namespace DollsEngine
 
         return pCommandBuffer;
     }
+
+    void VulkanCommandPool::ReleaseCommandBuffer(VulkanCommandBuffer *pCommandBuffer)
+    {}
 }
