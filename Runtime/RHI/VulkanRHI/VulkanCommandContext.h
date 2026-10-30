@@ -1,16 +1,9 @@
-//
-// Created by 13973 on 26-10-25.
-//
+#pragma once
 
-#ifndef VULKANCOMMANDCONTEXT_H
-#define VULKANCOMMANDCONTEXT_H
-
-
+#include "VulkanAPI.h"
 
 class VulkanCommandContext {
 
 };
 
 
-
-#endif //VULKANCOMMANDCONTEXT_H
