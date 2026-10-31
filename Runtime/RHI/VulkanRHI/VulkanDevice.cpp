@@ -113,6 +113,7 @@ namespace DollsEngine
     {
         std::lock_guard<std::mutex> lockGuard(m_commandPoolMutex);
 
+        VulkanCommandPool* pCommandPool = nullptr;
     }
 
 
