@@ -119,6 +119,10 @@ namespace DollsEngine
             pCommandPool = m_availableCommandPools[queueFamilyIndex].front();
             m_availableCommandPools[queueFamilyIndex].pop();
         }
+
+        if (pCommandPool == nullptr) {
+            std::unique_ptr<VulkanCommandPool> pNewCommandPool = std::make_unique<VulkanCommandPool>(*this);
+        }
     }
 
 
