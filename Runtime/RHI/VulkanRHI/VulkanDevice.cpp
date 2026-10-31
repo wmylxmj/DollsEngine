@@ -114,6 +114,11 @@ namespace DollsEngine
         std::lock_guard<std::mutex> lockGuard(m_commandPoolMutex);
 
         VulkanCommandPool* pCommandPool = nullptr;
+
+        if (!m_availableCommandPools[queueFamilyIndex].empty()) {
+            pCommandPool = m_availableCommandPools[queueFamilyIndex].front();
+            m_availableCommandPools[queueFamilyIndex].pop();
+        }
     }
 
 
