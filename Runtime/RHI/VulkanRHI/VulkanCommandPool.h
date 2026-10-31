@@ -23,6 +23,8 @@ namespace DollsEngine
         VulkanCommandBuffer* AcquireCommandBuffer(VkCommandBufferLevel commandBufferLevel);
         void ReleaseCommandBuffer(VulkanCommandBuffer *pCommandBuffer);
 
+        uint32_t GetQueueFamilyIndex() const { return m_queueFamilyIndex; }
+
     private:
         VulkanDevice& m_device;
 
