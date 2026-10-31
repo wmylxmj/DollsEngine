@@ -111,6 +111,7 @@ namespace DollsEngine
 
     VulkanCommandPool *VulkanDevice::AcquireCommandPool(uint32_t queueFamilyIndex)
     {
+        std::lock_guard<std::mutex> lockGuard(m_commandPoolMutex);
 
     }
 
