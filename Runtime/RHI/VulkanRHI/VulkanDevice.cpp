@@ -126,6 +126,8 @@ namespace DollsEngine
             pCommandPool = pNewCommandPool.get();
             m_commandPools[queueFamilyIndex].push_back(std::move(pNewCommandPool));
         }
+
+        return pCommandPool;
     }
 
 
