@@ -11,5 +11,6 @@ namespace DollsEngine
     class VulkanRenderPass {
 
     private:
+        VkRenderPass m_renderPass;
     };
 }
