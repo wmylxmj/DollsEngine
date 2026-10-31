@@ -109,5 +109,10 @@ namespace DollsEngine
         }
     }
 
+    VulkanCommandPool *VulkanDevice::AcquireCommandPool(uint32_t queueFamilyIndex)
+    {
+
+    }
+
 
 }
