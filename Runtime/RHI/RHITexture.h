@@ -1,16 +1,8 @@
-//
-// Created by 13973 on 26-10-26.
-//
+#pragma once
 
-#ifndef RHITEXTURE_H
-#define RHITEXTURE_H
+namespace DollsEngine
+{
+    class RHITexture {
 
-
-
-class RHITexture {
-
-};
-
-
-
-#endif //RHITEXTURE_H
+    };
+}
