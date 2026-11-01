@@ -1,16 +1,13 @@
-//
-// Created by 13973 on 26-10-18.
-//
+#pragma once
 
-#ifndef VULKANTEXTURE_H
-#define VULKANTEXTURE_H
+#include "../RHITexture.h"
+#include "VulkanAPI.h"
 
+namespace DollsEngine
+{
+    class VulkanTexture : public RHITexture {
 
+    };
 
-class VulkanTexture {
-
-};
-
-
-
-#endif //VULKANTEXTURE_H
+    ;
+}
