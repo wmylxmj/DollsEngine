@@ -12,7 +12,6 @@ namespace DollsEngine
 	{
 	public:
 		bool Init();
-		void Create();
 		void Tick();
 
 		Window* CreateWindow(const WindowCreateInfo& createInfo);
