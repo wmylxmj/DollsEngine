@@ -2,8 +2,6 @@
 
 namespace DollsEngine
 {
-    class RHIColorAttachmentDescription {
-    };
 
     class RHIDepthStencilAttachmentDescription
     {
