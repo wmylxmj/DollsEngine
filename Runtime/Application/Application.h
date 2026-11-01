@@ -11,6 +11,7 @@ namespace DollsEngine
 	class Application
 	{
 	public:
+		bool Init();
 		void Create();
 		void Tick();
 
