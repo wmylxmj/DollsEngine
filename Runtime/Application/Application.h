@@ -22,6 +22,7 @@ namespace DollsEngine
 	protected:
 		void OnEvent(Event& event);
 
+		virtual void OnInit() {}
 		virtual void OnWindowClose(WindowCloseEvent& event) {}
 
 		bool m_shouldExit = false;
