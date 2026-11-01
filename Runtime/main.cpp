@@ -6,6 +6,16 @@
 class MyApplication : public DollsEngine::Application
 {
 public:
+	virtual void OnInit() override
+	{
+		DollsEngine::WindowCreateInfo windowCreateInfo = {};
+		windowCreateInfo.clientWidth = 800;
+		windowCreateInfo.clientHeight = 600;
+		windowCreateInfo.title = "Test Window";
+
+		CreateWindow(windowCreateInfo)->Show();
+	}
+
 	virtual void OnWindowClose(DollsEngine::WindowCloseEvent& event) override
 	{
 		m_shouldExit = true;
@@ -17,16 +27,7 @@ int main()
 	DollsEngine::Engine engine;
 
 	MyApplication myApplication;
-	myApplication.Create();
-
 	engine.SetApplication(&myApplication);
-
-	DollsEngine::WindowCreateInfo windowCreateInfo;
-	windowCreateInfo.clientWidth = 800;
-	windowCreateInfo.clientHeight = 600;
-	windowCreateInfo.title = "Test Window";
-
-	myApplication.CreateWindow(windowCreateInfo)->Show();
 
 	engine.Init();
 
