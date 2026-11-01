@@ -12,6 +12,7 @@ namespace DollsEngine
 		m_platformService->Initialize();
 
 		OnInit();
+		return true;
 	}
 
 	void Application::Tick()
