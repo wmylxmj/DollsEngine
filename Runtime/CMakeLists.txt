@@ -66,6 +66,8 @@ add_executable(DollsEngine
         main.cpp
         RHI/VulkanRHI/VulkanFramebuffer.cpp
         RHI/VulkanRHI/VulkanFramebuffer.h
+        RHI/RHIFramebuffer.cpp
+        RHI/RHIFramebuffer.h
 )
 
 if (WIN32)
