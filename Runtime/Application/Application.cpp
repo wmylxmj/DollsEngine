@@ -10,6 +10,8 @@ namespace DollsEngine
 	{
 		m_platformService = std::make_unique<NativePlatformService>();
 		m_platformService->Initialize();
+
+		OnInit();
 	}
 
 	void Application::Tick()
