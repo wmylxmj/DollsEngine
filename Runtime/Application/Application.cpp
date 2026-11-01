@@ -6,7 +6,7 @@
 
 namespace DollsEngine
 {
-	void Application::Create()
+	bool Application::Init()
 	{
 		m_platformService = std::make_unique<NativePlatformService>();
 		m_platformService->Initialize();
