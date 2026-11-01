@@ -8,6 +8,7 @@ namespace DollsEngine
 	int Engine::Init()
 	{
 		if (!InitializeRHI()) return -1;
+		if (!m_application->Init()) return -1;
 		return 0;
 	}
 
