@@ -6,6 +6,9 @@
 
 namespace DollsEngine
 {
+    const uint32_t kRHIMaxNumColorAttachments = 4;
+
+
     class RHIColorAttachmentDescription
     {
     };
