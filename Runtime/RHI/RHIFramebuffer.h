@@ -2,6 +2,8 @@
 
 #include "RHITexture.h"
 
+#include <cstdint>
+
 namespace DollsEngine
 {
     class RHIColorAttachmentDescription
