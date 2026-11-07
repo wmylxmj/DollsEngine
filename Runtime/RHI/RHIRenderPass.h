@@ -1,16 +1,8 @@
-//
-// Created by 13973 on 26-11-7.
-//
+#pragma once
 
-#ifndef RHIRENDERPASS_H
-#define RHIRENDERPASS_H
+namespace DollsEngine
+{
+    class RHIRenderPass {
 
-
-
-class RHIRenderPass {
-
-};
-
-
-
-#endif //RHIRENDERPASS_H
+    };
+}
