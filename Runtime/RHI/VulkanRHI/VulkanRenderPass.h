@@ -9,6 +9,8 @@ namespace DollsEngine
     };
 
     class VulkanRenderPass {
+    public:
+        VkRenderPass GetHandle() const { return m_renderPass; }
 
     private:
         VkRenderPass m_renderPass;
