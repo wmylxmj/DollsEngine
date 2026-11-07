@@ -68,6 +68,8 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
+        RHI/RHIRenderPass.cpp
+        RHI/RHIRenderPass.h
 )
 
 if (WIN32)
