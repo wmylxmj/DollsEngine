@@ -2,6 +2,8 @@
 
 #include "VulkanAPI.h"
 
+#include <vector>
+
 namespace DollsEngine
 {
     /* RenderPass来源：1.BeginRenderPass 2.Pipeline */
