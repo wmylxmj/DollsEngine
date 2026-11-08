@@ -70,6 +70,8 @@ add_executable(DollsEngine
         main.cpp
         RHI/RHIRenderPass.cpp
         RHI/RHIRenderPass.h
+        RHI/RHIPresenter.cpp
+        RHI/RHIPresenter.h
 )
 
 if (WIN32)
