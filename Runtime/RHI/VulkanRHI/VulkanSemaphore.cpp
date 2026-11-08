@@ -14,6 +14,4 @@ namespace DollsEngine
         }
         return true;
     }
-
-
 }
