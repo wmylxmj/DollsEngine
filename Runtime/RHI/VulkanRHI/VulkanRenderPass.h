@@ -10,6 +10,8 @@ namespace DollsEngine
     class VulkanRenderPassDescription {
     private:
         std::vector<VkAttachmentDescription> m_attachmentDescriptions;
+
+        std::vector<VkAttachmentReference> m_colorAttachmentReferences;
     };
 
     class VulkanRenderPass {
