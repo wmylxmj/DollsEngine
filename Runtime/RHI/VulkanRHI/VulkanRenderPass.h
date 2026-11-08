@@ -12,6 +12,7 @@ namespace DollsEngine
         std::vector<VkAttachmentDescription> m_attachmentDescriptions;
 
         std::vector<VkAttachmentReference> m_colorAttachmentReferences;
+        // 深度模板
     };
 
     class VulkanRenderPass {
