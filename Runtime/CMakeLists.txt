@@ -22,6 +22,10 @@ add_executable(DollsEngine
         RHI/RHITexture.h
         RHI/RHIFramebuffer.cpp
         RHI/RHIFramebuffer.h
+        RHI/RHIRenderPass.cpp
+        RHI/RHIRenderPass.h
+        RHI/RHIPresenter.cpp
+        RHI/RHIPresenter.h
         RHI/RHICommandContext.cpp
         RHI/RHICommandContext.h
         RHI/RHIRuntime.cpp
@@ -68,10 +72,6 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
-        RHI/RHIRenderPass.cpp
-        RHI/RHIRenderPass.h
-        RHI/RHIPresenter.cpp
-        RHI/RHIPresenter.h
 )
 
 if (WIN32)
