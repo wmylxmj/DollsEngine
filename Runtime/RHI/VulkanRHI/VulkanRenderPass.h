@@ -13,6 +13,7 @@ namespace DollsEngine
 
         std::vector<VkAttachmentReference> m_colorAttachmentReferences;
         // 深度模板
+        VkAttachmentReference m_depthStencilAttachmentReference;
     };
 
     class VulkanRenderPass {
