@@ -15,6 +15,8 @@ namespace DollsEngine
         // 颜色解析
         // 深度模板
         VkAttachmentReference m_depthStencilAttachmentReference;
+        // 深度模板解析
+        VkAttachmentReference m_depthStencilResolveAttachmentReference;
     };
 
     class VulkanRenderPass {
