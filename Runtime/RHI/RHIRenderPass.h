@@ -34,6 +34,7 @@ namespace DollsEngine
         RHIAttachmentLoadOp stencilLoadOp;
         RHIAttachmentStoreOp stencilStoreOp;
         float clearDepth = 1.0f;
+        uint32_t clearStencil = 0;
     };
 
     class RHIRenderPassBeginInfo {
