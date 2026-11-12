@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VulkanAPI.h"
+#include "../RHIRenderPass.h"
 
 #include <vector>
 
