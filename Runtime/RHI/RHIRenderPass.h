@@ -4,17 +4,7 @@
 
 namespace DollsEngine
 {
-    enum class RHIAttachmentLoadOp {
-        Load,
-        Clear,
-        DontCare
-    };
-
-    enum class RHIAttachmentStoreOp {
-        Store,
-        DontCare
-    };
-
+    enum class RHIA
     class RHIRenderingColorAttachmentInfo {
     public:
         RHITexture* pTexture;
