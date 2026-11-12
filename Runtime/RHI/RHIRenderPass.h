@@ -20,7 +20,7 @@ namespace DollsEngine
         RHITexture* pResolveTexture;
         RHIAttachmentLoadOp loadOp;
         RHIAttachmentStoreOp storeOp;
-
+        float clearColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
     };
 
     // 深度模板
