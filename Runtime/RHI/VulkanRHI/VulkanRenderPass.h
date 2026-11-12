@@ -12,11 +12,8 @@ namespace DollsEngine
         std::vector<VkAttachmentDescription> m_attachmentDescriptions;
 
         std::vector<VkAttachmentReference> m_colorAttachmentReferences;
-        // 颜色解析
         std::vector<VkAttachmentReference> m_colorResolveAttachmentReferences;
-        // 深度模板
         VkAttachmentReference m_depthStencilAttachmentReference;
-        // 深度模板解析
         VkAttachmentReference m_depthStencilResolveAttachmentReference;
     };
 
