@@ -17,6 +17,8 @@ namespace DollsEngine
     struct RHIRenderingColorAttachmentInfo {
         RHITexture* pTexture = nullptr;
         RHITexture* pResolveTexture = nullptr;
+
+        RHIAttachmentLoadOp loadOp = RHIAttachmentLoadOp::DontCare;
         float clearColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
     };
 
