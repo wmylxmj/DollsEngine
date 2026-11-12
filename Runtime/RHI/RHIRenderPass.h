@@ -18,8 +18,8 @@ namespace DollsEngine
     };
 
     struct RHIRenderingColorAttachmentInfo {
-        RHITexture* pTexture;
-        RHITexture* pResolveTexture;
+        RHITexture* pTexture = nullptr;
+        RHITexture* pResolveTexture = nullptr;
         RHIAttachmentLoadOp loadOp;
         RHIAttachmentStoreOp storeOp;
         float clearColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
@@ -27,8 +27,8 @@ namespace DollsEngine
 
     // 深度模板
     struct RHIRenderingDepthStencilAttachmentInfo {
-        RHITexture* pTexture;
-        RHITexture* pResolveTexture;
+        RHITexture* pTexture = nullptr;
+        RHITexture* pResolveTexture = nullptr;
         RHIAttachmentLoadOp depthLoadOp;
         RHIAttachmentStoreOp depthStoreOp;
         RHIAttachmentLoadOp stencilLoadOp;
