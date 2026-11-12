@@ -29,6 +29,7 @@ namespace DollsEngine
         RHITexture* pResolveTexture;
 
         RHIAttachmentLoadOp depthLoadOp;
+        RHIAttachmentLoadOp stencilLoadOp;
 
         RHIAttachmentStoreOp stencilStoreOp;
     };
