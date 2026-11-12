@@ -31,7 +31,7 @@ namespace DollsEngine
         RHIAttachmentStoreOp stencilStoreOp;
     };
 
-    class RHIRenderPass {
-
+    class RHIRenderPassBeginInfo {
+    public:
     };
 }
