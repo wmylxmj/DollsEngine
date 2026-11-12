@@ -27,10 +27,8 @@ namespace DollsEngine
     struct RHIRenderingDepthStencilAttachmentInfo {
         RHITexture* pTexture;
         RHITexture* pResolveTexture;
-
         RHIAttachmentLoadOp depthLoadOp;
         RHIAttachmentLoadOp stencilLoadOp;
-
         RHIAttachmentStoreOp stencilStoreOp;
     };
 
