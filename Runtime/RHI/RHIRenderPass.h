@@ -15,7 +15,7 @@ namespace DollsEngine
         DontCare
     };
 
-    class RHIRenderingColorAttachmentInfo {
+    struct RHIRenderingColorAttachmentInfo {
     public:
         RHITexture* pTexture;
         RHITexture* pResolveTexture;
