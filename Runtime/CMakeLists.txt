@@ -20,8 +20,6 @@ add_executable(DollsEngine
         RHI/RHIResource.h
         RHI/RHITexture.cpp
         RHI/RHITexture.h
-        RHI/RHIFramebuffer.cpp
-        RHI/RHIFramebuffer.h
         RHI/RHIRenderPass.cpp
         RHI/RHIRenderPass.h
         RHI/RHIPresenter.cpp
