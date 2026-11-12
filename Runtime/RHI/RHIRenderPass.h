@@ -24,6 +24,8 @@ namespace DollsEngine
     };
 
     // 深度模板
+    struct RHIRenderingDepthStencilAttachmentInfo {
+    };
 
     class RHIRenderPass {
 
