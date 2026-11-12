@@ -5,7 +5,7 @@
 
 namespace DollsEngine
 {
-    class VulkanPresenter {
+    class VulkanPresenter : public RHIPresenter {
 
     };
 }
