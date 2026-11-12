@@ -31,7 +31,7 @@ namespace DollsEngine
         RHIAttachmentStoreOp depthStoreOp;
         RHIAttachmentLoadOp stencilLoadOp;
         RHIAttachmentStoreOp stencilStoreOp;
-        float clearDepth   = 1.0f;
+        float clearDepth = 1.0f;
     };
 
     class RHIRenderPassBeginInfo {
