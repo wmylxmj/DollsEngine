@@ -19,7 +19,8 @@ namespace DollsEngine
     public:
         RHITexture* pTexture;
         RHITexture* pResolveTexture;
-
+        RHIAttachmentLoadOp loadOp;
+        RHIAttachmentStoreOp storeOp;
 
     };
 
