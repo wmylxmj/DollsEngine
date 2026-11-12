@@ -3,6 +3,7 @@
 #include "RHITexture.h"
 
 #include <cstdint>
+#include <vector>
 
 namespace DollsEngine
 {
