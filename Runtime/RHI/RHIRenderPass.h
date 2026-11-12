@@ -16,7 +16,6 @@ namespace DollsEngine
     };
 
     struct RHIRenderingColorAttachmentInfo {
-    public:
         RHITexture* pTexture;
         RHITexture* pResolveTexture;
         RHIAttachmentLoadOp loadOp;
