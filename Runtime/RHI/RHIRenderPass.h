@@ -6,6 +6,9 @@ namespace DollsEngine
 {
     class RHIRenderingColorAttachmentInfo {
     public:
+        RHITexture* pTexture;
+        RHITexture* pResolveTexture;
+
 
     };
 
