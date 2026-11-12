@@ -20,6 +20,7 @@ namespace DollsEngine
 
     class VulkanRenderPass {
     public:
+        bool Create(const VulkanRenderPassDescription& description);
         VkRenderPass GetHandle() const { return m_renderPass; }
 
     private:
