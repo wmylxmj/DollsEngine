@@ -1,16 +1,8 @@
-//
-// Created by 13973 on 26-11-8.
-//
+#pragma once
 
-#ifndef RHIPRESENTER_H
-#define RHIPRESENTER_H
+namespace DollsEngine
+{
+    class RHIPresenter {
 
-
-
-class RHIPresenter {
-
-};
-
-
-
-#endif //RHIPRESENTER_H
+    };
+}
