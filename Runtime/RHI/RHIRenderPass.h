@@ -6,22 +6,10 @@
 
 namespace DollsEngine
 {
-    enum class RHIAttachmentLoadOp {
-        Load,
-        Clear,
-        DontCare
-    };
-
-    enum class RHIAttachmentStoreOp {
-        Store,
-        DontCare
-    };
 
     struct RHIRenderingColorAttachmentInfo {
         RHITexture* pTexture = nullptr;
         RHITexture* pResolveTexture = nullptr;
-        RHIAttachmentLoadOp loadOp;
-        RHIAttachmentStoreOp storeOp;
         float clearColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
     };
 
@@ -29,10 +17,6 @@ namespace DollsEngine
     struct RHIRenderingDepthStencilAttachmentInfo {
         RHITexture* pTexture = nullptr;
         RHITexture* pResolveTexture = nullptr;
-        RHIAttachmentLoadOp depthLoadOp;
-        RHIAttachmentStoreOp depthStoreOp;
-        RHIAttachmentLoadOp stencilLoadOp;
-        RHIAttachmentStoreOp stencilStoreOp;
         float clearDepth = 1.0f;
         uint32_t clearStencil = 0;
     };
