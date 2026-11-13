@@ -35,5 +35,6 @@ namespace DollsEngine
 
     class RHIRenderPassBeginInfo {
     public:
+        RHIRenderingDepthStencilAttachmentInfo depthStencilAttachmentInfo;
     };
 }
