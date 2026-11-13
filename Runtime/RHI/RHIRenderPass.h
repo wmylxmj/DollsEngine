@@ -13,6 +13,8 @@ namespace DollsEngine
         DontCare,
     };
 
+    enum class RHIAttachmentStoreOp {
+
     struct RHIRenderingColorAttachmentInfo {
         RHITexture* pTexture = nullptr;
         RHITexture* pResolveTexture = nullptr;
