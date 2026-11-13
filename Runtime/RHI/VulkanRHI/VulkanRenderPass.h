@@ -11,6 +11,7 @@ namespace DollsEngine
     class VulkanRenderPassDescription {
     public:
         void Initialize(const RHIRenderPassBeginInfo& beginInfo);
+
     private:
         std::vector<VkAttachmentDescription> m_attachmentDescriptions;
 
