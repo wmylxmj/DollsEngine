@@ -14,7 +14,6 @@ namespace DollsEngine
     };
 
     enum class RHIAttachmentStoreOp {
-        Store,
     };
 
 
