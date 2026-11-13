@@ -10,6 +10,4 @@ namespace DollsEngine
         VkImage m_image;
 
     };
-
-    ;
 }
