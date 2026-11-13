@@ -15,7 +15,6 @@ namespace DollsEngine
 
     enum class RHIAttachmentStoreOp {
         Store,
-        DontCare,
     };
 
 
@@ -24,6 +23,7 @@ namespace DollsEngine
         RHITexture* pResolveTexture = nullptr;
 
         RHIAttachmentLoadOp loadOp = RHIAttachmentLoadOp::DontCare;
+
         float clearColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
     };
 
