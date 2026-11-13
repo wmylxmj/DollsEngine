@@ -7,6 +7,7 @@ namespace DollsEngine
 {
     class VulkanTexture : public RHITexture {
     protected:
+        VkImage m_image;
 
     };
 
