@@ -32,6 +32,7 @@ namespace DollsEngine
         RHITexture* pResolveTexture = nullptr;
 
         RHIAttachmentLoadOp depthLoadOp = RHIAttachmentLoadOp::DontCare;
+        RHIAttachmentStoreOp depthStoreOp = RHIAttachmentStoreOp::DontCare;
 
         float clearDepth = 1.0f;
         uint32_t clearStencil = 0;
