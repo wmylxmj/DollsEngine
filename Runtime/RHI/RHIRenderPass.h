@@ -31,6 +31,7 @@ namespace DollsEngine
     struct RHIRenderingDepthStencilAttachmentInfo {
         RHITexture* pTexture = nullptr;
         RHITexture* pResolveTexture = nullptr;
+        RHIAttachmentLoadOp depthLoadOp = RHIAttachmentLoadOp::DontCare;
         float clearDepth = 1.0f;
         uint32_t clearStencil = 0;
     };
