@@ -5,6 +5,6 @@
 
 namespace DollsEngine
 {
-    VkAttachmentLoadOp ConvertToVkAttachmentLoadOp(VkAttachmentLoadOp loadOp);
+    VkAttachmentLoadOp ConvertToVkAttachmentLoadOp(RHIAttachmentLoadOp loadOp);
 
 }
