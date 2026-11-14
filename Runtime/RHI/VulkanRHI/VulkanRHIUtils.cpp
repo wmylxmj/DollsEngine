@@ -15,6 +15,8 @@ namespace DollsEngine
                 return VK_ATTACHMENT_LOAD_OP_CLEAR;
             case RHIAttachmentLoadOp::DontCare:
                 return VK_ATTACHMENT_LOAD_OP_DONT_CARE;
+            default:
+                return VK_ATTACHMENT_LOAD_OP_DONT_CARE;
         }
     }
 
