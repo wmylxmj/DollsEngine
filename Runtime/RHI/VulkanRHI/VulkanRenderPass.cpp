@@ -2,5 +2,10 @@
 
 namespace DollsEngine
 {
+    void VulkanRenderPassDescription::Initialize(const RHIRenderPassBeginInfo &renderPassBeginInfo)
+    {
+
+    }
+
 
 }
