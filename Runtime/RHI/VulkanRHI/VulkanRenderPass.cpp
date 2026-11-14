@@ -22,6 +22,7 @@ namespace DollsEngine
             m_attachmentDescriptions.push_back(attachmentDescription);
 
             VkAttachmentReference attachmentReference = {};
+            attachmentReference.attachment = static_cast<uint32_t>(m_attachmentDescriptions.size() - 1);
         }
     }
 
