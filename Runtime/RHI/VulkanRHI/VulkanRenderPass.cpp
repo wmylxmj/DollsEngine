@@ -12,7 +12,7 @@ namespace DollsEngine
         for (const auto & colorAttachmentInfo : renderPassBeginInfo.colorAttachmentInfos) {
             VkAttachmentDescription attachmentDescription = {};
             attachmentDescription.format = ConvertToVkFormat(colorAttachmentInfo.pTexture->GetPixelFormat());
-            attachmentDescription.samples = VK_SAMPLE_COUNT_1_BIT;
+            attachmentDescription.samples = static_cast<VkSampleCountFlagBits>(colorAttachmentInfo.pTexture->GetSampleCount());
             attachmentDescription.loadOp = ConvertToVkAttachmentLoadOp(colorAttachmentInfo.loadOp);
             attachmentDescription.storeOp = ConvertToVkAttachmentStoreOp(colorAttachmentInfo.storeOp);
             attachmentDescription.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
