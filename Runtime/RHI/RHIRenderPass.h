@@ -34,6 +34,7 @@ namespace DollsEngine
         RHIAttachmentLoadOp depthLoadOp = RHIAttachmentLoadOp::DontCare;
         RHIAttachmentStoreOp depthStoreOp = RHIAttachmentStoreOp::DontCare;
         RHIAttachmentLoadOp stencilLoadOp = RHIAttachmentLoadOp::DontCare;
+        RHIAttachmentStoreOp stencilStoreOp = RHIAttachmentStoreOp::DontCare;
 
         float clearDepth = 1.0f;
         uint32_t clearStencil = 0;
