@@ -5,10 +5,7 @@
 
 namespace DollsEngine
 {
-
     VkFormat ConvertToVkFormat(RHIPixelFormat format);
-
-
     VkAttachmentLoadOp ConvertToVkAttachmentLoadOp(RHIAttachmentLoadOp loadOp);
     VkAttachmentStoreOp ConvertToVkAttachmentStoreOp(RHIAttachmentStoreOp storeOp);
 }
