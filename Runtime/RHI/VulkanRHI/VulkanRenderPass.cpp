@@ -8,6 +8,7 @@ namespace DollsEngine
     void VulkanRenderPassDescription::Initialize(const RHIRenderPassBeginInfo &renderPassBeginInfo)
     {
         m_attachmentDescriptions.clear();
+        m_colorAttachmentReferences.clear();
         for (const auto & colorAttachmentInfo : renderPassBeginInfo.colorAttachmentInfos) {
             VkAttachmentDescription attachmentDescription = {};
             attachmentDescription.format = ConvertToVkFormat(colorAttachmentInfo.pTexture->GetPixelFormat());
