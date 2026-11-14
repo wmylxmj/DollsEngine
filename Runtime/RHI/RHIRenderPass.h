@@ -23,6 +23,7 @@ namespace DollsEngine
         RHITexture* pResolveTexture = nullptr;
 
         RHIAttachmentLoadOp loadOp = RHIAttachmentLoadOp::DontCare;
+        // DONT CARE
 
         float clearColor[4] = { 0.0f, 0.0f, 0.0f, 0.0f };
     };
