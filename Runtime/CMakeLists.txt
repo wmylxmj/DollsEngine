@@ -34,6 +34,8 @@ add_executable(DollsEngine
         RHI/VulkanRHI/Platforms/VulkanNativePlatform.h
         RHI/VulkanRHI/VulkanRHI.h
         RHI/VulkanRHI/VulkanRHI.cpp
+        RHI/VulkanRHI/VulkanRHIUtils.cpp
+        RHI/VulkanRHI/VulkanRHIUtils.h
         RHI/VulkanRHI/VulkanInstance.h
         RHI/VulkanRHI/VulkanInstance.cpp
         RHI/VulkanRHI/VulkanPhysicalDevice.cpp
@@ -70,8 +72,6 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
-        RHI/VulkanRHI/VulkanRHIUtils.cpp
-        RHI/VulkanRHI/VulkanRHIUtils.h
 )
 
 if (WIN32)
