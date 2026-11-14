@@ -10,7 +10,7 @@ namespace DollsEngine
     /* RenderPass来源：1.BeginRenderPass 2.Pipeline */
     class VulkanRenderPassDescription {
     public:
-        void Initialize(const RHIRenderPassBeginInfo& beginInfo);
+        void Initialize(const RHIRenderPassBeginInfo& renderPassBeginInfo);
 
     private:
         std::vector<VkAttachmentDescription> m_attachmentDescriptions;
