@@ -16,5 +16,6 @@ namespace DollsEngine
 
     protected:
         RHIPixelFormat m_pixelFormat = RHIPixelFormat::Undefined;
+        // 采样数
     };
 }
