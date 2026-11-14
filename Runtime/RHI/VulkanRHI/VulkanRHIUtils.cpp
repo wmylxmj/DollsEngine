@@ -20,7 +20,11 @@ namespace DollsEngine
 
     VkAttachmentStoreOp ConvertToVkAttachmentStoreOp(RHIAttachmentStoreOp storeOp)
     {
-
+        switch (storeOp) {
+            case RHIAttachmentStoreOp::Store:
+                return VK_ATTACHMENT_STORE_OP_STORE;
+            default:
+                return VK_ATTACHMENT_STORE_OP_DONT_CARE;
+        }
     }
-
 }
