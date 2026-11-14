@@ -18,5 +18,9 @@ namespace DollsEngine
         }
     }
 
+    VkAttachmentStoreOp ConvertToVkAttachmentStoreOp(RHIAttachmentStoreOp storeOp)
+    {
+
+    }
 
 }
