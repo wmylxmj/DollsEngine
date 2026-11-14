@@ -43,8 +43,6 @@ namespace DollsEngine
     };
 
     struct RHIRenderPassBeginInfo {
-    public:
-        // 颜色附件信息
         std::vector<RHIRenderingColorAttachmentInfo> colorAttachmentInfos;
         RHIRenderingDepthStencilAttachmentInfo depthStencilAttachmentInfo;
     };
