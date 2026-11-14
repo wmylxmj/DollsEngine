@@ -8,6 +8,9 @@ namespace DollsEngine
     };
 
     class RHITexture {
+    public:
+        RHIPixelFormat GetPixelFormat() const { return m_pixelFormat; }
+
     protected:
         RHIPixelFormat m_pixelFormat = RHIPixelFormat::Undefined;
     };
