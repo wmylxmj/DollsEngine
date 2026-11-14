@@ -70,6 +70,8 @@ add_executable(DollsEngine
         Application/Platforms/NativeWindow.h
         Application/Platforms/NativePlatformService.h
         main.cpp
+        RHI/VulkanRHI/VulkanFence.cpp
+        RHI/VulkanRHI/VulkanFence.h
 )
 
 if (WIN32)
