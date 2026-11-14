@@ -5,6 +5,7 @@ namespace DollsEngine
     enum class RHIPixelFormat {
         Undefined,
         R8G8B8A8_UNORM,
+        D24_UNORM_S8_UINT,
     };
 
     class RHITexture {
