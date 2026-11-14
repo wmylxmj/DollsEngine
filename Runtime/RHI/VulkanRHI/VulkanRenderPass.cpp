@@ -10,6 +10,8 @@ namespace DollsEngine
         for (int i = 0; i < renderPassBeginInfo.colorAttachmentInfos.size(); i++) {
             VkAttachmentDescription attachmentDescription = {};
             attachmentDescription.format = ConvertToVkFormat(renderPassBeginInfo.colorAttachmentInfos[i].pTexture->GetPixelFormat());
+            attachmentDescription.samples = VK_SAMPLE_COUNT_1_BIT;
+            attachmentDescription.loadOp = ConvertToVkAttachmentLoadOp(renderPassBeginInfo.colorAttachmentInfos[i].loadOp);
         }
     }
 
