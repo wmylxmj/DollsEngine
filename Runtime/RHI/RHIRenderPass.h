@@ -17,6 +17,7 @@ namespace DollsEngine
         Store,
         DontCare,
     };
+
     struct RHIRenderingColorAttachmentInfo {
         RHITexture* pTexture = nullptr;
         RHITexture* pResolveTexture = nullptr;
