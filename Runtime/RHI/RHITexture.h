@@ -8,6 +8,7 @@ namespace DollsEngine
     };
 
     class RHITexture {
-
+    protected:
+        RHIPixelFormat m_pixelFormat = RHIPixelFormat::Undefined;
     };
 }
