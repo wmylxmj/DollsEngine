@@ -3,3 +3,8 @@
 //
 
 #include "VulkanRHIUtils.h"
+
+namespace DollsEngine
+{
+
+}
