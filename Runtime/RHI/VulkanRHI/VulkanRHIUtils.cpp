@@ -6,5 +6,10 @@
 
 namespace DollsEngine
 {
+    VkAttachmentLoadOp ConvertToVkAttachmentLoadOp(RHIAttachmentLoadOp loadOp)
+    {
+
+    }
+
 
 }
