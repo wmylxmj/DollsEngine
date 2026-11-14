@@ -72,6 +72,8 @@ add_executable(DollsEngine
         main.cpp
         RHI/VulkanRHI/VulkanFence.cpp
         RHI/VulkanRHI/VulkanFence.h
+        RHI/VulkanRHI/VulkanRHIUtils.cpp
+        RHI/VulkanRHI/VulkanRHIUtils.h
 )
 
 if (WIN32)
