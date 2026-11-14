@@ -6,7 +6,7 @@
 
 namespace DollsEngine
 {
-    VkFormat ConvertToVkFormat(RHIPixelFormat format)
+    VkFormat ConvertToVkFormat(const RHIPixelFormat format)
     {
         switch (format) {
             case RHIPixelFormat::R8G8B8A8_UNORM:
