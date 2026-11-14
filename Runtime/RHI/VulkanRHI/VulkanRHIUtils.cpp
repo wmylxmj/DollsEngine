@@ -18,8 +18,6 @@ namespace DollsEngine
         }
     }
 
-
-
     VkAttachmentLoadOp ConvertToVkAttachmentLoadOp(RHIAttachmentLoadOp loadOp)
     {
         switch (loadOp) {
