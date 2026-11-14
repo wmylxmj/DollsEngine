@@ -42,7 +42,7 @@ namespace DollsEngine
         uint32_t clearStencil = 0;
     };
 
-    class RHIRenderPassBeginInfo {
+    struct RHIRenderPassBeginInfo {
     public:
         // 颜色附件信息
         std::vector<RHIRenderingColorAttachmentInfo> colorAttachmentInfos;
