@@ -17,7 +17,7 @@ namespace DollsEngine
 
         std::vector<VkAttachmentReference> m_colorAttachmentReferences;
         std::vector<VkAttachmentReference> m_colorResolveAttachmentReferences;
-        VkAttachmentReference m_depthStencilAttachmentReference;
+        VkAttachmentReference m_depthStencilAttachmentReference = {};
         VkAttachmentReference m_depthStencilResolveAttachmentReference;
     };
 
