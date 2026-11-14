@@ -6,5 +6,10 @@
 
 namespace DollsEngine
 {
+    VkFormat ConvertToVkFormat(RHIPixelFormat format)
+    {
+
+    }
+
 
 }
