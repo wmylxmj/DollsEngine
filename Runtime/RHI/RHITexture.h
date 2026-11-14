@@ -13,7 +13,6 @@ namespace DollsEngine
     class RHITexture {
     public:
         RHIPixelFormat GetPixelFormat() const { return m_pixelFormat; }
-        uint32_t GetSampleCount() const { return m_sampleCount; }
 
     protected:
         RHIPixelFormat m_pixelFormat = RHIPixelFormat::Undefined;
