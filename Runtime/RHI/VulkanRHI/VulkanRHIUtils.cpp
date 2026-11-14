@@ -8,7 +8,14 @@ namespace DollsEngine
 {
     VkAttachmentLoadOp ConvertToVkAttachmentLoadOp(RHIAttachmentLoadOp loadOp)
     {
-
+        switch (loadOp) {
+            case RHIAttachmentLoadOp::Load:
+                return VK_ATTACHMENT_LOAD_OP_LOAD;
+            case RHIAttachmentLoadOp::Clear:
+                return VK_ATTACHMENT_LOAD_OP_CLEAR;
+            case RHIAttachmentLoadOp::DontCare:
+                return VK_ATTACHMENT_LOAD_OP_DONT_CARE;
+        }
     }
 
 
