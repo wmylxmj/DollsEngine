@@ -40,6 +40,7 @@ namespace DollsEngine
 
     class RHIRenderPassBeginInfo {
     public:
+        // 颜色附件信息
         RHIRenderingDepthStencilAttachmentInfo depthStencilAttachmentInfo;
     };
 }
