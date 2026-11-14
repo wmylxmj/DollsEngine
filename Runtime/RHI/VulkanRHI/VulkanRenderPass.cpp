@@ -12,6 +12,9 @@ namespace DollsEngine
             attachmentDescription.format = ConvertToVkFormat(renderPassBeginInfo.colorAttachmentInfos[i].pTexture->GetPixelFormat());
             attachmentDescription.samples = VK_SAMPLE_COUNT_1_BIT;
             attachmentDescription.loadOp = ConvertToVkAttachmentLoadOp(renderPassBeginInfo.colorAttachmentInfos[i].loadOp);
+            attachmentDescription.storeOp = ConvertToVkAttachmentStoreOp(renderPassBeginInfo.colorAttachmentInfos[i].storeOp);
+            attachmentDescription.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
+            attachmentDescription.stencilStoreOp = VK_ATTACHMENT_STORE_OP_DONT_CARE;
         }
     }
 
