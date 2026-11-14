@@ -7,7 +7,6 @@
 
 namespace DollsEngine
 {
-    VkAttachmentLoadOp ConvertToVkAttachmentLoadOp(VkAttachmentLoadOp loadOp);
 
     /* RenderPass来源：1.BeginRenderPass 2.Pipeline */
     class VulkanRenderPassDescription {
