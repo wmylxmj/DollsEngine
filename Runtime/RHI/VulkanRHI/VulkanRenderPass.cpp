@@ -1,5 +1,6 @@
 #include "VulkanRenderPass.h"
 
+#include "VulkanRHIUtils.h"
 #include "VulkanTexture.h"
 
 namespace DollsEngine
