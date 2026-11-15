@@ -62,6 +62,8 @@ namespace DollsEngine
             m_attachmentDescriptions.push_back(depthStencilAttachmentDescription);
 
             m_depthStencilAttachmentReference = {};
+            m_depthStencilAttachmentReference.attachment = static_cast<uint32_t>(m_attachmentDescriptions.size() - 1);
+            m_depthStencilAttachmentReference.layout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
         }
     }
 
