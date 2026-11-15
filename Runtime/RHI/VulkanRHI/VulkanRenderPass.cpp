@@ -12,7 +12,7 @@ namespace DollsEngine
         for (const auto & colorAttachmentInfo : renderPassBeginInfo.colorAttachmentInfos) {
             if (colorAttachmentInfo.pTexture == nullptr) continue;
 
-            const uint32_t sampleCount = colorInfo.pTexture->GetSampleCount();
+            const uint32_t sampleCount = colorAttachmentInfo.pTexture->GetSampleCount();
 
 
             VkAttachmentDescription attachmentDescription = {};
