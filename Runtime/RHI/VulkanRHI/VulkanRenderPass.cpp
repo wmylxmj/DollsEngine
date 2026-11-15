@@ -9,6 +9,7 @@ namespace DollsEngine
     {
         m_attachmentDescriptions.clear();
         m_colorAttachmentReferences.clear();
+        m_colorResolveAttachmentReferences.clear();
         for (const auto & colorAttachmentInfo : renderPassBeginInfo.colorAttachmentInfos) {
             if (colorAttachmentInfo.pTexture == nullptr) continue;
 
