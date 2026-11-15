@@ -34,6 +34,7 @@ namespace DollsEngine
             if (sampleCount > 1 && colorAttachmentInfo.pResolveTexture != nullptr) {
                 VkAttachmentDescription resolveAttachmentDescription = {};
                 resolveAttachmentDescription.format = colorAttachmentInfo.pResolveTexture->GetFormat();
+                resolveAttachmentDescription.samples = VK_SAMPLE_COUNT_1_BIT;
 
             }
         }
