@@ -76,6 +76,7 @@ namespace DollsEngine
                 resolveAttachmentDescription.storeOp = VK_ATTACHMENT_STORE_OP_STORE;
                 resolveAttachmentDescription.stencilLoadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
                 resolveAttachmentDescription.stencilStoreOp = VK_ATTACHMENT_STORE_OP_STORE;
+                m_attachmentDescriptions.push_back(resolveAttachmentDescription);
             }
         }
     }
