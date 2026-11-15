@@ -38,6 +38,8 @@ namespace DollsEngine
                 resolveAttachmentDescription.storeOp = VK_ATTACHMENT_STORE_OP_STORE;
                 m_attachmentDescriptions.push_back(resolveAttachmentDescription);
 
+                resolveAttachmentReference.attachment = static_cast<uint32_t>(m_attachmentDescriptions.size() - 1);
+
             }
         }
     }
