@@ -29,6 +29,8 @@ namespace DollsEngine
             attachmentReference.attachment = static_cast<uint32_t>(m_attachmentDescriptions.size() - 1);
             attachmentReference.layout = VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;
             m_colorAttachmentReferences.push_back(attachmentReference);
+
+            VkAttachmentReference resolveAttachmentReference = {};
         }
     }
 
