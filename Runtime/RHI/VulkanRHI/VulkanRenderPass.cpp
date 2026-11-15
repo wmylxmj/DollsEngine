@@ -44,13 +44,14 @@ namespace DollsEngine
             m_colorResolveAttachmentReferences.push_back(resolveAttachmentReference);
         }
 
+        const RHIRenderingDepthStencilAttachmentInfo& depthStencilAttachmentInfo = renderPassBeginInfo.depthStencilAttachmentInfo;
         if (renderPassBeginInfo.depthStencilAttachmentInfo.pTexture != nullptr) {
             const uint32_t sampleCount = renderPassBeginInfo.depthStencilAttachmentInfo.pTexture->GetSampleCount();
 
             VkAttachmentDescription depthStencilAttachmentDescription = {};
             depthStencilAttachmentDescription.format = ConvertToVkFormat(renderPassBeginInfo.depthStencilAttachmentInfo.pTexture->GetPixelFormat());
             depthStencilAttachmentDescription.samples = static_cast<VkSampleCountFlagBits>(sampleCount);
-            depthStencilAttachmentDescription.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
+            depthStencilAttachmentDescription.loadOp = ConvertToVkAttachmentLoadOp(renderPassBeginInfo.depthStencilAttachmentInfo.depthLoadOp);
         }
     }
 
