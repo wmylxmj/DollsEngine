@@ -30,7 +30,7 @@ namespace DollsEngine
             attachmentReference.layout = VK_IMAGE_LAYOUT_COLOR_ATTACHMENT_OPTIMAL;
             m_colorAttachmentReferences.push_back(attachmentReference);
 
-            VkAttachmentReference resolveAttachmentReference = {};
+            VkAttachmentReference resolveAttachmentReference = { VK_ATTACHMENT_UNUSED, VK_IMAGE_LAYOUT_UNDEFINED };
             if (sampleCount > 1 && colorAttachmentInfo.pResolveTexture != nullptr) {
                 VkAttachmentDescription resolveAttachmentDescription = attachmentDescription;
                 resolveAttachmentDescription.samples = VK_SAMPLE_COUNT_1_BIT;
