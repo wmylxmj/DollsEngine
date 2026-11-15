@@ -46,6 +46,10 @@ namespace DollsEngine
             m_colorResolveAttachmentReferences.push_back(resolveAttachmentReference);
         }
 
+        m_depthStencilAttachmentReference = { VK_ATTACHMENT_UNUSED, VK_IMAGE_LAYOUT_UNDEFINED };
+        m_depthStencilResolveAttachmentReference = { VK_ATTACHMENT_UNUSED, VK_IMAGE_LAYOUT_UNDEFINED };
+
+
         const RHIRenderingDepthStencilAttachmentInfo& depthStencilAttachmentInfo = renderPassBeginInfo.depthStencilAttachmentInfo;
         if (depthStencilAttachmentInfo.pTexture != nullptr) {
             const uint32_t sampleCount = depthStencilAttachmentInfo.pTexture->GetSampleCount();
