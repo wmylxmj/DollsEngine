@@ -14,7 +14,6 @@ namespace DollsEngine
 
             const uint32_t sampleCount = colorAttachmentInfo.pTexture->GetSampleCount();
 
-
             VkAttachmentDescription attachmentDescription = {};
             attachmentDescription.format = ConvertToVkFormat(colorAttachmentInfo.pTexture->GetPixelFormat());
             attachmentDescription.samples = static_cast<VkSampleCountFlagBits>(sampleCount);
