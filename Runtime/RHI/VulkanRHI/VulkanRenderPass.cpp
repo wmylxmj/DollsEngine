@@ -60,6 +60,8 @@ namespace DollsEngine
             depthStencilAttachmentDescription.initialLayout = needsLoad ? VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL : VK_IMAGE_LAYOUT_UNDEFINED;
             depthStencilAttachmentDescription.finalLayout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
             m_attachmentDescriptions.push_back(depthStencilAttachmentDescription);
+
+            m_depthStencilAttachmentReference = {};
         }
     }
 
