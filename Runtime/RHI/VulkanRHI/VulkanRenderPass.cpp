@@ -33,6 +33,7 @@ namespace DollsEngine
             VkAttachmentReference resolveAttachmentReference = {};
             if (sampleCount > 1 && colorAttachmentInfo.pResolveTexture != nullptr) {
                 VkAttachmentDescription resolveAttachmentDescription = {};
+                resolveAttachmentDescription.format = colorAttachmentInfo.pResolveTexture->GetFormat();
 
             }
         }
