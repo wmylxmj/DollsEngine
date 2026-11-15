@@ -71,6 +71,8 @@ namespace DollsEngine
 
             if (sampleCount > 1 && depthStencilAttachmentInfo.pResolveTexture != nullptr) {
                 VkAttachmentDescription resolveAttachmentDescription = {};
+                resolveAttachmentDescription.format = depthStencilAttachmentInfo.pResolveTexture->GetFormat();
+                resolveAttachmentDescription.samples = VK_SAMPLE_COUNT_1_BIT;
             }
         }
     }
