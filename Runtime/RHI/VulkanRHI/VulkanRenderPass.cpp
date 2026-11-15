@@ -57,6 +57,7 @@ namespace DollsEngine
             depthStencilAttachmentDescription.stencilStoreOp = ConvertToVkAttachmentStoreOp(depthStencilAttachmentInfo.stencilStoreOp);
 
             const bool needsLoad = depthStencilAttachmentDescription.loadOp == VK_ATTACHMENT_LOAD_OP_LOAD || depthStencilAttachmentDescription.stencilLoadOp == VK_ATTACHMENT_LOAD_OP_LOAD;
+            depthStencilAttachmentDescription.initialLayout = needsLoad ? VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL : VK_IMAGE_LAYOUT_UNDEFINED;
 
         }
     }
