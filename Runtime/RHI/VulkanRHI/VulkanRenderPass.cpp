@@ -10,6 +10,8 @@ namespace DollsEngine
         m_attachmentDescriptions.clear();
         m_colorAttachmentReferences.clear();
         for (const auto & colorAttachmentInfo : renderPassBeginInfo.colorAttachmentInfos) {
+            if (colorAttachmentInfo.pTexture == nullptr) continue;
+
             VkAttachmentDescription attachmentDescription = {};
             attachmentDescription.format = ConvertToVkFormat(colorAttachmentInfo.pTexture->GetPixelFormat());
             attachmentDescription.samples = static_cast<VkSampleCountFlagBits>(colorAttachmentInfo.pTexture->GetSampleCount());
