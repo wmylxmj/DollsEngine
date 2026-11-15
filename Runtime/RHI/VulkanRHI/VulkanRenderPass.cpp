@@ -53,6 +53,8 @@ namespace DollsEngine
             depthStencilAttachmentDescription.samples = static_cast<VkSampleCountFlagBits>(sampleCount);
             depthStencilAttachmentDescription.loadOp = ConvertToVkAttachmentLoadOp(depthStencilAttachmentInfo.depthLoadOp);
             depthStencilAttachmentDescription.storeOp = ConvertToVkAttachmentStoreOp(depthStencilAttachmentInfo.depthStoreOp);
+            depthStencilAttachmentDescription.stencilLoadOp = ConvertToVkAttachmentLoadOp(depthStencilAttachmentInfo.stencilLoadOp);
+            depthStencilAttachmentDescription.stencilStoreOp = ConvertToVkAttachmentStoreOp(depthStencilAttachmentInfo.stencilStoreOp);
         }
     }
 
