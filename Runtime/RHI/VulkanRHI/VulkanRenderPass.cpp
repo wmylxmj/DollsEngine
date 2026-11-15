@@ -49,7 +49,7 @@ namespace DollsEngine
 
             VkAttachmentDescription depthStencilAttachmentDescription = {};
             depthStencilAttachmentDescription.format = ConvertToVkFormat(renderPassBeginInfo.depthStencilAttachmentInfo.pTexture->GetPixelFormat());
-            depthStencilAttachmentDescription.samples = sampleCount;
+            depthStencilAttachmentDescription.samples = static_cast<VkSampleCountFlagBits>(sampleCount);
             depthStencilAttachmentDescription.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
         }
     }
