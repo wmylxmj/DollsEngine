@@ -45,6 +45,7 @@ namespace DollsEngine
         }
 
         if (renderPassBeginInfo.depthStencilAttachmentInfo.pTexture != nullptr) {
+            const uint32_t sampleCount = renderPassBeginInfo.depthStencilAttachmentInfo.pTexture->GetSampleCount();
         }
     }
 
