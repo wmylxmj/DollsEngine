@@ -43,6 +43,9 @@ namespace DollsEngine
             }
             m_colorResolveAttachmentReferences.push_back(resolveAttachmentReference);
         }
+
+        if (renderPassBeginInfo.depthStencilAttachmentInfo.pTexture != nullptr) {
+        }
     }
 
 
