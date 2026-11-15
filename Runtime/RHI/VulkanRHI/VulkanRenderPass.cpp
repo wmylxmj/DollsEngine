@@ -8,6 +8,7 @@ namespace DollsEngine
     void VulkanRenderPassDescription::Initialize(const RHIRenderPassBeginInfo &renderPassBeginInfo)
     {
         m_attachmentDescriptions.clear();
+
         m_colorAttachmentReferences.clear();
         m_colorResolveAttachmentReferences.clear();
         for (const auto & colorAttachmentInfo : renderPassBeginInfo.colorAttachmentInfos) {
