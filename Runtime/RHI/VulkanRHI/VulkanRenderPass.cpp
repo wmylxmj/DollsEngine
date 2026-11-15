@@ -35,6 +35,7 @@ namespace DollsEngine
                 VkAttachmentDescription resolveAttachmentDescription = {};
                 resolveAttachmentDescription.format = colorAttachmentInfo.pResolveTexture->GetFormat();
                 resolveAttachmentDescription.samples = VK_SAMPLE_COUNT_1_BIT;
+                resolveAttachmentDescription.loadOp = VK_ATTACHMENT_LOAD_OP_DONT_CARE;
 
             }
         }
