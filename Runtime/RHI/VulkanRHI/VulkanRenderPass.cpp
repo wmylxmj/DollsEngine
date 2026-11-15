@@ -70,6 +70,7 @@ namespace DollsEngine
             m_depthStencilAttachmentReference.layout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
 
             if (sampleCount > 1 && depthStencilAttachmentInfo.pResolveTexture != nullptr) {
+                VkAttachmentDescription resolveAttachmentDescription = {};
             }
         }
     }
