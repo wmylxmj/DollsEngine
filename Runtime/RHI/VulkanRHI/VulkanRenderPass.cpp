@@ -48,7 +48,7 @@ namespace DollsEngine
             const uint32_t sampleCount = renderPassBeginInfo.depthStencilAttachmentInfo.pTexture->GetSampleCount();
 
             VkAttachmentDescription depthStencilAttachmentDescription = {};
-            depthStencilAttachmentDescription.format = renderPassBeginInfo.depthStencilAttachmentInfo.pTexture->GetPixelFormat();
+            depthStencilAttachmentDescription.format = ConvertToVkFormat(renderPassBeginInfo.depthStencilAttachmentInfo.pTexture->GetPixelFormat());
             depthStencilAttachmentDescription.samples = sampleCount;
             depthStencilAttachmentDescription.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
         }
