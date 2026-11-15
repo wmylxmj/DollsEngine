@@ -31,7 +31,9 @@ namespace DollsEngine
             m_colorAttachmentReferences.push_back(attachmentReference);
 
             VkAttachmentReference resolveAttachmentReference = {};
-            if (sampleCount > 1 && colorAttachmentInfo.pResolveTexture != nullptr)
+            if (sampleCount > 1 && colorAttachmentInfo.pResolveTexture != nullptr) {
+
+            }
         }
     }
 
