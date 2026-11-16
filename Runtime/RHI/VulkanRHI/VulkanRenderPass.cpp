@@ -90,4 +90,10 @@ namespace DollsEngine
         : m_device(device)
     {
     }
+
+    bool VulkanRenderPass::Create(const VulkanRenderPassDescription &description)
+    {
+
+    }
+
 }
