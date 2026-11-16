@@ -94,6 +94,8 @@ namespace DollsEngine
     bool VulkanRenderPass::Create(const VulkanRenderPassDescription &description)
     {
         const std::vector<VkAttachmentDescription>& attachmentDescriptions = description.GetAttachmentDescriptions();
+        if (attachmentDescriptions.empty()) return false;
+
         const std::vector<VkAttachmentReference>& colorAttachmentReferences = description.GetColorAttachmentReferences();
         const std::vector<VkAttachmentReference>& colorResolveAttachmentReferences = description.GetColorResolveAttachmentReferences();
 
