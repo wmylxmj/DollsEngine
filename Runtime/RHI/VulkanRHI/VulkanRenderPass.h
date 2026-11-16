@@ -19,6 +19,7 @@ namespace DollsEngine
         const VkAttachmentReference& GetDepthStencilAttachmentReference() const { return m_depthStencilAttachmentReference; }
 
         bool HasColorResolveAttachments() const { return m_hasColorResolveAttachments; }
+        bool HasDepthStencilAttachment() const { return m_depthStencilAttachmentReference.attachment != VK_ATTACHMENT_UNUSED; }
         bool HasDepthStencilResolveAttachments() const { return m_depthStencilResolveAttachmentReference.attachment != VK_ATTACHMENT_UNUSED; }
 
     private:
