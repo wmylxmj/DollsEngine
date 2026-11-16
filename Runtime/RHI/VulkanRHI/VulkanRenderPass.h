@@ -16,6 +16,8 @@ namespace DollsEngine
 
         const std::vector<VkAttachmentDescription>& GetAttachmentDescriptions() const { return m_attachmentDescriptions; }
         const std::vector<VkAttachmentReference>& GetColorAttachmentReferences() const { return m_colorAttachmentReferences; }
+        const std::vector<VkAttachmentReference>& GetColorResolveAttachmentReferences() const { return m_colorResolveAttachmentReferences; }
+        const VkAttachmentReference& GetDepthStencilAttachmentReference() const { return m_depthStencilAttachmentReference; }
 
         bool HasColorResolveAttachments() const { return m_hasColorResolveAttachments; }
         bool HasDepthStencilResolveAttachments() const { return m_depthStencilResolveAttachmentReference.attachment != VK_ATTACHMENT_UNUSED; }
