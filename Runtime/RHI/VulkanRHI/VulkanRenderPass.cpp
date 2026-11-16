@@ -84,5 +84,11 @@ namespace DollsEngine
         }
     }
 
+    VulkanRenderPass::VulkanRenderPass(VulkanDevice &device) : m_device(device) {}
+    {
+
+    }
+
+
 
 }
