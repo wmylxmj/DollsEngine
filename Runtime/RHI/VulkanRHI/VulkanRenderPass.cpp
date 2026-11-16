@@ -11,6 +11,7 @@ namespace DollsEngine
 
         m_colorAttachmentReferences.clear();
         m_colorResolveAttachmentReferences.clear();
+        m_hasColorResolveAttachments = false;
         for (const auto & colorAttachmentInfo : renderPassBeginInfo.colorAttachmentInfos) {
             if (colorAttachmentInfo.pTexture == nullptr) continue;
 
