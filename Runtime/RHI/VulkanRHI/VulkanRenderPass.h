@@ -16,6 +16,8 @@ namespace DollsEngine
 
         const std::vector<VkAttachmentDescription>& GetAttachmentDescriptions() const { return m_attachmentDescriptions; }
 
+        bool HasColorResolveAttachments() const { return m_hasColorResolveAttachments; }
+
     private:
         std::vector<VkAttachmentDescription> m_attachmentDescriptions;
 
