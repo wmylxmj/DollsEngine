@@ -21,6 +21,8 @@ namespace DollsEngine
         std::vector<VkAttachmentReference> m_colorResolveAttachmentReferences;
         VkAttachmentReference m_depthStencilAttachmentReference = { VK_ATTACHMENT_UNUSED, VK_IMAGE_LAYOUT_UNDEFINED };
         VkAttachmentReference m_depthStencilResolveAttachmentReference = { VK_ATTACHMENT_UNUSED, VK_IMAGE_LAYOUT_UNDEFINED };
+
+        bool m_hasColorResolveAttachments = false;
     };
 
     class VulkanRenderPass {
