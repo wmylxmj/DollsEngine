@@ -100,4 +100,5 @@ namespace DollsEngine
         const std::vector<VkAttachmentReference>& colorResolveAttachmentReferences = description.GetColorResolveAttachmentReferences();
 
     }
+
 }
