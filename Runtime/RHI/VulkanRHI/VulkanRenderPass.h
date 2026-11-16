@@ -14,6 +14,8 @@ namespace DollsEngine
     public:
         void Initialize(const RHIRenderPassBeginInfo& renderPassBeginInfo);
 
+        const std::vector<VkAttachmentDescription>& GetAttachmentDescriptions() const { return m_attachmentDescriptions; }
+
     private:
         std::vector<VkAttachmentDescription> m_attachmentDescriptions;
 
