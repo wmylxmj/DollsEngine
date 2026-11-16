@@ -95,6 +95,7 @@ namespace DollsEngine
     {
         const std::vector<VkAttachmentDescription>& attachmentDescriptions = description.GetAttachmentDescriptions();
         const std::vector<VkAttachmentReference>& colorAttachmentReferences = description.GetColorAttachmentReferences();
+        const std::vector<VkAttachmentReference>& colorResolveAttachmentReferences = description.GetColorResolveAttachmentReferences();
 
     }
 
