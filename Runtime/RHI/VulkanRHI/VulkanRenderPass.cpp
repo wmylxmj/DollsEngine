@@ -93,6 +93,6 @@ namespace DollsEngine
 
     bool VulkanRenderPass::Create(const VulkanRenderPassDescription &description)
     {
-
+        return true;
     }
 }
