@@ -15,6 +15,7 @@ namespace DollsEngine
         void Initialize(const RHIRenderPassBeginInfo& renderPassBeginInfo);
 
         const std::vector<VkAttachmentDescription>& GetAttachmentDescriptions() const { return m_attachmentDescriptions; }
+        const std::vector<VkAttachmentReference>& GetColorAttachmentReferences() const { return m_colorAttachmentReferences; }
 
         bool HasColorResolveAttachments() const { return m_hasColorResolveAttachments; }
         bool HasDepthStencilResolveAttachments() const { return m_depthStencilResolveAttachmentReference.attachment != VK_ATTACHMENT_UNUSED; }
