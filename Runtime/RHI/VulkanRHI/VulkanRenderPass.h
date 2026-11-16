@@ -25,6 +25,7 @@ namespace DollsEngine
 
     class VulkanRenderPass {
     public:
+        VulkanRenderPass(VulkanDevice& device);
         bool Create(const VulkanRenderPassDescription& description);
         VkRenderPass GetHandle() const { return m_renderPass; }
 
