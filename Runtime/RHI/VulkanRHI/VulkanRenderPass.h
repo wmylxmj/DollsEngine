@@ -29,6 +29,7 @@ namespace DollsEngine
         VkRenderPass GetHandle() const { return m_renderPass; }
 
     private:
-        VkRenderPass m_renderPass;
+        VulkanDevice& m_device;
+        VkRenderPass m_renderPass = VK_NULL_HANDLE;
     };
 }
