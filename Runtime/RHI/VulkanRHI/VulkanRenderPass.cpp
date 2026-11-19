@@ -2,6 +2,7 @@
 
 #include "VulkanRHIUtils.h"
 #include "VulkanTexture.h"
+#include "VulkanDevice.h"
 
 namespace DollsEngine
 {
