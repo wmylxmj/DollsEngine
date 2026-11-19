@@ -80,6 +80,7 @@ namespace DollsEngine
         if (vkCreateDevice(m_physicalDevice.GetHandle(), &deviceCreateInfo, nullptr, &m_device) != VK_SUCCESS) {
             return false;
         }
+        volkLoadDevice(m_device);
 
         m_graphicsQueue.Initialize(graphicsQueueFamilyIndex.value(), 0);
         if (computeQueueFamilyIndex.has_value()) {

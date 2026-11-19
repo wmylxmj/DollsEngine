@@ -93,11 +93,36 @@ namespace DollsEngine
 
     bool VulkanRenderPass::Create(const VulkanRenderPassDescription &description)
     {
+        if (m_renderPass != VK_NULL_HANDLE) return false;
+
         const std::vector<VkAttachmentDescription>& attachmentDescriptions = description.GetAttachmentDescriptions();
         if (attachmentDescriptions.empty()) return false;
 
         const std::vector<VkAttachmentReference>& colorAttachmentReferences = description.GetColorAttachmentReferences();
         const std::vector<VkAttachmentReference>& colorResolveAttachmentReferences = description.GetColorResolveAttachmentReferences();
 
+        VkSubpassDescription subpassDescription = {};
+        subpassDescription.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
+        subpassDescription.colorAttachmentCount = static_cast<uint32_t>(colorAttachmentReferences.size());
+        subpassDescription.pColorAttachments = colorAttachmentReferences.data();
+        if (description.HasColorResolveAttachments()) {
+            subpassDescription.pResolveAttachments = colorResolveAttachmentReferences.data();
+        }
+        if (description.HasDepthStencilAttachment()) {
+            subpassDescription.pDepthStencilAttachment = &description.GetDepthStencilAttachmentReference();
+        }
+
+        VkRenderPassCreateInfo renderPassCreateInfo = {};
+        renderPassCreateInfo.sType = VK_STRUCTURE_TYPE_RENDER_PASS_CREATE_INFO;
+        renderPassCreateInfo.attachmentCount = static_cast<uint32_t>(attachmentDescriptions.size());
+        renderPassCreateInfo.pAttachments = attachmentDescriptions.data();
+        renderPassCreateInfo.subpassCount = 1;
+        renderPassCreateInfo.pSubpasses = &subpassDescription;
+
+        if (vkCreateRenderPass(m_device.GetHandle(), &renderPassCreateInfo, nullptr, &m_renderPass) != VK_SUCCESS) {
+            return false;
+        }
+
+        return true;
     }
 }
