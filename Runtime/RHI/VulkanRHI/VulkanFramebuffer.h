@@ -12,6 +12,7 @@ namespace DollsEngine
 
     private:
         VulkanDevice& m_device;
+
         VkFramebuffer m_framebuffer = VK_NULL_HANDLE;
 
 
