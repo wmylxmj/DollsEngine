@@ -10,6 +10,9 @@ namespace DollsEngine
         D24_UNORM_S8_UINT,
     };
 
+    struct RHITextureCreateInfo {
+    };
+
     class RHITexture {
     public:
         RHIPixelFormat GetPixelFormat() const { return m_pixelFormat; }
