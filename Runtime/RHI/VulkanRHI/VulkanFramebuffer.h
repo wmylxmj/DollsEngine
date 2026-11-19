@@ -11,6 +11,7 @@ namespace DollsEngine
         VkFramebuffer GetHandle() const { return m_framebuffer; }
 
     private:
+        VulkanDevice& m_device;
         VkFramebuffer m_framebuffer = VK_NULL_HANDLE;
 
 
