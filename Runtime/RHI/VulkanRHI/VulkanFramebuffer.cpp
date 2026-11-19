@@ -3,3 +3,8 @@
 //
 
 #include "VulkanFramebuffer.h"
+
+namespace DollsEngine
+{
+
+}
