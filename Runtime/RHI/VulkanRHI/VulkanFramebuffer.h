@@ -4,6 +4,8 @@
 
 namespace DollsEngine
 {
+    class VulkanDevice;
+
     class VulkanFramebuffer {
     public:
         VkFramebuffer GetHandle() const { return m_framebuffer; }
