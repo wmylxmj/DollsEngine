@@ -8,7 +8,7 @@ namespace DollsEngine
 
     class VulkanFramebuffer {
     public:
-        VulkanFramebuffer(VulkanDevice& device);
+        explicit VulkanFramebuffer(VulkanDevice& device);
         VkFramebuffer GetHandle() const { return m_framebuffer; }
 
     private:
