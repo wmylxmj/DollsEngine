@@ -17,6 +17,7 @@ namespace DollsEngine
 
     protected:
         RHIPixelFormat m_pixelFormat = RHIPixelFormat::Undefined;
+        uint32_t m_width = 0;
         // 采样数
         uint32_t m_sampleCount = 1;
     };
