@@ -2,8 +2,9 @@
 
 #include "VulkanAPI.h"
 
-class VulkanCommandContext {
+namespace DollsEngine
+{
+    class VulkanCommandContext {
 
-};
-
-
+    };
+}
