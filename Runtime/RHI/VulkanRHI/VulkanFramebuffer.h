@@ -10,6 +10,8 @@ namespace DollsEngine
     public:
         explicit VulkanFramebuffer(VulkanDevice& device);
 
+        // 获得句柄
+        VkFramebuffer GetHandle() const { return m_framebuffer; }
     private:
         VulkanDevice& m_device;
 
