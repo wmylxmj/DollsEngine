@@ -1,7 +1,8 @@
 #pragma once
 
+namespace DollsEngine
+{
+    class VulkanFramebuffer {
 
-class VulkanFramebuffer {
-
-};
-
+    };
+}
