@@ -6,5 +6,10 @@
 
 namespace DollsEngine
 {
+    VulkanFramebuffer::VulkanFramebuffer(VulkanDevice& device) : m_device(device)
+    {
 
+    }
 }
+
+
