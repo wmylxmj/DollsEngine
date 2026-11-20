@@ -19,7 +19,6 @@ namespace DollsEngine
         VulkanPlatform& m_platform;
 
         void* windowHandle = nullptr;
-
         VkSurfaceKHR m_surface = VK_NULL_HANDLE;
 
     };
