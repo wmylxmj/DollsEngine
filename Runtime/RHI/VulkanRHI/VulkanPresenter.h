@@ -11,6 +11,7 @@ namespace DollsEngine
 
     class VulkanPresenter : public RHIPresenter {
     public:
+        VulkanPresenter(VulkanInstance& instance, VulkanDevice& device, VulkanPlatform& platform);
 
     protected:
         VulkanInstance& m_instance;
