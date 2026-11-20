@@ -4,7 +4,6 @@
 
 #include "VulkanPresenter.h"
 
-
 namespace DollsEngine
 {
     VulkanPresenter::VulkanPresenter(VulkanInstance &instance, VulkanDevice &device, VulkanPlatform &platform) :
