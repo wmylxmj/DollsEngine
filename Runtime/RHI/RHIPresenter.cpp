@@ -3,3 +3,8 @@
 //
 
 #include "RHIPresenter.h"
+
+namespace DollsEngine
+{
+
+}
