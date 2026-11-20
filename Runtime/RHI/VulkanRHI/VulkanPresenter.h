@@ -1,5 +1,6 @@
 #pragma once
 
+#include "VulkanInstance.h"
 #include "VulkanSwapchain.h"
 #include "../RHIPresenter.h"
 
@@ -11,6 +12,7 @@ namespace DollsEngine
     public:
 
     protected:
+        VulkanInstance& m_instance;
         VulkanDevice& m_device;
 
     };
