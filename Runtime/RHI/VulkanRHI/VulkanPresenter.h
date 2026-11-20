@@ -6,6 +6,7 @@
 
 namespace DollsEngine
 {
+    class VulkanInstance;
     class VulkanDevice;
 
     class VulkanPresenter : public RHIPresenter {
