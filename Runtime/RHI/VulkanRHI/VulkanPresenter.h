@@ -16,7 +16,6 @@ namespace DollsEngine
     protected:
         VulkanInstance& m_instance;
         VulkanDevice& m_device;
-        VulkanPlatform& m_platform;
 
     };
 }
