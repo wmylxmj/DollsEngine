@@ -20,7 +20,6 @@ namespace DollsEngine
 
 
         VkSurfaceKHR    m_surface = VK_NULL_HANDLE;
-        VulkanSwapchain m_swapchain;
 
     };
 }
