@@ -5,13 +5,9 @@
 
 namespace DollsEngine
 {
-    class VulkanPlatform;
-}
-
-namespace DollsEngine
-{
     class VulkanInstance;
     class VulkanDevice;
+    class VulkanPlatform;
 
     class VulkanPresenter : public RHIPresenter {
     public:
