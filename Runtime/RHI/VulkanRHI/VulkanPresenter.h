@@ -16,6 +16,8 @@ namespace DollsEngine
     protected:
         VulkanInstance& m_instance;
         VulkanDevice& m_device;
+        VulkanPlatform& m_platform;
+
 
         VkSurfaceKHR    m_surface = VK_NULL_HANDLE;
         VulkanSwapchain m_swapchain;
