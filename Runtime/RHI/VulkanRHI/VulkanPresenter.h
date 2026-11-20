@@ -9,6 +9,7 @@ namespace DollsEngine
 
     class VulkanPresenter : public RHIPresenter {
     protected:
+        VulkanDevice& m_device;
 
     };
 }
