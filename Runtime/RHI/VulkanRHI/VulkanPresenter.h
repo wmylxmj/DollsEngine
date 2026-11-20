@@ -8,6 +8,8 @@ namespace DollsEngine
     class VulkanDevice;
 
     class VulkanPresenter : public RHIPresenter {
+    public:
+
     protected:
         VulkanDevice& m_device;
 
