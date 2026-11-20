@@ -3,6 +3,6 @@
 namespace DollsEngine
 {
     class RHIPresenter {
-
+    public:
     };
 }
