@@ -6,7 +6,6 @@ namespace DollsEngine
 {
     struct VulkanTextureViewDescription
     {
-        VkImageViewType
         VkFormat format = VK_FORMAT_UNDEFINED;
         VkImageAspectFlags aspectMask = VK_IMAGE_ASPECT_NONE;
 
