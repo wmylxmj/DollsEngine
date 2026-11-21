@@ -4,6 +4,10 @@
 
 namespace DollsEngine
 {
+    struct VulkanTextureViewDescription
+    {
+
+    };
     class VulkanTextureView {
     public:
         VkImageView GetHandle() const { return m_imageView; }
