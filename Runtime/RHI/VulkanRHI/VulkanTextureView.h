@@ -2,8 +2,6 @@
 
 #include "VulkanAPI.h"
 
-#include <cstdint>
-
 namespace DollsEngine
 {
     struct VulkanTextureViewDescription
