@@ -9,7 +9,7 @@ namespace DollsEngine
         VkImageViewType imageViewType = VK_IMAGE_VIEW_TYPE_MAX_ENUM;
 
     };
-    class VulkanTextureView {
+    struct VulkanTextureView {
         VkImageView m_imageView = VK_NULL_HANDLE;
     };
 }
