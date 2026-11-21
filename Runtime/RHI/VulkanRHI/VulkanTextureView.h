@@ -17,6 +17,7 @@ namespace DollsEngine
     };
 
     class VulkanTextureView {
+    public:
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
 
         VkImage m_image = VK_NULL_HANDLE;
