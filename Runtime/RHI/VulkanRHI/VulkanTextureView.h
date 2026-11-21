@@ -16,7 +16,7 @@ namespace DollsEngine
         uint32_t arrayLayerCount = VK_REMAINING_ARRAY_LAYERS;
     };
 
-    struct VulkanTextureView {
+    class VulkanTextureView {
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
 
         VkImage m_image = VK_NULL_HANDLE;
