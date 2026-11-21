@@ -54,6 +54,8 @@ add_executable(DollsEngine
         RHI/VulkanRHI/VulkanSwapchain.h
         RHI/VulkanRHI/VulkanTexture.cpp
         RHI/VulkanRHI/VulkanTexture.h
+        RHI/VulkanRHI/VulkanTextureView.cpp
+        RHI/VulkanRHI/VulkanTextureView.h
         RHI/VulkanRHI/VulkanRenderPass.cpp
         RHI/VulkanRHI/VulkanRenderPass.h
         RHI/VulkanRHI/VulkanFramebuffer.cpp
