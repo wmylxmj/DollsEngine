@@ -18,6 +18,8 @@ namespace DollsEngine
 
     struct VulkanTextureView {
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
+
+        VkImage m_image = VK_NULL_HANDLE;
         VkImageView m_imageView = VK_NULL_HANDLE;
     };
 }
