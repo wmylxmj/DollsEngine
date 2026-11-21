@@ -6,6 +6,7 @@ namespace DollsEngine
 {
     struct VulkanTextureViewDescription
     {
+        VkImageViewType imageViewType = VK_IMAGE_VIEW_TYPE_2D;
 
     };
     class VulkanTextureView {
