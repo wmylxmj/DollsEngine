@@ -9,6 +9,7 @@ namespace DollsEngine
         VkFormat format = VK_FORMAT_UNDEFINED;
         VkImageAspectFlags aspectMask = VK_IMAGE_ASPECT_NONE;
 
+        uint32_t baseMipLevel = 0;
     };
 
     struct VulkanTextureView {
