@@ -13,6 +13,7 @@ namespace DollsEngine
         uint32_t baseMipLevel = 0;
         uint32_t mipLevelCount = VK_REMAINING_MIP_LEVELS;
         uint32_t baseArrayLayer = 0;
+        uint32_t arrayLayerCount = VK_REMAINING_ARRAY_LAYERS;
     };
 
     struct VulkanTextureView {
