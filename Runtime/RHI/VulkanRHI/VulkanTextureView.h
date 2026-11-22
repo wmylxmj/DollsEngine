@@ -19,9 +19,6 @@ namespace DollsEngine
         uint32_t arrayLayerCount = VK_REMAINING_ARRAY_LAYERS;
     };
 
-    /**
-     * 仅管理VkImageView的生命周期
-     */
     class VulkanTextureView {
     public:
         // 输入：设备引用
