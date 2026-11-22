@@ -21,6 +21,7 @@ namespace DollsEngine
     public:
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
         // 获得句柄
+        VkImageView GetHandle() const { return m_imageView; }
 
     protected:
         VkImage m_image = VK_NULL_HANDLE;
