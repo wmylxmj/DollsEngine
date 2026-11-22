@@ -23,6 +23,12 @@ namespace DollsEngine
     public:
         VulkanTextureView(VulkanDevice& device);
 
+        VulkanTextureView(const VulkanTextureView&) = delete;
+        VulkanTextureView& operator=(const VulkanTextureView&) = delete;
+        VulkanTextureView(VulkanTextureView&&) = delete;
+        VulkanTextureView& operator=(VulkanTextureView&&) = delete;
+
+
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
         VkImageView GetHandle() const { return m_imageView; }
 
