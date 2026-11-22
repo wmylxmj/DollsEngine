@@ -12,5 +12,9 @@ namespace DollsEngine
 
     }
 
+    bool VulkanTextureView::Create(VkImage image, const VulkanTextureViewDescription &description)
+    {
+
+    }
 
 }
