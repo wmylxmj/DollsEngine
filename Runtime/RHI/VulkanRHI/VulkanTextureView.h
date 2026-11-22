@@ -21,7 +21,6 @@ namespace DollsEngine
 
     class VulkanTextureView {
     public:
-        // 输入：设备引用
         explicit VulkanTextureView(VulkanDevice& device);
 
         VulkanTextureView(const VulkanTextureView&) = delete;
