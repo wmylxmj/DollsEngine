@@ -34,11 +34,6 @@ namespace DollsEngine
 
         VkImage GetImage() const { return m_image; }
 
-        VulkanTextureView(const VulkanTextureView&) = delete;
-        VulkanTextureView& operator=(const VulkanTextureView&) = delete;
-        VulkanTextureView(VulkanTextureView&&) = delete;
-        VulkanTextureView& operator=(VulkanTextureView&&) = delete;
-
     protected:
         VulkanDevice& m_device;
 
