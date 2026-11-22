@@ -6,5 +6,10 @@
 
 namespace DollsEngine
 {
+    VulkanTextureView::VulkanTextureView(VulkanDevice &device)
+    {
+
+    }
+
 
 }
