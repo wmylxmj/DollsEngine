@@ -20,6 +20,7 @@ namespace DollsEngine
     class VulkanTextureView {
     public:
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
+        // 获得句柄
 
     protected:
         VkImage m_image = VK_NULL_HANDLE;
