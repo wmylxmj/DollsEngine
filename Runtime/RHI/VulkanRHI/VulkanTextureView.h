@@ -27,6 +27,8 @@ namespace DollsEngine
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
         VkImageView GetHandle() const { return m_imageView; }
 
+        VkImage GetImage() const { return m_image; }
+
     protected:
         VulkanDevice
         VkImage m_image = VK_NULL_HANDLE;
