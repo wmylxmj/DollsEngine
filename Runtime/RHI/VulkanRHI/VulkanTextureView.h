@@ -20,6 +20,7 @@ namespace DollsEngine
     public:
         bool Create(VkImage image, const VulkanTextureViewDescription& description);
 
+    protected:
         VkImage m_image = VK_NULL_HANDLE;
         VkImageView m_imageView = VK_NULL_HANDLE;
     };
