@@ -4,6 +4,11 @@
 
 namespace DollsEngine
 {
+    class VulkanDevice;
+}
+
+namespace DollsEngine
+{
     struct VulkanTextureViewDescription
     {
         VkImageViewType viewType = VK_IMAGE_VIEW_TYPE_MAX_ENUM;
@@ -23,6 +28,7 @@ namespace DollsEngine
         VkImageView GetHandle() const { return m_imageView; }
 
     protected:
+        VulkanDevice
         VkImage m_image = VK_NULL_HANDLE;
         VkImageView m_imageView = VK_NULL_HANDLE;
     };
