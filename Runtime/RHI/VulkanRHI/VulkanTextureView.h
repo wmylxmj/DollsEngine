@@ -8,6 +8,7 @@ namespace DollsEngine
     {
         VkImageViewType viewType = VK_IMAGE_VIEW_TYPE_MAX_ENUM;
         VkFormat format = VK_FORMAT_UNDEFINED;
+        VkComponentMapping components = {};3
         VkImageAspectFlags aspectMask = VK_IMAGE_ASPECT_NONE;
 
         uint32_t baseMipLevel = 0;
