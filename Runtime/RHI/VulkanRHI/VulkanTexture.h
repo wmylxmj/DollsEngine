@@ -1,18 +1,27 @@
 #pragma once
 
 #include "../RHITexture.h"
-#include "VulkanTextureView.h"
-
-#include <memory>
+#include "VulkanAPI.h"
 
 namespace DollsEngine
 {
+    class VulkanDevice;
+
     class VulkanTexture : public RHITexture {
+    public:
+        explicit VulkanTexture(VulkanDevice& device);
+        ~VulkanTexture();
+
+        // 外部 VkImage 路径：只包装，不拥有 image
+        bool Create(VkImage image, const RHITextureCreateInfo& createInfo);
+
+        VkImage GetImage() const { return m_image; }
+        bool IsImageOwner() const { return m_isImageOwner; }
+
     protected:
         VulkanDevice& m_device;
-        VkImage m_image;
+        VkImage m_image = VK_NULL_HANDLE;
         // 拥有图片
-        bool m_isImageOwner;
-
+        bool m_isImageOwner = false;
     };
 }
