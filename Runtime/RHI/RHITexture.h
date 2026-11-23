@@ -25,6 +25,8 @@ namespace DollsEngine
         uint32_t GetSampleCount() const { return m_sampleCount; }
 
     protected:
+        explicit RHITexture(const RHITextureCreateInfo& createInfo);
+
         RHIPixelFormat m_pixelFormat = RHIPixelFormat::Undefined;
         uint32_t m_width = 0;
         uint32_t m_height = 0;
