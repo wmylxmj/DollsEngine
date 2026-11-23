@@ -9,6 +9,7 @@ namespace DollsEngine
 {
     class VulkanTexture : public RHITexture {
     protected:
+        VulkanDevice& m_device;
         VkImage m_image;
         // 拥有图片
         bool m_isImageOwner;
