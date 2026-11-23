@@ -3,6 +3,8 @@
 #include "../RHITexture.h"
 #include "VulkanTextureView.h"
 
+#include <memory>
+
 namespace DollsEngine
 {
     class VulkanTexture : public RHITexture {
