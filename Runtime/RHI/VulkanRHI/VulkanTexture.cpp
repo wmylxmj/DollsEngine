@@ -9,8 +9,7 @@
 namespace DollsEngine
 {
     VulkanTexture::VulkanTexture(VulkanDevice& device)
-        : RHITexture(RHITextureCreateInfo{})
-        , m_device(device)
+        : m_device(device)
     {
     }
 
