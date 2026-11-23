@@ -11,6 +11,10 @@ namespace DollsEngine
     };
 
     struct RHITextureCreateInfo {
+        RHIPixelFormat pixelFormat = RHIPixelFormat::Undefined;
+        uint32_t width = 0;
+        uint32_t height = 0;
+        uint32_t sampleCount = 1;
     };
 
     class RHITexture {
