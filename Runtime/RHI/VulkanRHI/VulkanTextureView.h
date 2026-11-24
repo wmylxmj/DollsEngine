@@ -21,17 +21,19 @@ namespace DollsEngine
 
         bool operator==(const VulkanTextureViewDescription& other) const
         {
-            return viewType == other.viewType
-                && format == other.format
-                && components.r == other.components.r
-                && components.g == other.components.g
-                && components.b == other.components.b
-                && components.a == other.components.a
-                && aspectMask == other.aspectMask
-                && baseMipLevel == other.baseMipLevel
-                && mipLevelCount == other.mipLevelCount
-                && baseArrayLayer == other.baseArrayLayer
-                && arrayLayerCount == other.arrayLayerCount;
+            if (viewType != other.viewType) return false;
+            if (format != other.format) return false;
+            if (components.r != other.components.r) return false;
+            if (components.g != other.components.g) return false;
+            if (components.b != other.components.b) return false;
+            if (components.a != other.components.a) return false;
+            if (aspectMask != other.aspectMask) return false;
+            if (baseMipLevel != other.baseMipLevel) return false;
+            if (mipLevelCount != other.mipLevelCount) return false;
+            if (baseArrayLayer != other.baseArrayLayer) return false;
+            if (arrayLayerCount != other.arrayLayerCount) return false;
+
+            return true;
         }
     };
 
