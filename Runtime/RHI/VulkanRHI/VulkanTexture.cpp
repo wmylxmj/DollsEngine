@@ -40,4 +40,22 @@ namespace DollsEngine
         return true;
     }
 
+    VulkanTextureView* VulkanTexture::GetOrCreateView(const VulkanTextureViewDescription& description)
+    {
+        if (m_image == VK_NULL_HANDLE) {
+            return nullptr;
+        }
+
+        if (auto it = m_textureViewCaches.find(description); it != m_textureViewCaches.end()) {
+            return it->second.get();
+        }
+
+        auto view = std::make_unique<VulkanTextureView>(m_device);
+        if (!view->Create(m_image, description)) {
+            return nullptr;
+        }
+
+        return m_textureViewCaches.emplace(description, std::move(view)).first->second.get();
+    }
+
 }
