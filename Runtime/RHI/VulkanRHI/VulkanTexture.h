@@ -28,7 +28,6 @@ namespace DollsEngine
     protected:
         VulkanDevice& m_device;
         VkImage m_image = VK_NULL_HANDLE;
-        // 拥有图片
         bool m_isImageOwner = false;
         // 纹理视图缓存
         std::shared_mutex m_textureViewCachesMutex;
