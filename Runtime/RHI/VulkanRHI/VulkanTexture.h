@@ -32,7 +32,6 @@ namespace DollsEngine
         bool m_isImageOwner = false;
         // 纹理视图缓存
         std::shared_mutex m_textureViewCachesMutex;
-
         std::unordered_map<VulkanTextureViewDescription, std::unique_ptr<VulkanTextureView>, Hash<VulkanTextureViewDescription>> m_textureViewCaches;
     };
 }
