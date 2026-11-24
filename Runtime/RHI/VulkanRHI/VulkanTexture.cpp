@@ -46,6 +46,14 @@ namespace DollsEngine
             return nullptr;
         }
 
+        {
+            std::shared_lock lock(m_textureViewCachesMutex);
+            if (auto it = m_textureViewCaches.find(description); it != m_textureViewCaches.end()) {
+                return it->second.get();
+            }
+        }
+
+        std::unique_lock lock(m_textureViewCachesMutex);
         if (auto it = m_textureViewCaches.find(description); it != m_textureViewCaches.end()) {
             return it->second.get();
         }

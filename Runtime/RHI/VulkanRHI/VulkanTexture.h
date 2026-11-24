@@ -5,6 +5,8 @@
 
 #include <unordered_map>
 #include <memory>
+#include <mutex>
+#include <shared_mutex>
 
 namespace DollsEngine
 {
@@ -29,5 +31,6 @@ namespace DollsEngine
         bool m_isImageOwner = false;
         // 纹理视图缓存
         std::unordered_map<VulkanTextureViewDescription, std::unique_ptr<VulkanTextureView>, Hash<VulkanTextureViewDescription>> m_textureViewCaches;
+        std::shared_mutex m_textureViewCachesMutex;
     };
 }
