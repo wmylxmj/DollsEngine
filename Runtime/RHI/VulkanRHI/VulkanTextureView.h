@@ -41,6 +41,19 @@ namespace DollsEngine
     struct Hash<VulkanTextureViewDescription> {
         size_t operator()(const VulkanTextureViewDescription& description) const
         {
+            size_t seed = 0;
+            HashCombine(seed, description.viewType);
+            HashCombine(seed, description.format);
+            HashCombine(seed, description.components.r);
+            HashCombine(seed, description.components.g);
+            HashCombine(seed, description.components.b);
+            HashCombine(seed, description.components.a);
+            HashCombine(seed, description.aspectMask);
+            HashCombine(seed, description.baseMipLevel);
+            HashCombine(seed, description.mipLevelCount);
+            HashCombine(seed, description.baseArrayLayer);
+            HashCombine(seed, description.arrayLayerCount);
+            return seed;
         }
     };
 
