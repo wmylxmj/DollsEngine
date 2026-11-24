@@ -15,6 +15,7 @@ add_subdirectory(../External/VulkanMemoryAllocator ${CMAKE_CURRENT_BINARY_DIR}/V
 # 将源代码添加到此项目的可执行文件。
 add_executable(DollsEngine
         Core/Core.h
+        Core/Hash/Hash.h
         Core/Event/Event.h
         RHI/RHI.h
         RHI/RHIResource.h
