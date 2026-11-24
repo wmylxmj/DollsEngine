@@ -20,9 +20,9 @@ namespace DollsEngine
         // 外部 VkImage 路径：只包装，不拥有 image
         bool Create(VkImage image, const RHITextureCreateInfo& createInfo);
 
+        VulkanTextureView* GetOrCreateView(const VulkanTextureViewDescription& description);
         VkImage GetImage() const { return m_image; }
         bool IsImageOwner() const { return m_isImageOwner; }
-        VulkanTextureView* GetOrCreateView(const VulkanTextureViewDescription& description);
 
     protected:
         VulkanDevice& m_device;
