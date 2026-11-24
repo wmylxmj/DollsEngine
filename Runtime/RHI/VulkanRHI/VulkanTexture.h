@@ -27,6 +27,7 @@ namespace DollsEngine
 
     protected:
         VulkanDevice& m_device;
+
         VkImage m_image = VK_NULL_HANDLE;
         bool m_isImageOwner = false;
         // 纹理视图缓存
