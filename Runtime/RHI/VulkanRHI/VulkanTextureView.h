@@ -1,6 +1,7 @@
 #pragma once
 
 #include "VulkanAPI.h"
+#include "../../Core/Hash/Hash.h"
 
 namespace DollsEngine
 {
