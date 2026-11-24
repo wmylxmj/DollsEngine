@@ -20,6 +20,10 @@ namespace DollsEngine
         uint32_t arrayLayerCount = VK_REMAINING_ARRAY_LAYERS;
     };
 
+    template<>
+    struct Hash<VulkanTextureViewDescription> {
+    };
+
     /**
      * 仅管理VkImageView的生命周期
      */
