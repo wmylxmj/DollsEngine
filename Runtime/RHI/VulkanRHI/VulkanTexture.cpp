@@ -42,10 +42,6 @@ namespace DollsEngine
 
     VulkanTextureView *VulkanTexture::GetOrCreateTextureView(const VulkanTextureViewDescription &description)
     {
-
-    }
-
-    {
         if (m_image == VK_NULL_HANDLE) {
             return nullptr;
         }
