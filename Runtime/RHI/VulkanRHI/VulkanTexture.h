@@ -26,5 +26,7 @@ namespace DollsEngine
         VkImage m_image = VK_NULL_HANDLE;
         // 拥有图片
         bool m_isImageOwner = false;
+        // 纹理视图缓存
+        std::unordered_map<VulkanTextureViewDescription, std::unique_ptr<VulkanTextureView>, Hash<VulkanTextureViewDescription>> m_textureViewCaches;
     };
 }
