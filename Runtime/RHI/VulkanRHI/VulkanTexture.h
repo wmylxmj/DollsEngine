@@ -4,6 +4,7 @@
 #include "VulkanTextureView.h"
 
 #include <unordered_map>
+#include <memory>
 
 namespace DollsEngine
 {
