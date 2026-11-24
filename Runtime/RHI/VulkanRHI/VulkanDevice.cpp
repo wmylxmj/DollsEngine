@@ -131,5 +131,10 @@ namespace DollsEngine
         return pCommandPool;
     }
 
+    void VulkanDevice::ReleaseCommandPool(VulkanCommandPool* pCommandPool)
+    {
+        std::lock_guard<std::mutex> lockGuard(m_commandPoolMutex);
+        m_availableCommandPools[pCommandPool->GetQueueFamilyIndex()].push(pCommandPool);
+    }
 
 }
