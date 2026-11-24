@@ -5,7 +5,6 @@
 
 namespace DollsEngine
 {
-
     template<typename T>
     struct Hash
     {
