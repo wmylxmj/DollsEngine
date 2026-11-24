@@ -22,6 +22,9 @@ namespace DollsEngine
 
     template<>
     struct Hash<VulkanTextureViewDescription> {
+        size_t operator()(const VulkanTextureViewDescription& description) const
+        {
+        }
     };
 
     /**
