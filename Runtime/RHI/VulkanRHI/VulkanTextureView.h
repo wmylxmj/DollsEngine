@@ -18,6 +18,21 @@ namespace DollsEngine
         uint32_t mipLevelCount = VK_REMAINING_MIP_LEVELS;
         uint32_t baseArrayLayer = 0;
         uint32_t arrayLayerCount = VK_REMAINING_ARRAY_LAYERS;
+
+        bool operator==(const VulkanTextureViewDescription& other) const
+        {
+            return viewType == other.viewType
+                && format == other.format
+                && components.r == other.components.r
+                && components.g == other.components.g
+                && components.b == other.components.b
+                && components.a == other.components.a
+                && aspectMask == other.aspectMask
+                && baseMipLevel == other.baseMipLevel
+                && mipLevelCount == other.mipLevelCount
+                && baseArrayLayer == other.baseArrayLayer
+                && arrayLayerCount == other.arrayLayerCount;
+        }
     };
 
     template<>
