@@ -34,6 +34,5 @@ namespace DollsEngine
         std::shared_mutex m_textureViewCachesMutex;
 
         std::unordered_map<VulkanTextureViewDescription, std::unique_ptr<VulkanTextureView>, Hash<VulkanTextureViewDescription>> m_textureViewCaches;
-        std::shared_mutex m_textureViewCachesMutex;
     };
 }
