@@ -3,6 +3,8 @@
 #include "../RHITexture.h"
 #include "VulkanTextureView.h"
 
+#include <unordered_map>
+
 namespace DollsEngine
 {
     class VulkanDevice;
