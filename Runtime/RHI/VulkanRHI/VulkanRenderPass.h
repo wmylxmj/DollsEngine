@@ -41,7 +41,9 @@ namespace DollsEngine
      * 渲染通道兼容性描述
      */
     class VulkanRenderPassCompatibilityDescription
-    {};
+    {
+
+    };
 
 
     class VulkanRenderPass {
