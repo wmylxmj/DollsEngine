@@ -37,6 +37,9 @@ namespace DollsEngine
         bool m_hasColorResolveAttachments = false;
     };
 
+    /**
+     * 兼容性描述
+     */
     class VulkanRenderPass {
     public:
         VulkanRenderPass(VulkanDevice& device);
