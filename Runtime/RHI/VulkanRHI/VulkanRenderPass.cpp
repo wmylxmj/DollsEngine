@@ -87,6 +87,59 @@ namespace DollsEngine
         }
     }
 
+    void VulkanRenderPassCompatibilityDescription::Initialize(const VulkanRenderPassDescription& description)
+    {
+        const std::vector<VkAttachmentDescription>& attachmentDescriptions = description.GetAttachmentDescriptions();
+        const std::vector<VkAttachmentReference>& colorAttachmentReferences = description.GetColorAttachmentReferences();
+        const std::vector<VkAttachmentReference>& colorResolveAttachmentReferences = description.GetColorResolveAttachmentReferences();
+
+        m_attachmentFormat.resize(attachmentDescriptions.size());
+        m_attachmentSamples.resize(attachmentDescriptions.size());
+        m_attachmentFlags.resize(attachmentDescriptions.size());
+
+        for (size_t index = 0; index < attachmentDescriptions.size(); ++index) {
+            m_attachmentFormat[index] = attachmentDescriptions[index].format;
+            m_attachmentSamples[index] = attachmentDescriptions[index].samples;
+            m_attachmentFlags[index] = attachmentDescriptions[index].flags;
+        }
+
+        m_colorAttachmentIndices.resize(colorAttachmentReferences.size());
+        for (size_t index = 0; index < colorAttachmentReferences.size(); ++index) {
+            m_colorAttachmentIndices[index] = colorAttachmentReferences[index].attachment;
+        }
+
+        m_colorResolveAttachmentIndices.resize(colorResolveAttachmentReferences.size());
+        for (size_t index = 0; index < colorResolveAttachmentReferences.size(); ++index) {
+            m_colorResolveAttachmentIndices[index] = colorResolveAttachmentReferences[index].attachment;
+        }
+
+        m_depthStencilAttachmentIndex = description.HasDepthStencilAttachment()
+            ? description.GetDepthStencilAttachmentReference().attachment
+            : VK_ATTACHMENT_UNUSED;
+
+        m_depthStencilResolveAttachmentIndex = description.HasDepthStencilResolveAttachment()
+            ? description.GetDepthStencilResolveAttachmentReference().attachment
+            : VK_ATTACHMENT_UNUSED;
+    }
+
+    bool VulkanRenderPassCompatibilityDescription::operator==(
+        const VulkanRenderPassCompatibilityDescription& other) const
+    {
+        if (m_attachmentFormat.size() != other.m_attachmentFormat.size()) return false;
+        if (m_colorAttachmentIndices != other.m_colorAttachmentIndices) return false;
+        if (m_colorResolveAttachmentIndices != other.m_colorResolveAttachmentIndices) return false;
+        if (m_depthStencilAttachmentIndex != other.m_depthStencilAttachmentIndex) return false;
+        if (m_depthStencilResolveAttachmentIndex != other.m_depthStencilResolveAttachmentIndex) return false;
+
+        for (size_t index = 0; index < m_attachmentFormat.size(); ++index) {
+            if (m_attachmentFormat[index] != other.m_attachmentFormat[index]) return false;
+            if (m_attachmentSamples[index] != other.m_attachmentSamples[index]) return false;
+            if (m_attachmentFlags[index] != other.m_attachmentFlags[index]) return false;
+        }
+
+        return true;
+    }
+
     VulkanRenderPass::VulkanRenderPass(VulkanDevice& device)
         : m_device(device)
     {
