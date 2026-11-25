@@ -38,7 +38,7 @@ namespace DollsEngine
     };
 
     /**
-     * 兼容性描述
+     * 渲染通道兼容性描述
      */
 
 
